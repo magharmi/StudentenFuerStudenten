@@ -325,7 +325,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <div class="card">
-                <img src="C:/Users/Armin/Desktop/sulf.jpeg" alt="John" style="width:100%">
+                <img src="C:/Users/Armin/Documents/Github/StudentenFuerStudenten/sulf.jpeg" alt="John" style="width:100%">
                 <h1>Sulfikar Hamka</h1>
                 <p class="title">Lellek</p>
                 <p>Hochschule Bochum</p>
@@ -340,9 +340,9 @@
         </div>
         <div class="column">
             <div id="myDIV" class="header">
-                <h2>My To Do List</h2>
-                <input type="text" id="myInput" placeholder="Title...">
-                <span onclick="newElement()" class="addBtn">Add</span>
+                <h2>To-Do-Liste</h2>
+                <input type="text" id="myInput" placeholder="Was merken?">
+                <span onclick="newElement()" class="addBtn">Hinzufügen</span>
             </div>
 
             <ul id="myUL">
@@ -391,7 +391,7 @@
                     var t = document.createTextNode(inputValue);
                     li.appendChild(t);
                     if (inputValue === '') {
-                        alert("You must write something!");
+                        alert("Du musst etwas eingeben!");
                     } else {
                         document.getElementById("myUL").appendChild(li);
                     }
