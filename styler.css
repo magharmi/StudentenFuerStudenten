@@ -124,6 +124,13 @@ hr {
     overflow: visible
 }
 
+.button-group{
+    display: flex;
+    }
+.button-group button{
+    border: 0;
+}
+
 button,
 input,
 select,
