@@ -2183,6 +2183,7 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
+<<<<<<< HEAD
 }
 
 /*was merken eingabe feld*/
@@ -2192,6 +2193,25 @@ input[type=text] {
     margin-bottom: 5px;
 }
 /*was merken eingabe feld*/
+=======
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Suchfeld im Header*/
+#suchfeld{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#suchfeld:focus{
+    width: auto;
+}
+
+/* Eingabefeld ToDoListe*/
+
+>>>>>>> 4417ba56b503d649a44e972d736c9d6581f7bcf9
 #myInput {
     margin-bottom: 0;
     width: 150%;
