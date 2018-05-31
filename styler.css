@@ -1991,7 +1991,7 @@ a {
     clear: both;
 }
 
-
+/*top button (unten rechts)*/
 #myBtn {
     display: none;
     /* Hidden by default */
@@ -2022,16 +2022,18 @@ a {
     width: 60px;
 }
 
+/*irgendwas mit den karten*/
 #myBtn:hover {
     background-color: #555;
     /* Add a dark-grey background on hover */
 }
 
-
+/*abstand zwischen den karten*/
 .w3-third {
     margin-top: 50px;
 }
 
+/*katrten style*/
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -2040,11 +2042,13 @@ a {
 
 }
 
+/*titel lellek feld*/
 .title {
     color: grey;
     font-size: 18px;
 }
 
+/*kontakt button*/
 button {
     border: none;
     outline: 0;
@@ -2058,6 +2062,7 @@ button {
     font-size: 18px;
 }
 
+/*auswahl im header*/
 a {
     text-decoration: none;
     font-size: 22px;
@@ -2145,14 +2150,16 @@ ul li.checked::before {
     top: 0;
     padding: 12px 16px 12px 16px;
 }
-
+/*to do liste*/
+/*
 .close:hover {
     background-color: #f44336;
     color: white;
-}
+}*/
 
 /* Style the header */
 
+/*to do listen kopf*/
 .header {
     background-color: #ff9900;
     padding: 15px;
@@ -2161,7 +2168,7 @@ ul li.checked::before {
 }
 
 /* Clear floats after the header */
-
+/* to do header*/
 .header:after {
     content: "";
     display: table;
@@ -2169,7 +2176,7 @@ ul li.checked::before {
 }
 
 /* Style the input */
-
+/*was merken eingabe feld*/
 input {
     border: none;
     width: 75%;
@@ -2178,12 +2185,13 @@ input {
     font-size: 16px;
 }
 
+/*was merken eingabe feld*/
 input[type=text] {
     width: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
+/*was merken eingabe feld*/
 #myInput {
     margin-bottom: 0;
     width: 150%;
@@ -2191,6 +2199,7 @@ input[type=text] {
 
 /* Style the "Add" button */
 
+/*hinzufügen button*/
 .addBtn {
     padding: 10px;
     margin-top: 5px;
@@ -2205,9 +2214,9 @@ input[type=text] {
     overflow: hidden;
 }
 
-.addBtn:hover {
+/*.addBtn:hover {
     background-color: #bbb;
-}
+}*/
 
 #burgerbutton {
     margin: 8px 10px 8px 8px;
