@@ -2176,13 +2176,22 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
-}
-
-input[type=text] {
-    width: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+/* Suchfeld im Header*/
+#suchfeld{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#suchfeld:focus{
+    width: auto;
+}
+
+/* Eingabefeld ToDoListe*/
 
 #myInput {
     margin-bottom: 0;
