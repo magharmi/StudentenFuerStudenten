@@ -273,7 +273,7 @@ h5,
 h6 {
     font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 400;
-    margin: 10px 0
+    margin: 0;
 }
 
 .w3-wide {
@@ -694,7 +694,7 @@ a {
     width: 99.99999%
 }
 
-@media (min-width:601px) {
+@media (min-width: 961px) {
     .w3-col.m1 {
         width: 8.33333%
     }
@@ -1040,8 +1040,7 @@ a {
 }
 
 .w3-panel {
-    margin-top: 16px
-    margin-bottom: 16px
+    margin-top: 16px margin-bottom: 16px
 }
 
 .w3-code,
@@ -1051,10 +1050,7 @@ a {
 }
 
 .w3-code {
-    width: auto
-    background-color: #fff
-    padding: 8px 12px
-    border-left: 4px solid #4CAF50;
+    width: auto background-color: #fff padding: 8px 12px border-left: 4px solid #4CAF50;
     word-wrap: break-word
 }
 
@@ -1917,7 +1913,6 @@ a {
     display: inline-block;
     cursor: pointer;
     float: right;
-    padding-right: 12px;
 }
 
 .bar1,
@@ -1994,14 +1989,6 @@ a {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Eingabefeld */
-
-input[type=text] {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 
@@ -2168,7 +2155,7 @@ ul li.checked::before {
 
 .header {
     background-color: #ff9900;
-    padding: 30px 40px;
+    padding: 15px;
     color: white;
     text-align: center;
 }
@@ -2191,59 +2178,37 @@ input {
     font-size: 16px;
 }
 
+input[type=text] {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#myInput {
+    margin-bottom: 0;
+    width: 150%;
+}
+
 /* Style the "Add" button */
 
 .addBtn {
     padding: 10px;
     margin-top: 5px;
-    margin-bottom: 5px;
     width: 100%;
     background: #4CAF50;
     color: #555;
-    float: left;
+    float: right;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .addBtn:hover {
     background-color: #bbb;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#burgerbutton {
+    margin: 8px 10px 8px 8px;
+}
