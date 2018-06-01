@@ -18,10 +18,3 @@ https://www.w3schools.com/howto/howto_js_filter_lists.asp
 Freundeliste
 https://www.w3schools.com/howto/howto_css_login_form.asp
 Login
-
-
-ToDo
--Header/Footer in eigene Dateien
-	-> Steuerung des aktiven Tabs von alleine
--Funktionen einfügen
-
