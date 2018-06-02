@@ -31,10 +31,9 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial;
-            float: center;
-            max-width: 1000px;
+        #profilBody {
+            width: 960px;
+            margin: 0 auto;
         }
 
         .heading {
@@ -131,10 +130,6 @@
             }
         }
 
-
-
-
-
         .body {
             margin-top: 50px;
         }
@@ -175,89 +170,115 @@
         a:hover {
             opacity: 0.7;
         }
-        
-        
+
+
         .beschreibung {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
         }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content/Box */
-.modal-content {
-    margin: 10% auto; /* 15% from the top and centered */
-    width: 50%; /* Could be more or less, depending on screen size */
-}
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
 
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        /* Modal Content/Box */
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-        
-        
-        
+        .modal-content {
+            margin: 10% auto;
+            /* 15% from the top and centered */
+            width: 50%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
         /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            /* Some padding */
+            border: 1px solid #ccc;
+            /* Gray border */
+            border-radius: 4px;
+            /* Rounded borders */
+            box-sizing: border-box;
+            /* Make sure that padding and width stays in place */
+            margin-top: 6px;
+            /* Add a top margin */
+            margin-bottom: 16px;
+            /* Bottom margin */
+            resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+        }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+        /* Style the submit button with a specific background color etc */
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* Add a background color and some padding around the form */
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
 
     </style>
 
@@ -266,142 +287,143 @@ input[type=submit]:hover {
 
 <body>
     <div id="profilBody">
-    <p id="headerabstand"> </p>
-    
-    <div class="card">
-        <img src="img.jpg" alt="John" style="width:100%">
-        <h1>John Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>Harvard University</p>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button id="kontakt">Kontakt</button></p>
+        <p id="headerabstand"> </p>
+
+        <div class="card">
+            <img src="img.jpg" alt="John" style="width:100%">
+            <h1>John Doe</h1>
+            <p class="title">CEO & Founder, Example</p>
+            <p>Harvard University</p>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <p><button id="kontakt">Kontakt</button></p>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                    <form action="action_page.php">
+
+                        <label for="vName">First Name</label>
+                        <input type="text" id="vName" placeholder="Dein Vorname">
+
+                        <label for="nName">Last Name</label>
+                        <input type="text" id="nName" placeholder="Dein Nachname">
+
+                        <label for="wOrt">Wohnort</label>
+                        <input type="text" id="wOrt" placeholder="Wohnort">
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Deine Nachricht" style="height:200px"></textarea>
+
+                        <input type="submit" value="Senden">
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("kontakt");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        </script>
+
+        <h1>Wer bin ich?</h1>
+        <div class="beschreibung">
+            <p>Hallo, ich bin ein Jude.<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!</p>
+        </div>
+
+        <h1>Bewertung</h1>
+
+        <div class="row">
+            <div class="side">
+                <div>5 Sterne</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>150</div>
+            </div>
+            <div class="side">
+                <div>4 Sterne</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>63</div>
+            </div>
+            <div class="side">
+                <div>3 Sterne</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>15</div>
+            </div>
+            <div class="side">
+                <div>2 Sterne</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-2"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>6</div>
+            </div>
+            <div class="side">
+                <div>1 Stern</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-1"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>20</div>
+            </div>
+        </div>
     </div>
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="container">
-  <form action="action_page.php">
-
-    <label for="vName">First Name</label>
-    <input type="text" id="vName" placeholder="Dein Vorname">
-
-    <label for="nName">Last Name</label>
-    <input type="text" id="nName" placeholder="Dein Nachname">
-
-    <label for="wOrt">Wohnort</label>
-    <input type="text" id="wOrt" placeholder="Wohnort">
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Deine Nachricht" style="height:200px"></textarea>
-
-    <input type="submit" value="Senden">
-
-  </form>
-</div>
-      </div>
-
-    </div>
-    
-    <script>
-        // Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("kontakt");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-    </script>
-    
-    <h1>Wer bin ich?</h1>
-    <div class="beschreibung">
-        <p>Hallo, ich bin ein Jude.<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!<br>Hier steht ganz viel scheisse!</p>
-    </div>
-
-    <h1>Bewertung</h1>
-    
-    <div class="row">
-        <div class="side">
-            <div>5 Sterne</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-5"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>150</div>
-        </div>
-        <div class="side">
-            <div>4 Sterne</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-4"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>63</div>
-        </div>
-        <div class="side">
-            <div>3 Sterne</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-3"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>15</div>
-        </div>
-        <div class="side">
-            <div>2 Sterne</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-2"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>6</div>
-        </div>
-        <div class="side">
-            <div>1 Stern</div>
-        </div>
-        <div class="middle">
-            <div class="bar-container">
-                <div class="bar-1"></div>
-            </div>
-        </div>
-        <div class="side right">
-            <div>20</div>
-        </div>
-    </div>
-</div>
 </body>
 
 
