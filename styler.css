@@ -2273,9 +2273,10 @@ input {
     }
 }
 
-#headerabstand{
+.headerabstand{
     font-size: 1px;
     padding-bottom: 55px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 

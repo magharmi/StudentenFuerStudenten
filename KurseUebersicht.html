@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="styler.css">
     <style>
         #KurseUebersicht {
-            width: 960px;
+            width: 66%;
+            max-width: 960;
             margin: 0 auto;
         }
 
         #MeineKurseListe,
-        #AlleKurseListe {
+        .AlleKurseListe {
             /* Remove default list styling */
             list-style-type: none;
             padding: 0px;
@@ -19,7 +20,7 @@
         }
 
         #MeineKurseListe li,
-        #AlleKurseListe li {
+        .AlleKurseListe li {
             border: 1px solid #ddd;
             /* Add a border to all links */
             margin-top: -1px;
@@ -39,12 +40,12 @@
         }
 
         #MeineKurseListe li:hover,
-        #AlleKurseListe li:hover {
+        .AlleKurseListe li:hover {
             background-color: #eee;
             /* Add a hover effect to all links, except for headers */
         }
-        
-        #AlleKurseDiv{
+
+        #AlleKurseDiv {
             margin-top: 0.5em;
         }
 
@@ -126,11 +127,34 @@
         </div>
         <div id="AlleKurseDiv">
             <h1 id="AlleKurseUeberschrift">Alle Kurse</h1>
-            <ul id="AlleKurseListe">
+            <ul class="AlleKurseListe">
                 <li>
                     <button class="collapsible">Informatik und Elektrotechnik</button>
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisaboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <ul class="AlleKurseListe">
+                            <li>
+                                <button class="collapsible">Informatik</button>
+                                <div class="content">
+                                    <ul class="AlleKurseListe">
+                                        <li><a href="#">Java Programmierung</a></li>
+                                        <li><a href="#">C Programmierung</a></li>
+                                        <li><a href="#">Rechnerarchitektur</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="collapsible">Elektrotechnik</button>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="collapsible">Mechatronik</button>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>
