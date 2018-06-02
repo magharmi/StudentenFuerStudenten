@@ -9,15 +9,15 @@
             width: 960px;
             margin: 0 auto;
         }
-        
-        #MeineKurseListe {
+
+        #MeineKurseListe, #AlleKurseListe {
             /* Remove default list styling */
             list-style-type: none;
             padding: 0px;
             margin: 0px;
         }
 
-        #MeineKurseListe li{
+        #MeineKurseListe li, #AlleKurseListe li {
             border: 1px solid #ddd;
             /* Add a border to all links */
             margin-top: -1px;
@@ -36,7 +36,7 @@
             /* Make it into a block element to fill the whole list */
         }
 
-        #MeineKurseListe li:hover{
+        #MeineKurseListe li:hover, #AlleKurseListe li:hover {
             background-color: #eee;
             /* Add a hover effect to all links, except for headers */
         }
@@ -47,8 +47,8 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a class="active" href="index.html">Startseite</a>
-            <a href="KurseUebersicht.html">Kurse</a>
+            <a href="index.html">Startseite</a>
+            <a class="active" href="KurseUebersicht.html">Kurse</a>
             <a href="FreundeUebersicht.html">Freunde</a>
             <a href="Profil.html">Profil</a>
             <a href="login.html">Login</a>
@@ -80,18 +80,30 @@
 <body>
     <p id="headerabstand"> </p>
     <div id="KurseUebersicht">
-        <h1 id="MeineKurse">Meine Kurse</h1>
-        <ul id="MeineKurseListe">
-            <li><a href="#">Adele</a></li>
-            <li><a href="#">Agnes</a></li>
-
-            <li><a href="#">Billy</a></li>
-            <li><a href="#">Bob</a></li>
-
-            <li><a href="#">Calvin</a></li>
-            <li><a href="#">Christina</a></li>
-            <li><a href="#">Cindy</a></li>
-        </ul>
+        <div id="MeineKurseDiv">
+            <h1 id="MeineKurseUeberschrift">Meine Kurse</h1>
+            <ul id="MeineKurseListe">
+                <li><a href="#">Adele</a></li>
+                <li><a href="#">Agnes</a></li>
+                <li><a href="#">Billy</a></li>
+                <li><a href="#">Bob</a></li>
+                <li><a href="#">Calvin</a></li>
+                <li><a href="#">Christina</a></li>
+                <li><a href="#">Cindy</a></li>
+            </ul>
+        </div>
+        <div id="AlleKurseDiv">
+            <h1 id="AlleKurseUeberschrift">Alle Kurse</h1>
+            <ul id="AlleKurseListe">
+                <li><a href="#">Adele</a></li>
+                <li><a href="#">Agnes</a></li>
+                <li><a href="#">Billy</a></li>
+                <li><a href="#">Bob</a></li>
+                <li><a href="#">Calvin</a></li>
+                <li><a href="#">Christina</a></li>
+                <li><a href="#">Cindy</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 
