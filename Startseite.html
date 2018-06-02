@@ -7,7 +7,7 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
 
-        <div id="topbartexte">
+        <div class="topbartexte" id="topbartexte">
             <a class="active" href="Startseite.html">Startseite</a>
             <a href="KurseUebersicht.html">Kurse</a>
             <a href="FreundeUebersicht.html">Freunde</a>
@@ -27,11 +27,11 @@
         function myFunction(x) {
             x.classList.toggle("change");
 
-            var x = document.getElementById("topbartexte");
-            if (x.className === "topbartexte") {
-                x.className += " responsive";
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
             } else {
-                x.className = "topbartexte";
+                y.className = "topbartexte";
             }
         }
 

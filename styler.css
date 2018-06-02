@@ -2157,13 +2157,10 @@ ul li.checked::before {
 
 /*to do liste*/
 
-/*
 .close:hover {
     background-color: #f44336;
     color: white;
-}*/
-
-/* Style the header */
+}
 
 /*to do listen kopf*/
 
@@ -2174,7 +2171,6 @@ ul li.checked::before {
     text-align: center;
 }
 
-/* Clear floats after the header */
 
 /* to do header*/
 
@@ -2184,9 +2180,7 @@ ul li.checked::before {
     clear: both;
 }
 
-/* Style the input */
-
-/*was merken eingabe feld*/
+/* Eingabe Felder */
 
 input {
     border: none;
@@ -2194,29 +2188,15 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
-    /*<<<<<<< HEAD Was ist das hier?*/
-}
-
-/*was merken eingabe feld*/
-
-input[type=text] {
-    width: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-/*was merken eingabe feld*/
-
-/*======= Was ist das hier?*/
-
-margin-top: 5px;
-margin-bottom: 5px;
 }
 
 /* Suchfeld im Header*/
 
 #suchfeld {
-    width: 130px;
+    margin: 5px 5px 5px 15px;
+    width: 150px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -2226,8 +2206,6 @@ margin-bottom: 5px;
 }
 
 /* Eingabefeld ToDoListe*/
-
-/*> > > > > > > 4417ba56b503d649a44e972d736c9d6581f7bcf9 Was ist das hier?*/
 
 #myInput {
     margin-bottom: 0;
