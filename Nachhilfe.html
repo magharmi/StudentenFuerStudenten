@@ -4,29 +4,152 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav">
-        <a class="active" href="#startseite">Startseite</a>
-        <a href="#kurse">Kurse</a>
-        <a href="#freunde">Freunde</a>
-        <a href="#profil">Profil</a>
-        <a href="#login">Login</a>
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a class="active" href="index.html">Startseite</a>
+            <a href="KurseUebersicht.html">Kurse</a>
+            <a href="FreundeUebersicht.html">Freunde</a>
+            <a href="Profil.html">Profil</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <input type="text" id="suchfeld" placeholder="Suche...">
+
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <input type="text" id="suchfeld" placeholder="Suche...">
     </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
-        }
-    </script>
 
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
+        }
+
+    </script>
 </head>
 
 <body>
+    <p id="headerabstand"> </p>
+    
+    <div class="w3-row-padding w3-center w3-margin-top">
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <div class="card">
+                        <h2> Nachhilfe &Uumlbersicht</h2>
+                    <ul>
+                        <li>Mathe</li>
+                        <li>Englisch</li>
+                        <li>Datenbank</li>
+                        <li>Deutsch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <div class="card">
+                    <div id="myDIV" class="header">
+                        <h2>Meine Nachhilfe-Kurse</h2>
+                        <div class="button-group">
+                            <input type="text" id="myInput" placeholder="Kurs hinzufügen?">
+                            <span onclick="newElement()" class="addBtn">Hinzufügen</span>
+                        </div>
+                    </div>
+                    
+
+                    <ul id="Nachhilfe">
+                        <li>Allahu Akbar rufen</li>
+                        <li class="checked">Sulfikar einladen</li>
+                        <li>Vincent einladen</li>
+                        <li>Alex einladen</li>
+                        <li>Chicken</li>
+                        <li>Mich nicht blicken lassen</li>
+                    </ul>
+
+                    <script>
+                        // Create a "close" button and append it to each list item
+                        var myNodelist = document.getElementsByTagName("LI");
+                        var i;
+                        for (i = 0; i < myNodelist.length; i++) {
+                            var span = document.createElement("SPAN");
+                            var txt = document.createTextNode("\u00D7");
+                            span.className = "close";
+                            span.appendChild(txt);
+                            myNodelist[i].appendChild(span);
+                        }
+
+                        // Click on a close button to hide the current list item
+                        var close = document.getElementsByClassName("close");
+                        var i;
+                        for (i = 0; i < close.length; i++) {
+                            close[i].onclick = function() {
+                                var div = this.parentElement;
+                                div.style.display = "none";
+                            }
+                        }
+
+                        // Add a "checked" symbol when clicking on a list item
+                        var list = document.querySelector('ul');
+                        list.addEventListener('click', function(ev) {
+                            if (ev.target.tagName === 'LI') {
+                                ev.target.classList.toggle('checked');
+                            }
+                        }, false);
+
+                        // Create a new list item when clicking on the "Add" button
+                        function newElement() {
+                            var li = document.createElement("li");
+                            var inputValue = document.getElementById("myInput").value;
+                            var t = document.createTextNode(inputValue);
+                            li.appendChild(t);
+                            if (inputValue === '') {
+                                alert("Du musst etwas eingeben!");
+                            } else {
+                                document.getElementById("Nachhilfe").appendChild(li);
+                            }
+                            document.getElementById("myInput").value = "";
+
+                            var span = document.createElement("SPAN");
+                            var txt = document.createTextNode("\u00D7");
+                            span.className = "close";
+                            span.appendChild(txt);
+                            li.appendChild(span);
+
+                            for (i = 0; i < close.length; i++) {
+                                close[i].onclick = function() {
+                                    var div = this.parentElement;
+                                    div.style.display = "none";
+                                }
+                            }
+                        }
+
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <div class="card">
+                    <h2>Suche/Finde</h2><br>
+                </div>
+                    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                    <p>Finde oder biete</p>
+                    <p>Hilfe an</p>
+                
+            </div>
+        </div>
+    </div>
 </body>
 
 
@@ -51,6 +174,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
