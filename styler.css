@@ -2271,6 +2271,7 @@ input {
     #topbartexte.responsive {
         display: inherit;
     }
+
     #topbartexte.responsive a {
         float: none;
         display: block;
