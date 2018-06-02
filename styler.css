@@ -2082,14 +2082,14 @@ a:hover {
 
 /* Remove margins and padding from the list */
 
-ul {
+#ToDoListe {
     margin: 0;
     padding: 0;
 }
 
 /* Style the list items */
 
-ul li {
+#ToDoListe li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -2107,19 +2107,19 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 
-ul li:nth-child(odd) {
+#ToDoListe li:nth-child(odd) {
     background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
 
-ul li:hover {
+#ToDoListe li:hover {
     background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
 
-ul li.checked {
+#ToDoListe li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
@@ -2127,7 +2127,7 @@ ul li.checked {
 
 /* Add a "checked" mark when clicked on */
 
-ul li.checked::before {
+#ToDoListe li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -2142,7 +2142,7 @@ ul li.checked::before {
 
 /* Style the close button */
 
-.close {
+#ToDoListe .close {
     position: absolute;
     right: 0;
     top: 0;
@@ -2151,7 +2151,7 @@ ul li.checked::before {
 
 /*to do liste*/
 
-.close:hover {
+#ToDoListe .close:hover {
     background-color: #f44336;
     color: white;
 }

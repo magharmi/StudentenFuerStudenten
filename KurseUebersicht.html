@@ -4,29 +4,95 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav">
-        <a href="#startseite">Startseite</a>
-        <a class="active" href="#kurse">Kurse</a>
-        <a href="#freunde">Freunde</a>
-        <a href="#profil">Profil</a>
-        <a href="#login">Login</a>
+    <style>
+        #KurseUebersicht {
+            width: 960px;
+            margin: 0 auto;
+        }
+        
+        #MeineKurseListe {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #MeineKurseListe li{
+            border: 1px solid #ddd;
+            /* Add a border to all links */
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            /* Grey background color */
+            padding: 12px;
+            /* Add some padding */
+            text-decoration: none;
+            /* Remove default text underline */
+            font-size: 18px;
+            /* Increase the font-size */
+            color: black;
+            /* Add a black text color */
+            display: block;
+            /* Make it into a block element to fill the whole list */
+        }
+
+        #MeineKurseListe li:hover{
+            background-color: #eee;
+            /* Add a hover effect to all links, except for headers */
+        }
+
+    </style>
+
+
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a class="active" href="index.html">Startseite</a>
+            <a href="KurseUebersicht.html">Kurse</a>
+            <a href="FreundeUebersicht.html">Freunde</a>
+            <a href="Profil.html">Profil</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <input type="text" id="suchfeld" placeholder="Suche...">
+
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <input type="text" id="suchfeld" placeholder="Suche...">
     </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
-        }
-    </script>
 
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
+        }
+
+    </script>
 </head>
 
 <body>
+    <p id="headerabstand"> </p>
+    <div id="KurseUebersicht">
+        <h1 id="MeineKurse">Meine Kurse</h1>
+        <ul id="MeineKurseListe">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
 
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Cindy</a></li>
+        </ul>
+    </div>
 </body>
 
 
@@ -51,6 +117,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
