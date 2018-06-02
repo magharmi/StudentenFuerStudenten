@@ -2255,10 +2255,19 @@ margin-bottom: 5px;
     overflow: hidden;
 }
 
-/*.addBtn:hover {
+.addBtn:hover {
     background-color: #bbb;
-}*/
+}
+
+/*Burgerbutton in Topbar*/
 
 #burgerbutton {
     margin: 8px 10px 8px 8px;
+}
+
+/*Logo in Topbar*/
+
+#logo {
+    margin: 0px;
+    padding: 4px
 }
