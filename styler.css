@@ -2279,5 +2279,6 @@ input {
 }
 
 #profilBody{
-    margin: center;
+    width: 100;
+    margin: auto;
 }
