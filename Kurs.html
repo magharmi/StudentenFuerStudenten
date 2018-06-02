@@ -4,6 +4,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
+    <style>
+        #Kurs {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+    </style>
     <div class="topnav">
         <a href="#startseite">Startseite</a>
         <a class="active" href="#kurse">Kurse</a>
@@ -21,13 +28,29 @@
         function myFunction(x) {
             x.classList.toggle("change");
         }
+
     </script>
 
 </head>
 
 <body>
     <p class="headerabstand"> </p>
-
+    <div id="Kurs">
+        <div class="w3-row-padding w3-margin-top">
+            <div class="w3-third">
+                <div class="w3-card w3-container">
+                    <h1>Informatik</h1>
+                    <p>Hauptschule Bochum</p>
+                </div>
+            </div>
+            <div class="w3-twothird">
+                <div class="w3-card w3-container">
+                    <h1>Beschreibung</h1>
+                    <p>Dieser Kurs ist speziell für alle Informatiker eingerichtet!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
@@ -52,6 +75,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
