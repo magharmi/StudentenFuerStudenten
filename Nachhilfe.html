@@ -4,109 +4,156 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
-        <div class="topbartexte" id="topbartexte">
-            <a class="active" href="index.html">Startseite</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Profil.html">Profil</a>
-            <a href="login.html">Login</a>
-        </div>
-
-        <input type="text" id="suchfeld" placeholder="Suche...">
-
+    <div class="topnav">
+        <a class="active" href="#startseite">Startseite</a>
+        <a href="#kurse">Kurse</a>
+        <a href="#freunde">Freunde</a>
+        <a href="#profil">Profil</a>
+        <a href="#login">Login</a>
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+        <input type="text" id="suchfeld" placeholder="Suche...">
     </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
+        }
+    </script>
 
-            var y = document.getElementById("topbartexte");
-            if (y.className === "topbartexte") {
-                y.className += " responsive";
-            } else {
-                y.className = "topbartexte";
-            }
+
+    <style>
+        #KurseUebersicht {
+            width: 80%;
+            max-width: 960;
+            margin: 0 auto;
         }
 
-    </script>
+        #MeineKurseListe,
+        .AlleKurseListe {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #MeineKurseListe li,
+        .AlleKurseListe li {
+            border: 1px solid #ddd;
+            /* Add a border to all links */
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            /* Grey background color */
+            padding: 12px;
+            /* Add some padding */
+            text-decoration: none;
+            /* Remove default text underline */
+            font-size: 18px;
+            /* Increase the font-size */
+            color: black;
+            /* Add a black text color */
+            display: block;
+            /* Make it into a block element to fill the whole list */
+        }
+
+        #MeineKurseListe li:hover,
+        .AlleKurseListe li:hover {
+            background-color: #eee;
+            /* Add a hover effect to all links, except for headers */
+        }
+
+        #AlleKurseDiv {
+            margin-top: 0.5em;
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 1;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+        
+        .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+    </style>
+
 </head>
 
 <body>
     <p class="headerabstand"> </p>
-    
-    <div class="w3-row-padding w3-center w3-margin-top">
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div class="card">
-                        <h2> Nachhilfe &Uumlbersicht</h2>
-                    <ul>
-                        <li>Mathe</li>
-                        <li>Englisch</li>
-                        <li>Datenbank</li>
-                        <li>Deutsch</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div id="KurseUebersicht">
+        <div id="AlleKurseDiv">
+            <h1 id="AlleKurseUeberschrift">Aufgabensammlung</h1>
+            <h4>Wähle eine Studiengangrichtung aus</h4>
+            <ul class="AlleKurseListe">
+                <li>
+                    <button class="collapsible">Informatik und Elektrotechnik</button>
+                    <div class="content">
+                        <ul class="AlleKurseListe">
+                            <h4>Wähle ein Studiengang aus</h4>
+                            <li>
+                                <button class="collapsible">Informatik</button>
+                                <div class="content">
+                                    <ul class="AlleKurseListe">
+                                        <h4>Wähle das Fach aus, für welches du Aufgaben suchst</h4>
+                                        <li>
+                                            <button class="collapsible">Java Programmierung</button>
+                                            <div class="content">
+                                                <ul class="AlleKurseListe">
+                                                    <li>
+                                                        <input type="text" id="myInput" placeholder="Was bietest du genau?">
+                                                        <script>
+                                                            var input = document.getElementById("myInput");
+                                                            input.addEventListener("keyup", function(event) {
+                                                            event.preventDefault();
+                                                                if (event.keyCode === 13) {
+                                                                    newElement();
+                                                                }
+                                                            });
 
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div class="card">
-                    <div id="myDIV" class="header">
-                        <h2>Meine Nachhilfe-Kurse</h2>
-                        <div class="button-group">
-                            <input type="text" id="myInput" placeholder="Kurs hinzufügen?">
-                            <span onclick="newElement()" class="addBtn">Hinzufügen</span>
-                        </div>
-                    </div>
-                    
-
-                    <ul id="Nachhilfe">
-                        <li>Allahu Akbar rufen</li>
-                        <li class="checked">Sulfikar einladen</li>
-                        <li>Vincent einladen</li>
-                        <li>Alex einladen</li>
-                        <li>Chicken</li>
-                        <li>Mich nicht blicken lassen</li>
-                    </ul>
-
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
-                        }
-
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
-                        for (i = 0; i < close.length; i++) {
-                            close[i].onclick = function() {
-                                var div = this.parentElement;
-                                div.style.display = "none";
-                            }
-                        }
-
-                        // Add a "checked" symbol when clicking on a list item
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function(ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                        }, false);
-
-                        // Create a new list item when clicking on the "Add" button
+                                                        </script>
+                                                        <span onclick="newElement()" class="addBtn">Hinzufuegen</span>
+                                                        <ul id="Prog">
+                                                         
+                                                        </ul>
+                                                        <script>
+                                                         // Create a new list item when clicking on the "Add" button
                         function newElement() {
                             var li = document.createElement("li");
                             var inputValue = document.getElementById("myInput").value;
@@ -115,12 +162,12 @@
                             if (inputValue === '') {
                                 alert("Du musst etwas eingeben!");
                             } else {
-                                document.getElementById("Nachhilfe").appendChild(li);
+                                document.getElementById("Prog").appendChild(li);
                             }
                             document.getElementById("myInput").value = "";
 
                             var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
+                            
                             span.className = "close";
                             span.appendChild(txt);
                             li.appendChild(span);
@@ -132,24 +179,98 @@
                                 }
                             }
                         }
-
-                    </script>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div class="card">
-                    <h2>Suche/Finde</h2><br>
-                </div>
-                    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                    <p>Finde oder biete</p>
-                    <p>Hilfe an</p>
+                        
+                        var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    alert("Hallo");
+  }
+}, false);
+                                                            
+                           </script>                             
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="collapsible">C Programmierung</button>
+                                            <div class="content">
+                                                <ul class="AlleKurseListe">
+                                                   
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="collapsible">Objektorientierte Programmierung</button>
+                                            <div class="content">
+                                                <ul class="AlleKurseListe">
+                                                 
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="collapsible">Moderne Webtechnologien</button>
+                                            <div class="content">
+                                                <ul class="AlleKurseListe">
+                                                    <h4>Wähle aus, was für Aufgaben zu haben willst</h4>
+                                                    <li><a href="#">Java Grundlagen</a></li>
+                                                    <li><a href="#">Konstruktoren</a></li>
+                                                    <li><a href="#">JavaFX</a></li>
+                                                    <li><a href="#">Wie installier ich Eclipse</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="collapsible">IT Sicherheit</button>
+                                            <div class="content">
+                                                <ul class="AlleKurseListe">
+                                                    <h4>Wähle aus, was für Aufgaben zu haben willst</h4>
+                                                    <li><a href="#">Java Grundlagen</a></li>
+                                                    <li><a href="#">Konstruktoren</a></li>
+                                                    <li><a href="#">JavaFX</a></li>
+                                                    <li><a href="#">Wie installier ich Eclipse</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="collapsible">Elektrotechnik</button>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="collapsible">Mechatronik</button>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 
-            </div>
+            </ul>
         </div>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
 
 
@@ -174,7 +295,6 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
-
     </script>
 </footer>
 
