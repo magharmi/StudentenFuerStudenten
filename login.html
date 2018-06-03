@@ -8,37 +8,31 @@
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="login.html">Studenten für Studenten</a>
-
-        </div>
-
-
-
-        <div class="container" onclick="myFunction(this)" id="burgerbutton">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
         </div>
     </div>
-    <script>
-        #
-        register {
-            width: 66 % ;
-            max - width: 960;
+
+    <style>
+        #register {
+            width: 80%;
+            max-width: 960;
             margin: 0 auto;
         }
 
-        *{
-            box - sizing: border - box
+        * {
+            box-sizing: border - box
         }
 
         /* Add padding to containers */
+
         .container {
             padding: 16 px;
         }
 
         /* Full-width input fields */
-        input[type = text], input[type = password] {
-            width: 100 % ;
+
+        input[type=text],
+        input[type=password] {
+            width: 100 %;
             padding: 15 px;
             margin: 5 px 0 22 px 0;
             display: inline - block;
@@ -46,64 +40,49 @@
             background: #f1f1f1;
         }
 
-        input[type = text]: focus, input[type = password]: focus {
+        input[type=text]: focus,
+        input[type=password]: focus {
             background - color: #ddd;
             outline: none;
         }
 
         /* Overwrite default styles of hr */
+
         hr {
             border: 1 px solid# f1f1f1;
             margin - bottom: 25 px;
         }
 
         /* Set a style for the submit/register button */
+
         .registerbtn {
             background - color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: # f1f1f1;
-            text - align: center;
-        }
-        /*------------------------------------------------------*/
-        function myFunction(x) {
-            x.classList.toggle("change");
-
-            var y = document.getElementById("topbartexte");
-            if (y.className === "topbartexte") {
-                y.className += " responsive";
-            } else {
-                y.className = "topbartexte";
-            }
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
         }
 
-        <
-        script >
-            function myFunction(x) {
-                x.classList.toggle("change");
-            }
-    </script>
+        .registerbtn:hover {
+            opacity: 1;
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+        /* Add a blue text color to links */
+
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -254,23 +233,20 @@ a {
                 width: 100%;
             }
         }
+
     </style>
-
-
-
 </head>
 
 <body>
-
-    <h2>sas</h2>
+    <p class="headerabstand"> </p>
 
 
     <div id="register">
         <div class="login">
-            <div class="w3-card w3-container" style="min-height:460px">
+            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
                 <div class="card">
 
-                    <img src="logo.png" alt="John" style="width:50%">
+                    <img class="w3-margin-top" src="logo.png" alt="Logo" style="width:50%">
                     <p class="title">Lernen auf Augenhöhe</p>
 
 
@@ -292,9 +268,7 @@ a {
                                 <input type="password" placeholder="Passwort" name="psw" required>
 
                                 <button type="submit">Einloggen</button>
-                                <label>
-        <input type="checkbox" checked="checked" name="remember"> Daten merken
-      </label>
+                                <label><input type="checkbox" checked="checked" name="remember">Daten merken</label>
                             </div>
 
                             <div class="container" style="background-color:#f1f1f1">
@@ -314,6 +288,7 @@ a {
                                 modal.style.display = "none";
                             }
                         }
+
                     </script>
 
                 </div>
@@ -339,10 +314,6 @@ a {
 
                     <p>Mit Erstellung eines Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
                     <button type="submit" class="registerbtn">Registrieren</button>
-                </div>
-
-                <div class="container signin">
-                    <p>Du bist bereits Mitglied? <a href="#">Einloggen</a>.</p>
                 </div>
             </form>
         </div>
@@ -371,6 +342,7 @@ a {
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
