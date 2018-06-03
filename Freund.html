@@ -4,28 +4,87 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav">
-        <a href="#startseite">Startseite</a>
-        <a href="#kurse">Kurse</a>
-        <a class="active" href="#freunde">Freunde</a>
-        <a href="#profil">Profil</a>
-        <a href="#login">Login</a>
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a href="index.html">Startseite</a>
+            <a href="KurseUebersicht.html">Kurse</a>
+            <a class="active" href="FreundeUebersicht.html">Freunde</a>
+            <a href="Profil.html">Profil</a>
+            <a href="login.html">Login</a>
+        </div>
+        <input type="text" id="suchfeld" placeholder="Suche...">
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <input type="text" id="suchfeld" placeholder="Suche...">
     </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
+
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
         }
     </script>
 
+
+
+    <style>
+        .card {
+            box - shadow: 0 4 px 8 px 0 rgba(0, 0, 0, 0.2);
+            max - width: 300 px;
+            margin: auto;
+            text - align: center;
+            font - family: arial;
+        }
+
+        #banner {
+
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 15em;
+        }
+    </style>
 </head>
 
 <body>
+
+
+
+    <p class="headerabstand"> </p>
+
+
+
+    <div id="banner">
+        <img src="titelbild.jpg" alt="John">
+    </div>
+
+
+    <div class="card">
+
+        <img src="rainer.jpeg" alt="John" style="width:50%">
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
 
 </body>
 
@@ -51,6 +110,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
