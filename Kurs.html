@@ -11,26 +11,37 @@
         }
 
     </style>
-    <div class="topnav">
-        <a href="#startseite">Startseite</a>
-        <a class="active" href="#kurse">Kurse</a>
-        <a href="#freunde">Freunde</a>
-        <a href="#profil">Profil</a>
-        <a href="#login">Login</a>
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a class="active" href="index.html">Startseite</a>
+            <a href="KurseUebersicht.html">Kurse</a>
+            <a href="FreundeUebersicht.html">Freunde</a>
+            <a href="Profil.html">Profil</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <input type="text" id="suchfeld" placeholder="Suche...">
+
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <input type="text" id="suchfeld" placeholder="Suche...">
     </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
+
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
         }
 
     </script>
-
 </head>
 
 <body>
@@ -39,8 +50,14 @@
         <div class="w3-row-padding w3-margin-top">
             <div class="w3-third">
                 <div class="w3-card w3-container">
-                    <h1>Informatik</h1>
-                    <p>Hauptschule Bochum</p>
+                    <div class="tabellenzeile" id="Zusammenfassung">    
+                        <div class="tabellenzelle"><h1</div>    
+                        <div class="tabellenzelle"><h1 id="Titel">Informatik</h1></div>
+                    </div>
+                    <div class="tabellenzeile" id="Zusammenfassung">   
+                        <div class="tabellenzelle"></div>    
+                        <div class="tabellenzelle"><p>Hauptschule Bochum</p></div> 
+                    </div>
                 </div>
             </div>
             <div class="w3-twothird">
