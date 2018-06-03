@@ -12,16 +12,9 @@
     </div>
 
     <style>
-        #beschreibung {
-            width: 66%;
-            max-width: 960;
-            margin: 0 auto;
-        }
-
-
         #register {
             width: 80%;
-            max-width: 960;
+            max-width: 960px;
             margin: 0 auto;
         }
 
@@ -536,136 +529,110 @@
                 width: 100%;
             }
         }
+
+        #Loginbereich {
+            margin: 20px 0 3em 0;
+        }
+
+        #LoginLogo {
+            margin: 10px auto;
+        }
+
+        #LoginRegistrieren {
+            padding-bottom: 7px;
+        }
+
+        #LoginRegistrieren button {
+            width: 150px;
+        }
+
     </style>
 </head>
 
 <body>
     <p class="headerabstand"> </p>
-
-
     <div id="register">
-        <div class="login">
-            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
-                <div class="card">
-
-                    <img class="w3-margin-top" src="logo.png" alt="Logo" style="width:50%">
-                    <p class="title">Lernen auf Augenhöhe</p>
-                    <h2>Studenten für Studenten</h2>
-
-
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrieren</button>
-
-
-                    <div id="id01" class="modal">
-
-                        <form class="modal-content animate" action="/action_page.php">
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                <img src="logo.png" alt="Avatar" class="avatar">
-                            </div>
-
-                            <div class="container">
-                                <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Benutzername" name="uname" required>
-
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Passwort" name="psw" required>
-
-                                <button type="submit">Einloggen</button>
-                                <label><input type="checkbox" checked="checked" name="remember">Daten merken</label>
-                            </div>
-
-                            <div class="container" style="background-color:#f1f1f1">
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
-                                <span class="psw">Passwort <a href="#">vergessen?</a></span>
-                            </div>
-                        </form>
-                    </div>
-
-                    <script>
-                        // Get the modal
-                        var modal = document.getElementById('id01');
-
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
+        <div id="Loginbereich">
+            <div class="card">
+                <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
+                <p class="title">Lernen auf Augenhöhe</p>
+                <h2>Studenten für Studenten</h2>
+                <div id="LoginRegistrieren">
+                    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+                    <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
+                </div>
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="logo.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Benutzername" name="uname" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Passwort" name="psw" required>
+                            <button type="submit">Einloggen</button>
+                            <label><input type="checkbox" checked="checked" name="remember">Daten merken</label>
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            <span class="psw">Passwort <a href="#">vergessen?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
                         }
-                    </script>
+                    }
 
-                </div>
+                </script>
             </div>
+            <div id="id02" class="modal">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <form class="modal-content" action="/action_page.php">
+                    <div class="container">
+                        <h1>Registrieren</h1>
+                        <p>Um ein Konto zu erstellen, fülle bitte die Felder aus.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="E-Mail" name="email" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Passwort" name="psw" required>
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
+                        <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Merke Zugangsdaten</label>
+                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#" style="color:dodgerblue">AGB</a>.</p>
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            <button type="submit" class="signupbtn">Registrieren</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id02');
 
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
 
-
+            </script>
         </div>
-
-
+        <div id="beschreibung">
+            <h4>Willkommen auf der Seite Studenten für Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese benötigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die Möglichkeit in Lerngruppen einzutreten oder selber eine zu gründen sowie Aufgaben hoch- bzw. runterzuladen, einen Nachhilfelehrer zu finden, diesen zu bewerten oder selbst zu einem werden kannst. Wir bieten auch die Möglichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu können.</h4>
+        </div>
     </div>
-
-
-
-    <div id="id02" class="modal">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
-            <div class="container">
-                <h1>Registrieren</h1>
-                <p>Um ein Konto zu erstellen, fülle bitte die Felder aus.</p>
-                <hr>
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="E-Mail" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Passwort" name="psw" required>
-
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
-
-                <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Merke Zugangsdaten
-      </label>
-
-                <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#" style="color:dodgerblue">AGB</a>.</p>
-
-                <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
-                    <button type="submit" class="signupbtn">Registrieren</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id02');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-    <div id="beschreibung">
-        <h2>Neu hier?</h2>
-        <h4>Willkommen auf der Seite Studenten für Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese benötigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die Möglichkeit in Lerngruppen einzutreten oder selber eine zu gründen sowie Aufgaben hoch- bzw. runterzuladen, einen Nachhilfelehrer zu finden, diesen zu bewerten oder selbst zu einem werden kannst. Wir bieten auch die Möglichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu können.</h4>
-        <p>
-
-    </div>
-
-
-
-
-
-
 </body>
-
 
 <footer>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -688,6 +655,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
