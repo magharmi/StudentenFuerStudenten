@@ -31,9 +31,20 @@
                 y.className = "topbartexte";
             }
         }
-
     </script>
     <style>
+        .block {
+            display: block;
+            width: 50%;
+            border: none;
+            background-color: yellowgreen;
+            color: black;
+            padding: 10px 3px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
         #Kurs {
             width: 960px;
             margin: 0 auto;
@@ -54,7 +65,6 @@
         #KursBeschreibung {
             text-align: justify;
         }
-
     </style>
 </head>
 
@@ -72,6 +82,7 @@
                         <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
                         <h3>Teilnehmeranzahl:</h3>
                         <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
+                        <button type="button" class="block">Kurs beitreten</button>
                     </div>
                 </div>
             </div>
@@ -106,7 +117,6 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
-
     </script>
 </footer>
 
