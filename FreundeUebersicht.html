@@ -1,234 +1,242 @@
 <!DOCTYPE html>
 <html>
 
-    
-    <style>
-    
-    
+
+<style>
+   
+
+
+
     /*freunde übersicht*/
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f1f1f1;
-    font-family: Arial;
-}
-
-/* Center website */
-.main {
-    max-width: 1000px;
-    margin: auto;
-}
-
-h1 {
-    font-size: 50px;
-    word-break: break-all;
-}
-
-.row {
-    margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-    padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    display: none; /* Hide columns by default */
-}
-
-/* Clear floats after rows */ 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Content */
-.content {
-    background-color: white;
-    padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-    display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-/* Add a grey background color on mouse-over */
-.btn:hover {
-  background-color: #ddd;
-}
-
-/* Add a dark background color to the active button */
-.btn.active {
-  background-color: #666;
-   color: white;
-}
-
-/*regist*/
-* {box-sizing: border-box}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-
-/* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-/* Add padding to containers */
-.container {
-    padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
+    * {
+        box-sizing: border-box;
     }
-    .cancelbtn {
+
+    body {
+        background-color: #f1f1f1;
+        font-family: Arial;
+    }
+
+    /* Center website */
+
+    .main {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 50px;
+        word-break: break-all;
+    }
+
+    
+        /*abstand zum oberen rand*/
+    .row {
+        margin: -70px -16px;
+    }
+
+    /* Add padding BETWEEN each column (if you want) */
+
+    .row,
+    .row>.column {
+        padding: 8px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+
+    .column {
+        float: left;
+        width: 33.33%;
+        display: none;
+        /* Hide columns by default */
+    }
+
+    /* Clear floats after rows */
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Content */
+
+    .content {
+        background-color: white;
+        padding: 10px;
+    }
+
+    /* The "show" class is added to the filtered elements */
+
+    .show {
+        display: block;
+    }
+
+    
+   
+    /* Add padding to containers */
+
+    .container {
+        padding: 16px;
+    }
+
+    /* Full-width input fields */
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit/register button */
+
+    .registerbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+        opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+
+    a {
+        color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    /* Bordered form */
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+
+    /* Full-width inputs */
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
         width: 100%;
     }
-}
 
+    /* Add a hover effect for buttons */
 
-#freundetxt {
-   
-    margin-top: 100px;
- 
-}
+    button:hover {
+        opacity: 0.8;
+    }
 
-      #FreundeUebersicht {
-            width: 66%;
-            max-width: 960;
-            margin: 0 auto;
+    /* Extra style for the cancel button (red) */
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    /* Center the avatar image inside this container */
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+
+    /* Avatar image */
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    /* Add padding to containers */
+
+    .container {
+        padding: 16px;
+    }
+
+    /* The "Forgot password" text */
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
         }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
 
-    
-    </style>
-    
-    
+
+    #freundetxt {
+
+        margin-top: 100px;
+
+    }
+
+    #FreundeUebersicht {
+        width: 66%;
+        max-width: 960;
+        margin: 0 auto;
+    }
+
+</style>
+
+
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
@@ -267,136 +275,158 @@ span.psw {
 <body>
 
     <div id="FreundeUebersicht">
+        
+
+      
         <h2>sas</h2>
 
-        <p>
+                  <p>
 
             <img src="freunde.png" align="middle" width="100">
             <FONT SIZE="10 id=" freundetxt "">Freunde</FONT>
 
         </p>
-
-
-
         <!-- Portfolio Gallery Grid -->
-        <div class="row">
-            <div class="column nature">
-                <div class="content">
-                    <img src="rainer.jpeg" alt="Mountains" style width="100%">
-                    <h4>Rainer</h4>
-                    <p>Prof. an der BO</p>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="content">
-                    <img src="logo.png" alt="Lights" style="width:100%">
-                    <h4>Lights</h4>
-                    <p>Lorem ipsum dolor..</p>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="content">
-                    <img src="logo.png" alt="Nature" style="width:100%">
-                    <h4>Forest</h4>
-                    <p>Lorem ipsum dolor..</p>
-                </div>
-            </div>
+   
+            <div class="row">
+  
 
-            <div class="column cars">
-                <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
-                    <h4>Retro</h4>
-                    <p>Lorem ipsum dolor..</p>
+                <div class="column nature">
+                    
+                    <div class="content">
+                        
+                        <img src="rainer.jpeg" alt="Mountains" width= 100%>
+                        <h4>Rainer</h4>
+                        <p>Prof. an der BO</p>
+                    </div>
                 </div>
-            </div>
-            <div class="column cars">
-                <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
-                    <h4>Fast</h4>
-                    <p>Lorem ipsum dolor..</p>
+                
+                 <div class="column nature">
+                    <div class="content">
+                        <img src="rainer.jpeg" alt="Mountains" width= 100%>
+                        <h4>Rainer</h4>
+                        <p>Prof. an der BO</p>
+                    </div>
                 </div>
-            </div>
-            <div class="column cars">
-                <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
-                    <h4>Classic</h4>
-                    <p>Lorem ipsum dolor..</p>
+                
+                 <div class="column nature">
+                    <div class="content">
+                        <img src="rainer.jpeg" alt="Mountains"width= 100%>
+                        <h4>Rainer</h4>
+                        <p>Prof. an der BO</p>
+                    </div>
                 </div>
-            </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="sulf.jpeg"  alt="Lights" style="width:100%">
+                        <h4>Lights</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="logo.png" alt="Nature" style="width:100%">
+                        <h4>Forest</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
 
-            <div class="column people">
-                <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
-                    <h4>Girl</h4>
-                    <p>Lorem ipsum dolor..</p>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="logo.png" alt="Car" style="width:100%">
+                        <h4>Retro</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
                 </div>
-            </div>
-            <div class="column people">
-                <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
-                    <h4>Man</h4>
-                    <p>Lorem ipsum dolor..</p>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="logo.png" alt="Car" style="width:100%">
+                        <h4>Fast</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
                 </div>
-            </div>
-            <div class="column people">
-                <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
-                    <h4>Woman</h4>
-                    <p>Lorem ipsum dolor..</p>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="logo.png" alt="Car" style="width:100%">
+                        <h4>Classic</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
                 </div>
-            </div>
-            <!-- END GRID -->
 
-            <script>
-                filterSelection("all") // Execute the function and show all columns
-                function filterSelection(c) {
-                    var x, i;
-                    x = document.getElementsByClassName("column");
-                    if (c == "all") c = "";
-                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-                    for (i = 0; i < x.length; i++) {
-                        w3RemoveClass(x[i], "show");
-                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                    }
-                }
+                <div class="column people">
+                    <div class="content">
+                        <img src="logo.png" alt="People" style="width:100%">
+                        <h4>Girl</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="logo.png" alt="People" style="width:100%">
+                        <h4>Man</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="logo.png" alt="People" style="width:100%">
+                        <h4>Woman</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
 
-                // Show filtered elements
-                function w3AddClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {
-                            element.className += " " + arr2[i];
+                <!-- END GRID -->
+
+                <script>
+                    filterSelection("all") // Execute the function and show all columns
+                    function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName("column");
+                        if (c == "all") c = "";
+                        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                        for (i = 0; i < x.length; i++) {
+                            w3RemoveClass(x[i], "show");
+                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
                         }
                     }
-                }
 
-                // Hide elements that are not selected
-                function w3RemoveClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    // Show filtered elements
+                    function w3AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {
+                                element.className += " " + arr2[i];
+                            }
                         }
                     }
-                    element.className = arr1.join(" ");
-                }
 
-                // Add active class to the current button (highlight it)
-                var btnContainer = document.getElementById("myBtnContainer");
-                var btns = btnContainer.getElementsByClassName("btn");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function() {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
+                    // Hide elements that are not selected
+                    function w3RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                            }
+                        }
+                        element.className = arr1.join(" ");
+                    }
 
-            </script>
+                    // Add active class to the current button (highlight it)
+                    var btnContainer = document.getElementById("myBtnContainer");
+                    var btns = btnContainer.getElementsByClassName("btn");
+                    for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function() {
+                            var current = document.getElementsByClassName("active");
+                            current[0].className = current[0].className.replace(" active", "");
+                            this.className += " active";
+                        });
+                    }
+
+                </script>
 
 
 
@@ -405,8 +435,8 @@ span.psw {
 
 
 
+            </div>
         </div>
-    </div>
 </body>
 
 
