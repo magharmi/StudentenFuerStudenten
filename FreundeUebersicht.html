@@ -1,241 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
-
-
-    <style>
-        /*freunde übersicht*/
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f1f1f1;
-            font-family: Arial;
-        }
-
-        /* Center website */
-
-        .main {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h1 {
-            font-size: 50px;
-            word-break: break-all;
-        }
-
-
-        /*abstand zum oberen rand*/
-
-        .row {
-            margin: -70px -16px;
-        }
-
-        /* Add padding BETWEEN each column (if you want) */
-
-        .row,
-        .row>.column {
-            padding: 8px;
-        }
-
-        /* Create three equal columns that floats next to each other */
-
-        .column {
-            float: left;
-            width: 33.33%;
-            display: none;
-            /* Hide columns by default */
-        }
-
-        /* Clear floats after rows */
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Content */
-
-        .content {
-            background-color: white;
-            padding: 10px;
-        }
-
-        /* The "show" class is added to the filtered elements */
-
-        .show {
-            display: block;
-        }
-
-
-
-        /* Add padding to containers */
-
-        .container {
-            padding: 16px;
-        }
-
-        /* Full-width input fields */
-
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus,
-        input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-        /* Overwrite default styles of hr */
-
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* Set a style for the submit/register button */
-
-        .registerbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .registerbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-
-        a {
-            color: dodgerblue;
-        }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-
-        .signin {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-
-        /* Bordered form */
-
-        form {
-            border: 3px solid #f1f1f1;
-        }
-
-        /* Full-width inputs */
-
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        /* Set a style for all buttons */
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        /* Add a hover effect for buttons */
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        /* Extra style for the cancel button (red) */
-
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
-        }
-
-        /* Center the avatar image inside this container */
-
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-        }
-
-        /* Avatar image */
-
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
-
-        /* Add padding to containers */
-
-        .container {
-            padding: 16px;
-        }
-
-        /* The "Forgot password" text */
-
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: 100%;
-            }
-        }
-
-
-        #freundetxt {
-
-            margin-top: 100px;
-
-        }
-
-        #FreundeUebersicht {
-            width: 66%;
-            max-width: 960;
-            margin: 0 auto;
-        }
-    </style>
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <div class="topnav" id="myTopnav">
@@ -247,9 +13,7 @@
             <a href="Profil.html">Profil</a>
             <a href="login.html">Login</a>
         </div>
-
         <input type="text" id="suchfeld" placeholder="Suche...">
-
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -267,172 +31,172 @@
                 y.className = "topbartexte";
             }
         }
+
     </script>
 
+    <style>
+        /* Add padding BETWEEN each column (if you want) */
+
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 33.33%;
+        }
+
+        /* Clear floats after rows */
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+
+        .content {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19)
+        }
+
+        /* Add padding to containers */
+
+        .container {
+            padding: 16px;
+        }
+
+        /* Avatar image */
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        /* Add padding to containers */
+
+        .container {
+            padding: 16px;
+        }
+
+        .content img {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            width: auto;
+            max-width: 15em;
+            max-height: 15em;
+        }
+
+        #FreundeUebersicht {
+            width: 80%;
+            max-width: 960;
+            margin: 0 auto;
+        }
+
+        #FreundeUeberschriftDiv {
+            display: inline-block;
+        }
+
+        #FreundeUeberschrift {
+            margin: 0.5em;
+        }
+
+    </style>
 </head>
 
 <body>
-
+    <p class="headerabstand"> </p>
     <div id="FreundeUebersicht">
+        <div id="FreundeUeberschriftDiv">
+            <img id="FreundeLogo" src="freunde.png" width="100em">
+            <h1 id="FreundeUeberschrift">Freunde</h1>
+        </div>
 
-
-
-        <h2>sas</h2>
-
-        <p>
-
-            <img src="freunde.png" align="middle" width="100">
-            <FONT SIZE="10 id=" freundetxt "">Freunde</FONT>
-
-        </p>
         <!-- Portfolio Gallery Grid -->
-
         <div class="row">
-
-
-            <div class="column nature">
-
+            <div class="column">
                 <div class="content">
-
-                    <img src="rainer.jpeg" alt="Mountains" width="100%">
+                    <img class="Profilbild" src="rainer.jpeg" alt="Rainer">
                     <h4>Rainer</h4>
                     <p>Prof. an der BO</p>
                 </div>
             </div>
-
-            <div class="column nature">
+            <div class="column">
                 <div class="content">
-                    <img src="rainer.jpeg" alt="Mountains" width="100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Rainer</h4>
                     <p>Prof. an der BO</p>
                 </div>
             </div>
-
-            <div class="column nature">
+            <div class="column">
                 <div class="content">
-                    <img src="rainer.jpeg" alt="Mountains" width="100%">
+                    <img class="Profilbild" src="rainer.jpeg" alt="Rainer">
                     <h4>Rainer</h4>
                     <p>Prof. an der BO</p>
                 </div>
             </div>
-            <div class="column nature">
+            <div class="column">
                 <div class="content">
-                    <img src="sulf.jpeg" alt="Lights" style="width:100%">
+                    <img class="Profilbild" src="rainer.jpeg" alt="Rainer">
                     <h4>Lights</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-            <div class="column nature">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="Nature" style="width:100%">
+                    <img class="Profilbild" src="rainer.jpeg" alt="Rainer">
                     <h4>Forest</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-
-            <div class="column cars">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
+                    <img class="Profilbild" src="rainer.jpeg" alt="Rainer">
                     <h4>Retro</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-            <div class="column cars">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Fast</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-            <div class="column cars">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="Car" style="width:100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Classic</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-
-            <div class="column people">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Girl</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-            <div class="column people">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Man</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-            <div class="column people">
+            <div class="column">
                 <div class="content">
-                    <img src="logo.png" alt="People" style="width:100%">
+                    <img class="Profilbild" src="logo.png" alt="Logo">
                     <h4>Woman</h4>
                     <p>Lorem ipsum dolor..</p>
                 </div>
             </div>
-
-            <!-- END GRID -->
-
-            <script>
-                filterSelection("all") // Execute the function and show all columns
-                function filterSelection(c) {
-                    var x, i;
-                    x = document.getElementsByClassName("column");
-                    if (c == "all") c = "";
-                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-                    for (i = 0; i < x.length; i++) {
-                        w3RemoveClass(x[i], "show");
-                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                    }
-                }
-
-                // Show filtered elements
-                function w3AddClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {
-                            element.className += " " + arr2[i];
-                        }
-                    }
-                }
-
-                // Hide elements that are not selected
-                function w3RemoveClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);
-                        }
-                    }
-                    element.className = arr1.join(" ");
-                }
-
-                // Add active class to the current button (highlight it)
-                var btnContainer = document.getElementById("myBtnContainer");
-                var btns = btnContainer.getElementsByClassName("btn");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function() {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
-            </script>
-
-
-
-
-
-
-
-
         </div>
     </div>
 </body>
@@ -459,6 +223,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
