@@ -1063,7 +1063,7 @@ a {
     font-size: 110%
 }
 
-.w3-card{
+.w3-card {
     height: 100%;
 }
 
@@ -2277,7 +2277,7 @@ input {
     }
 }
 
-.headerabstand{
+.headerabstand {
     font-size: 1px;
     padding-bottom: 55px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19)
@@ -2285,11 +2285,4 @@ input {
 
 
 
-
-
-#freundetxt {
-   
-    margin-top: 500px;
- 
-}
 
