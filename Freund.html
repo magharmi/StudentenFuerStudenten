@@ -44,10 +44,30 @@
 
 
         #profilbild {
-
             margin: -30% 40% 50% 30%;
-
         }
+
+        #name {
+            margin: -30% 100% 15% 100%;
+            font-family: serif;
+            font-size: 300%;
+            width: 100%;
+        }
+
+        #hochschule {
+            margin: -18% 100% 15% 100%;
+            font-family: serif;
+            font-size: 150%;
+            width: 100%;
+        }
+
+        #studiengang {
+            margin: -16% 100% 15% 100%;
+            font-family: serif;
+            font-size: 150%;
+            width: 100%;
+        }
+
 
 
         #profilbild card {
@@ -70,7 +90,7 @@
 
 
         div.personbeschreibung {
-            background-color: lightgrey;
+            background-color: darkgrey;
             padding: 25px;
         }
 
@@ -85,6 +105,18 @@
                 font-size: 20px;
             }
         }
+
+
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: red;
+            padding: 14px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -95,6 +127,9 @@
     <p class="headerabstand"> </p>
     <div style="width: 500px; height: 60px; background: laven">
         <img src="banner.jpg" class="" width="2100px" height="250px" />
+        <p id="name">Rainer Lütticke</p>
+        <p id="hochschule">Hochschule Bochum</p>
+        <p id="studiengang">Informatik</p>
         <div id="profilbild">
 
 
@@ -110,7 +145,7 @@
                     <a href="#"><i class="fa fa-linkedin"></i></a>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                 </div>
-
+                <button type="button" class="block">Freund entfernen</button>
 
             </div>
 
