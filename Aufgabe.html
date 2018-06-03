@@ -34,12 +34,38 @@
             }
         }
 
+
     </script>
+    
+    <style>
+                main {
+            min-height: 30em;
+            padding: 3em;
+            background-image: repeating-radial-gradient( circle at 0 0, #fff, #ddd 50px);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 2em;
+            padding: 2em;
+            border: 1px dotted;
+        }
+    </style>
 
 </head>
 
 <body>
-
+    <p class="headerabstand"> </p>
+    <h1>Teile Aufgaben mit Anderen</h1>
+<main>
+	<h2>Lade deine Aufgaben hoch</h2>
+	<form method="post" enctype="multipart/form-data">
+		<label> Wähle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.
+			<input name="datei"
+			type="file" size="50" accept="text/*"> </label>
+		<button>Aufgaben hochladen</button>
+	</form>
+</main>
 </body>
 
 
