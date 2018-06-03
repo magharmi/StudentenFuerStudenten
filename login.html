@@ -12,68 +12,14 @@
     </div>
 
     <style>
-        #register {
+        #Registrieren {
             width: 80%;
             max-width: 960px;
             margin: 0 auto;
         }
 
         * {
-            box-sizing: border - box
-        }
-
-        /* Add padding to containers */
-
-        .container {
-            padding: 16 px;
-        }
-
-        /* Full-width input fields */
-
-        input[type=text],
-        input[type=password] {
-            width: 100 %;
-            padding: 15 px;
-            margin: 5 px 0 22 px 0;
-            display: inline - block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]: focus,
-        input[type=password]: focus {
-            background - color: #ddd;
-            outline: none;
-        }
-
-        /* Overwrite default styles of hr */
-
-        hr {
-            border: 1 px solid# f1f1f1;
-            margin - bottom: 25 px;
-        }
-
-        /* Set a style for the submit/register button */
-
-        .registerbtn {
-            background - color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .registerbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-
-        a {
-            color: dodgerblue;
+            box-sizing: border-box
         }
 
         /* Set a grey background color and center the text of the "sign in" section */
@@ -83,14 +29,10 @@
             text-align: center;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
         /* Full-width input fields */
 
-        input[type=text],
-        input[type=password] {
+        #Registrieren input[type=text],
+        #Registrieren input[type=password] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -98,32 +40,6 @@
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
-
-        /* Set a style for all buttons */
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        /* Extra styles for the cancel button */
-
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #d3d3d3;
-        }
-
-        /* Center the image and position the close button */
 
         .imgcontainer {
             text-align: center;
@@ -136,70 +52,9 @@
             border-radius: 50%;
         }
 
-        .container {
-            padding: 16px;
-        }
-
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
-
-        /* The Modal (background) */
-
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-            padding-top: 60px;
-        }
-
-        /* Modal Content/Box */
-
-        .modal-content {
-            background-color: #D3D3D3;
-            margin: 5% auto 15% auto;
-            /* 5% from the top, 15% from the bottom and centered */
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button (x) */
-
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: red;
-            cursor: pointer;
-        }
-
         /* Add Zoom Animation */
 
-        .animate {
+        #Registrieren .animate {
             -webkit-animation: animatezoom 0.6s;
             animation: animatezoom 0.6s
         }
@@ -222,86 +77,9 @@
             }
         }
 
-        /* Change styles for span and cancel button on extra small screens */
-
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: 100%;
-            }
-        }
-
-
-        /*login*/
-
-        <style>body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Full-width input fields */
-
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        /* Set a style for all buttons */
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        /* Extra styles for the cancel button */
-
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
-        }
-
-        /* Center the image and position the close button */
-
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
-
-        .container {
-            padding: 16px;
-        }
-
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
-
         /* The Modal (background) */
 
-        .modal {
+        #Registrieren .modal {
             display: none;
             /* Hidden by default */
             position: fixed;
@@ -320,230 +98,86 @@
             /* Fallback color */
             background-color: rgba(0, 0, 0, 0.4);
             /* Black w/ opacity */
-            padding-top: 60px;
-        }
-
-        /* Modal Content/Box */
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto;
-            /* 5% from the top, 15% from the bottom and centered */
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button (x) */
-
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: red;
-            cursor: pointer;
-        }
-
-        /* Add Zoom Animation */
-
-        .animate {
-            -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
-        }
-
-        @-webkit-keyframes animatezoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-            to {
-                -webkit-transform: scale(1)
-            }
-        }
-
-        @keyframes animatezoom {
-            from {
-                transform: scale(0)
-            }
-            to {
-                transform: scale(1)
-            }
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: 100%;
-            }
-        }
-
-
-        /*register*/
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        /* Full-width input fields */
-
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        /* Add a background color when the inputs get focus */
-
-        input[type=text]:focus,
-        input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-        /* Set a style for all buttons */
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        button:hover {
-            opacity: 1;
-        }
-
-        /* Extra styles for the cancel button */
-
-        .cancelbtn {
-            padding: 14px 20px;
-            background-color: #f44336;
-        }
-
-        /* Float cancel and signup buttons and add an equal width */
-
-        .cancelbtn,
-        .signupbtn {
-            float: left;
-            width: 50%;
-        }
-
-        /* Add padding to container elements */
-
-        .container {
-            padding: 16px;
-        }
-
-        /* The Modal (background) */
-
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: #474e5d;
             padding-top: 50px;
         }
 
         /* Modal Content/Box */
 
-        .modal-content {
+        #Registrieren .modal-content {
             background-color: #fefefe;
-            margin: 5% auto 15% auto;
-            /* 5% from the top, 15% from the bottom and centered */
+            margin: 6% auto 15% auto;
+            /* 6% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
             width: 80%;
             /* Could be more or less, depending on screen size */
         }
 
-        /* Style the horizontal ruler */
-
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* The Close Button (x) */
-
-        .close {
-            position: absolute;
-            right: 35px;
-            top: 15px;
-            font-size: 40px;
-            font-weight: bold;
-            color: #f1f1f1;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #f44336;
-            cursor: pointer;
-        }
-
-        /* Clear floats */
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Change styles for cancel button and signup button on extra small screens */
-
-        @media screen and (max-width: 300px) {
-            .cancelbtn,
-            .signupbtn {
-                width: 100%;
-            }
+        #Registrieren a {
+            color: dodgerblue;
+            font-size: 1.1em;
         }
 
         #Loginbereich {
-            margin: 20px 0 3em 0;
+            margin: 20px auto 3em auto;
         }
 
         #LoginLogo {
             margin: 10px auto;
         }
 
-        #LoginRegistrieren {
-            padding-bottom: 7px;
+        .LoginButtons {
+            padding-bottom: 2em;
+            margin: 0.4em auto;
+            width: 100%;
         }
 
-        #LoginRegistrieren button {
+        .LoginButtons button {
             width: 150px;
+            max-width: 960px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .LoginButtons button:hover {
+            opacity: 0.8;
+        }
+
+        .LoginButtons .cancelbtn {
+            background-color: #f44336;
+        }
+
+        .modalcontainer {
+            margin: 1em 5em 0em 5em;
+        }
+
+        #LoginTextAusrichten:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #DatenMerken {
+            width: 50%;
+            text-align: left;
+            float: left;
+        }
+
+        #DatenMerken input[type=checkbox] {
+            width: auto;
+            margin: 0.33em 1em;
+        }
+
+        #PasswortVergessen {
+            width: 50%;
+            text-align: right;
+            float: left;
+        }
+
+        #Beschreibung {
+            text-align: justify;
         }
 
     </style>
@@ -551,66 +185,64 @@
 
 <body>
     <p class="headerabstand"> </p>
-    <div id="register">
-        <div id="Loginbereich">
-            <div class="card">
-                <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
-                <p class="title">Lernen auf Augenhöhe</p>
-                <h2>Studenten für Studenten</h2>
-                <div id="LoginRegistrieren">
-                    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
-                    <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
-                </div>
-                <div id="id01" class="modal">
-                    <form class="modal-content animate" action="/action_page.php">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <img src="logo.png" alt="Avatar" class="avatar">
-                        </div>
-                        <div class="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Benutzername" name="uname" required>
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Passwort" name="psw" required>
-                            <button type="submit">Einloggen</button>
-                            <label><input type="checkbox" checked="checked" name="remember">Daten merken</label>
-                        </div>
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
-                            <span class="psw">Passwort <a href="#">vergessen?</a></span>
-                        </div>
-                    </form>
-                </div>
-                <script>
-                    // Get the modal
-                    var modal = document.getElementById('id01');
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-
-                </script>
+    <div id="Registrieren">
+        <div id="Loginbereich" class="card">
+            <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
+            <p class="title">Lernen auf Augenhöhe</p>
+            <h2>Studenten für Studenten</h2>
+            <div class="LoginButtons">
+                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+                <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
             </div>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="logo.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="modalcontainer">
+                        <input type="text" placeholder="Benutzername" name="uname" required>
+                        <input type="password" placeholder="Passwort" name="psw" required>
+                        <div id="LoginTextAusrichten">
+                            <div id="DatenMerken">
+                                <input type="checkbox" checked="checked" name="remember">Daten merken
+                            </div>
+                            <div id="PasswortVergessen">
+                                <a href="#">Passwort vergessen?</a>
+                            </div>
+                        </div>
+                        <div class="LoginButtons">
+                            <button type="submit">Einloggen</button>
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+            </script>
             <div id="id02" class="modal">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <form class="modal-content" action="/action_page.php">
-                    <div class="container">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="logo.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="modalcontainer">
                         <h1>Registrieren</h1>
                         <p>Um ein Konto zu erstellen, fülle bitte die Felder aus.</p>
-                        <hr>
-                        <label for="email"><b>Email</b></label>
                         <input type="text" placeholder="E-Mail" name="email" required>
-                        <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Passwort" name="psw" required>
-                        <label for="psw-repeat"><b>Repeat Password</b></label>
                         <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
-                        <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Merke Zugangsdaten</label>
-                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#" style="color:dodgerblue">AGB</a>.</p>
-                        <div class="clearfix">
-                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
+                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
+                        <div class="LoginButtons">
                             <button type="submit" class="signupbtn">Registrieren</button>
+                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
                 </form>
@@ -618,7 +250,6 @@
             <script>
                 // Get the modal
                 var modal = document.getElementById('id02');
-
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function(event) {
                     if (event.target == modal) {
@@ -628,7 +259,7 @@
 
             </script>
         </div>
-        <div id="beschreibung">
+        <div id="Beschreibung">
             <h4>Willkommen auf der Seite Studenten für Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese benötigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die Möglichkeit in Lerngruppen einzutreten oder selber eine zu gründen sowie Aufgaben hoch- bzw. runterzuladen, einen Nachhilfelehrer zu finden, diesen zu bewerten oder selbst zu einem werden kannst. Wir bieten auch die Möglichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu können.</h4>
         </div>
     </div>
