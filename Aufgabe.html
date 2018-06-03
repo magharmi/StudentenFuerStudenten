@@ -34,14 +34,18 @@
             }
         }
 
-
     </script>
-    
+
     <style>
-                main {
+        main {
             min-height: 30em;
             padding: 3em;
             background-image: repeating-radial-gradient( circle at 0 0, #fff, #ddd 50px);
+            width: 70%;
+            margin: auto;
+            border-color: orange;
+            border-width: medium;
+            border-style: solid;
         }
 
         input[type="file"] {
@@ -50,22 +54,25 @@
             padding: 2em;
             border: 1px dotted;
         }
-    </style>
 
+        h1 {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body>
     <p class="headerabstand"> </p>
     <h1>Teile Aufgaben mit Anderen</h1>
-<main>
-	<h2>Lade deine Aufgaben hoch</h2>
-	<form method="post" enctype="multipart/form-data">
-		<label> Wähle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.
-			<input name="datei"
-			type="file" size="50" accept="text/*"> </label>
-		<button>Aufgaben hochladen</button>
-	</form>
-</main>
+    <main>
+        <h2>Lade deine Aufgaben hoch</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label> Wähle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.
+			<input name="datei" type="file" size="50" accept="text/*"> </label>
+            <button id="aHochladen">Aufgaben hochladen</button>
+        </form>
+    </main>
 </body>
 
 
@@ -90,6 +97,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
