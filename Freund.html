@@ -44,14 +44,19 @@
             font - family: arial;
         }
 
-        #banner {
 
-            display: block;
-            margin: 0 auto;
-            height: auto;
-            width: auto;
-            max-width: 100%;
-            max-height: 15em;
+        .responsive {
+            width: 200%;
+            height: 750%;
+            max-height: 750px;
+            max-width: 150px;
+        }
+
+
+        #profilbild {
+
+            margin: -150px 100px 100px 100px;
+
         }
     </style>
 </head>
@@ -64,28 +69,19 @@
 
 
 
-    <div id="banner">
-        <img src="titelbild.jpg" alt="John">
+    <div style="width: 500px; height: 60px; background: laven">
+        <img src="banner.jpg" class="" width="2100px" height="275px" />
+        <div id="profilbild">
+
+
+
+
+
+            <img src="rainer.jpeg" width="auto" height="auto" />
+
+        </div>
+
     </div>
-
-
-    <div class="card">
-
-        <img src="rainer.jpeg" alt="John" style="width:50%">
-
-    </div>
-
-
-</body>
-
-</html>
-
-
-
-
-
-
-
 </body>
 
 
@@ -110,7 +106,6 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
-
     </script>
 </footer>
 
