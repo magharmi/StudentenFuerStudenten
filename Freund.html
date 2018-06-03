@@ -36,14 +36,6 @@
 
 
     <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-        }
-
         .title {
             color: grey;
             font-size: 18px;
@@ -56,6 +48,43 @@
             margin: -30% 40% 50% 30%;
 
         }
+
+
+        #profilbild card {
+            width: 50px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+
+        }
+
+
+
+
+        #txtbox {
+            margin: 200px 50px 30em 30em;
+        }
+
+
+
+        div.personbeschreibung {
+            background-color: lightgrey;
+            padding: 25px;
+        }
+
+        @media screen and (min-width: 600px) {
+            div.personbeschreibung {
+                font-size: 10px;
+            }
+        }
+
+        @media screen and (max-width: 601px) {
+            div. div.personbeschreibung {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -64,18 +93,14 @@
 
 
     <p class="headerabstand"> </p>
-
-
-
-
-
-
     <div style="width: 500px; height: 60px; background: laven">
-        <img src="banner.jpg" class="" width="2100px" height="275px" />
+        <img src="banner.jpg" class="" width="2100px" height="250px" />
         <div id="profilbild">
 
+
+
             <div class="card">
-                <img src="rainer.jpeg" alt="John" style="width:200%">
+                <img src="rainer.jpeg" alt="John" style="width:150%">
                 <h1>Rainer 187</h1>
                 <p class="title">Informatik</p>
                 <p>Hochschule Bochum</p>
@@ -86,19 +111,22 @@
                     <a href="#"><i class="fa fa-facebook"></i></a>
                 </div>
 
+
             </div>
-
-
 
         </div>
 
     </div>
 
 
-    <div id="textbox">
 
+    <div id="txtbox">
+
+        <div class="personbeschreibung">
+            <h1>Beschreibung</h1>
+            <a>Hallo ich bin der Rainer. War 8 Jahre im Knast und hab da über 15 Männer Vergewaltigt. Es ist aber nicht schwul da ich immer #noHomo gesagt hab und wie bekannt ist "nur der gefickte ist schwul". Das wäres es dann von mir meld dich falls du eine Latina bist oder ein Mann der gerne mal die Seife fallen lässt</a>
+        </div>
     </div>
-
 
 
 </body>
