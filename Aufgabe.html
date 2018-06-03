@@ -41,6 +41,11 @@
             min-height: 30em;
             padding: 3em;
             background-image: repeating-radial-gradient( circle at 0 0, #fff, #ddd 50px);
+            width: 70%;
+            margin: auto;
+            border-color: orange;
+            border-width: medium;
+            border-style: solid;
         }
 
         input[type="file"] {
@@ -49,6 +54,11 @@
             padding: 2em;
             border: 1px dotted;
         }
+        
+        h1{
+            text-align: center;
+        }
+        
 
     </style>
 
@@ -62,7 +72,7 @@
         <form method="post" enctype="multipart/form-data">
             <label> Wähle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.
 			<input name="datei" type="file" size="50" accept="text/*"> </label>
-            <button>Aufgaben hochladen</button>
+            <button id="aHochladen">Aufgaben hochladen</button>
         </form>
     </main>
 </body>
