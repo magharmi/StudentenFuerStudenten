@@ -32,13 +32,13 @@
             /* Make it into a block element to fill the whole list */
         }
 
-        #MeineKurseListe li:hover {
-            background-color: #eee;
-            /* Add a hover effect to all links, except for headers */
-        }
+            #MeineKurseListe li:hover {
+                background-color: #eee;
+                /* Add a hover effect to all links, except for headers */
+            }
 
-    </style>
-</head>
+        </style>
+    </head>
 
 <body>
     <!-- Kopierenstart -->
@@ -108,7 +108,7 @@
 
 
     <div class="w3-row-padding w3-center w3-margin-top seiteninhalt">
-        <div class="w3-third">
+        <div class="w3-half">
             <div class="w3-card w3-container" style="min-height:460px">
 
 
@@ -126,7 +126,7 @@
             </div>
         </div>
 
-        <div class="w3-third">
+        <div class="w3-half">
             <div class="w3-card w3-container" style="min-height:460px">
                 <div class="card">
                     <div id="myDIV" class="header">
@@ -183,7 +183,7 @@
                             if (ev.target.tagName === 'LI') {
                                 ev.target.classList.toggle('checked');
                             }
-                        }, false);
+                            }, false);
 
                         // Create a new list item when clicking on the "Add" button
                         function newElement() {
@@ -216,17 +216,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <h2>Suche/Finde</h2><br>
-                <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                <p>Finde oder biete</p>
-                <p>Hilfe an</p>
-            </div>
-        </div>
-
-        <div class="w3-third">
+        <div class="w3-half">
             <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
 
                 <h2>Aufgaben Übersicht</h2>
@@ -247,7 +237,7 @@
         </div>
 
 
-        <div class="w3-third">
+        <div class="w3-half">
             <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
                 <h2>Zuletzt bearbeitete Aufgabe</h2>
                 <p> <img src="aufgaben.jpg" alt="John" style="width:20%">
