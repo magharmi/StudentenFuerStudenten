@@ -99,6 +99,14 @@
             height: 19em;
         }
 
+
+
+        .uploadbutton {
+            background-color: forestgreen;
+            height: auto;
+            width: auto;
+
+        }
     </style>
 </head>
 
@@ -133,7 +141,6 @@
                 y.className = "topbartexte";
             }
         }
-
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
@@ -163,7 +170,6 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
-
         </script>
     </footer>
     <!-- Kopierenende -->
@@ -250,26 +256,12 @@
                                 }
                             });
                         }
-
                     </script>
-
+                    <button class="uploadbutton" onclick="document.getElementById('id01').style.display='block'">Aufgabe hochladen</button>
                 </div>
             </div>
         </div>
-        <div class="w3-half">
-            <div class="w3-card w3-container">
-                <div id="KursZusammenfassung">
-                    <h2>Aufgaben hochlanden</h2>
-                    <h4 id="KursTitel">Java Programmierung</h4>
-                    <p> </p>
-                    <h3>Voraussetzungen:</h3>
-                    <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
-                    <h3>Teilnehmeranzahl:</h3>
-                    <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
 
-                </div>
-            </div>
-        </div>
     </div>
 
 
