@@ -21,6 +21,7 @@
         function myFunction(x) {
             x.classList.toggle("change");
         }
+
     </script>
 
 
@@ -93,6 +94,7 @@
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
         }
+
     </style>
 
 </head>
@@ -231,10 +233,11 @@
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.maxHeight = content.scrollHeight + "em";
                 }
             });
         }
+
     </script>
 </body>
 
@@ -260,6 +263,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
     </script>
 </footer>
 
