@@ -108,10 +108,50 @@
             max-height: 1;
             
         }
-        ul, li
-{
-    list-style: none;
-}
+        
+         #KurseUebersicht {
+            width: 80%;
+            max-width: 960;
+            margin: 0 auto;
+        }
+
+        #MeineKurseListe,
+        .AlleKurseListe {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #MeineKurseListe li,
+        .AlleKurseListe li {
+            border: 1px solid #ddd;
+            /* Add a border to all links */
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            /* Grey background color */
+            padding: 12px;
+            /* Add some padding */
+            text-decoration: none;
+            /* Remove default text underline */
+            font-size: 18px;
+            /* Increase the font-size */
+            color: black;
+            /* Add a black text color */
+            display: block;
+            /* Make it into a block element to fill the whole list */
+        }
+
+        #MeineKurseListe li:hover,
+        .AlleKurseListe li:hover {
+            background-color: #eee;
+            /* Add a hover effect to all links, except for headers */
+        }
+
+        #AlleKurseDiv {
+            margin-top: 0.5em;
+        }
     </style>
 </head>
 
@@ -353,31 +393,8 @@
     </script>
      </div>
     </div>
-</body>
 
 
-<footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
 
             </div>
         </div>
@@ -518,6 +535,8 @@
             });
         }
     </script>
+            
+            
                 </div>
 
             </div>
@@ -525,6 +544,9 @@
 
 
     </div>
+    </div>
+    </div>
+    
 </body>
 
 </html>
