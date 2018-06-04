@@ -17,7 +17,7 @@
             text-align: center;
         }
 
-        #Kurs {
+        #KursBeigetreten {
             width: 960px;
             margin: 0 auto;
         }
@@ -26,19 +26,10 @@
             margin: 0.2em;
         }
 
-        #ts {
-            display: table;
-        }
-
-        .luls {
-            display: table-cell;
-        }
-
         #KursBeschreibung {
             text-align: justify;
         }
 
-        #MeineKurseListe li,
         .AlleKurseListe li {
             border: 1px solid #ddd;
             /* Add a border to all links */
@@ -58,7 +49,6 @@
             /* Make it into a block element to fill the whole list */
         }
 
-        #MeineKurseListe li:hover,
         .AlleKurseListe li:hover {
             background-color: #eee;
             /* Add a hover effect to all links, except for headers */
@@ -104,6 +94,11 @@
         #downloadpos {
             margin: auto;
         }
+
+        #KursBeigetreten .w3-half .w3-card {
+            height: 19em;
+        }
+
     </style>
 </head>
 
@@ -138,6 +133,7 @@
                 y.className = "topbartexte";
             }
         }
+
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
@@ -167,11 +163,12 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
+
         </script>
     </footer>
     <!-- Kopierenende -->
 
-    <div id="Kurs">
+    <div id="KursBeigetreten">
         <div class="w3-row-padding w3-margin-top">
             <div class="w3-half">
                 <div class="w3-card w3-container">
@@ -193,14 +190,14 @@
                     <p id="KursBeschreibung">Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und für die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren ermöglicht, können Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.</p>
                 </div>
             </div>
-            <div class="w3-half">
-                <div class="w3-card w3-container">
+            <div class="w3-col">
+                <div class="w3-card w3-container w3-margin-top">
                     <div id="KursZusammenfassung">
                         <div id="AlleKurseDiv">
-                            <h1 id="AlleKurseUeberschrift">Aufgaben Üersicht</h1>
+                            <h1 id="AlleKurseUeberschrift">Aufgaben Übersicht</h1>
                             <ul class="AlleKurseListe">
                                 <li>
-                                    <button class="collapsible">Übung: Getter & Setter</button>
+                                    <button class="collapsible">Übung: Getter und Setter</button>
                                     <div class="content">
                                         <p> Eine Übung zum richtigen Umgang von getter und setter. </p>
 
@@ -253,6 +250,7 @@
                                 }
                             });
                         }
+
                     </script>
 
                 </div>
