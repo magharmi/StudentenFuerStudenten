@@ -2283,19 +2283,18 @@ input {
 }
 
 .seiteninhalt {
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 
 .footerContent {
-    height: 7.5em;
     background-color: #ff9900;
     position: fixed;
     bottom: 0px;
+    height: 3em;
+    padding: 0.6em;
     text-align: center;
     width: 100%;
-    margin: 1.5em auto 0 auto;
-    padding: 1.5em;
     font-size: 17px;
 }
 
