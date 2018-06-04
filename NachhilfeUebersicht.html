@@ -153,11 +153,11 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a class="active" href="index.html">Startseite</a>
+            <a href="Startseite.html">Startseite</a>
+            <a href="Profil.html">Profil</a>
             <a href="KurseUebersicht.html">Kurse</a>
             <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Profil.html">Profil</a>
-            <a href="login.html">Login</a>
+            <a class="active" href="Nachhilfe.html">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -180,38 +180,6 @@
             }
         }
 
-
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-
-
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("nHilfeButton");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
@@ -219,7 +187,6 @@
         <a href="#datenschutz">Datenschutz</a>
         <a href="#agb">AGB</a>
         <a href="#kontakt">Kontakt</a>
-        <p>Mit ganz viel <span style="font-size:200%;color:red;">&hearts;</span> programmiert!</p>
     </div>
     <footer>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -516,6 +483,39 @@
 
             </div>
         </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+
+
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("nHilfeButton");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        </script>
     </div>
 
 </body>

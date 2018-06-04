@@ -4,257 +4,296 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-
-    <style>
-        #MeineKurseListe {
-            /* Remove default list styling */
-            list-style-type: none;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        #MeineKurseListe li {
-            border: 1px solid #ddd;
-            /* Add a border to all links */
-            margin-top: -1px;
-            /* Prevent double borders */
-            background-color: #f6f6f6;
-            /* Grey background color */
-            padding: 12px;
-            /* Add some padding */
-            text-decoration: none;
-            /* Remove default text underline */
-            font-size: 18px;
-            /* Increase the font-size */
-            color: black;
-            /* Add a black text color */
-            display: block;
-            /* Make it into a block element to fill the whole list */
-        }
-
-            #MeineKurseListe li:hover {
-                background-color: #eee;
-                /* Add a hover effect to all links, except for headers */
-            }
-
-        </style>
-    </head>
-
-<body>
-    <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a class="active" href="index.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
-        </div>
-
-        <input type="text" id="suchfeld" placeholder="Suche...">
-
-        <div class="container" onclick="myFunction(this)" id="burgerbutton">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <a href="index.html">Studenten für Studenten</a>
         </div>
     </div>
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
 
-            var y = document.getElementById("topbartexte");
-            if (y.className === "topbartexte") {
-                y.className += " responsive";
-            } else {
-                y.className = "topbartexte";
+
+
+    <style>
+        /*        <button type="submit" >Einloggen</button> alter login button*/
+
+        #Registrieren {
+            width: 80%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        /* Full-width input fields */
+
+        #Registrieren input[type=text],
+        #Registrieren input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        /* Add Zoom Animation */
+
+        #Registrieren .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
             }
         }
 
-    </script>
-    <p class="headerabstand"></p>
-    <div class="footerContent">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-        <a href="#agb">AGB</a>
-        <a href="#kontakt">Kontakt</a>
-    </div>
-    <footer>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
             }
-
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            to {
+                transform: scale(1)
             }
+        }
 
-        </script>
-    </footer>
-    <!-- Kopierenende -->
+        /* The Modal (background) */
 
+        #Registrieren .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 50px;
+        }
 
-    <div class="w3-row-padding w3-center w3-margin-top seiteninhalt">
-        <div class="w3-half">
-            <div class="w3-card w3-container" style="min-height:460px">
+        /* Modal Content/Box */
 
+        #Registrieren .modal-content {
+            background-color: #fefefe;
+            margin: 6% auto 15% auto;
+            /* 6% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
 
-                <div id="MeineKurseDiv">
-                    <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-                    <ul id="MeineKurseListe">
-                        <li><a href="Kurs.html">Java Programmierung</a></li>
-                        <li><a href="#">C Programmierung</a></li>
-                        <li><a href="#">Rechnerarchitektur</a></li>
-                        <li><a href="#">Webtechnologien</a></li>
-                        <li><a href="#">IT-Sicherheit</a></li>
-                    </ul>
-                </div>
+        #Registrieren a {
+            color: dodgerblue;
+            font-size: 1.1em;
+        }
 
+        #Loginbereich {
+            margin: 20px auto 3em auto;
+        }
+
+        #LoginLogo {
+            margin: 10px auto;
+        }
+
+        .LoginButtons {
+            padding-bottom: 2em;
+            margin: 0.4em auto;
+            width: 100%;
+        }
+
+        .LoginButtons button {
+            width: 150px;
+            max-width: 960px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            /*  cursor: pointer;*/
+        }
+
+        .LoginButtons button:hover {
+            opacity: 0.8;
+        }
+
+        .LoginButtons .cancelbtn {
+            background-color: #f44336;
+        }
+
+        .modalcontainer {
+            margin: 1em 5em 0em 5em;
+        }
+
+        #LoginTextAusrichten:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #DatenMerken {
+            width: 50%;
+            text-align: left;
+            float: left;
+        }
+
+        #DatenMerken input[type=checkbox] {
+            width: auto;
+            margin: 0.33em 1em;
+        }
+
+        #PasswortVergessen {
+            width: 50%;
+            text-align: right;
+            float: left;
+        }
+
+        #Beschreibung {
+            text-align: justify;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="headerabstand"> </p>
+    <div id="Registrieren">
+        <div id="Loginbereich" class="card">
+            <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
+            <p class="title">Lernen auf Augenhöhe</p>
+            <h2>Studenten für Studenten</h2>
+            <div class="LoginButtons">
+                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+                <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
             </div>
-        </div>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="logo.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="modalcontainer">
+                        <input type="text" placeholder="Benutzername" name="uname" required>
+                        <input type="password" placeholder="Passwort" name="psw" required>
+                        <div id="LoginTextAusrichten">
+                            <div id="DatenMerken">
+                                <input type="checkbox" checked="checked" name="remember">Daten merken
+                            </div>
+                            <div id="PasswortVergessen">
+                                <a href="#">Passwort vergessen?</a>
+                            </div>
+                        </div>
+                        <div class="LoginButtons">
+                            <button type="submit" onclick="window.location.replace('Startseite.html')">Einloggen</button>
 
-        <div class="w3-half">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div class="card">
-                    <div id="myDIV" class="header">
-                        <h2>To-Do-Liste</h2>
-                        <div class="button-group">
-                            <input type="text" id="myInput" placeholder="Was merken?">
-                            <script>
-                                var input = document.getElementById("myInput");
-                                input.addEventListener("keyup", function(event) {
-                                    event.preventDefault();
-                                    if (event.keyCode === 13) {
-                                        newElement();
-                                    }
-                                });
 
-                            </script>
-
-                            <span onclick="newElement()" class="addBtn">Hinzufügen</span>
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
-
-                    <ul id="ToDoListe">
-                        <li>Mathe lernen</li>
-                        <li class="checked">Vortrag vorbereiten</li>
-                        <li>Physikhefter ordnen</li>
-                        <li>Hausarbeit abgeben</li>
-                    </ul>
-
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
-                        }
-
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
-                        for (i = 0; i < close.length; i++) {
-                            close[i].onclick = function() {
-                                var div = this.parentElement;
-                                div.style.display = "none";
-                            }
-                        }
-
-                        // Add a "checked" symbol when clicking on a list item
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function(ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                            }, false);
-
-                        // Create a new list item when clicking on the "Add" button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("Du musst etwas eingeben!");
-                            } else {
-                                document.getElementById("ToDoListe").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
-                            for (i = 0; i < close.length; i++) {
-                                close[i].onclick = function() {
-                                    var div = this.parentElement;
-                                    div.style.display = "none";
-                                }
-                            }
-                        }
-
-                    </script>
-                </div>
+                </form>
             </div>
-        </div>
-        <div class="w3-half">
-            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
 
-                <h2>Aufgaben Übersicht</h2>
-                <p>
-                    <img src="aufgaben.jpg" alt="John" style="width:20%">
-                    <p>
-                        <div id="MeineKurseDiv">
-
-                            <ul id="MeineKurseListe">
-                                <li><a href="Kurs.html">Java: Aufgabe 3</a></li>
-                                <li><a href="#">Mathe: Aufgabe 3</a></li>
-                                <li><a href="#">Java: Aufgabe 2</a></li>
-                                <li><a href="#">Java: Aufgabe 1</a></li>
-                                <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
-                            </ul>
+            </script>
+            <div id="id02" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="logo.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="modalcontainer">
+                        <h1>Registrieren</h1>
+                        <p>Um ein Konto zu erstellen, fülle bitte die Felder aus.</p>
+                        <input type="text" placeholder="E-Mail" name="email" required>
+                        <input type="password" placeholder="Passwort" name="psw" required>
+                        <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
+                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
+                        <div class="LoginButtons">
+                            <button type="submit" class="signupbtn">Registrieren</button>
+                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
+                    </div>
+                </form>
             </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id02');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+            </script>
         </div>
-
-
-        <div class="w3-half">
-            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
-                <h2>Zuletzt bearbeitete Aufgabe</h2>
-                <p> <img src="aufgaben.jpg" alt="John" style="width:20%">
-                    <p>
-                        <div id="MeineKurseDiv">
-
-                            <ul id="MeineKurseListe">
-                                <li><a href="Kurs.html">Java: Aufgabe 3</a></li>
-                                <li><a href="#">Mathe: Aufgabe 3</a></li>
-                                <li><a href="#">Java: Aufgabe 2</a></li>
-                                <li><a href="#">Java: Aufgabe 1</a></li>
-                                <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
-                            </ul>
-                        </div>
-            </div>
+        <div id="Beschreibung">
+            <h4>Willkommen auf der Seite Studenten für Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese benötigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die Möglichkeit in Lerngruppen einzutreten oder selber eine zu gründen sowie Aufgaben hoch- bzw. runterzuladen, einen Nachhilfelehrer zu finden, diesen zu bewerten oder selbst zu einem werden kannst. Wir bieten auch die Möglichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu können.</h4>
         </div>
     </div>
 </body>
+
+<footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+    </script>
+</footer>
 
 </html>
