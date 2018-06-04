@@ -11,7 +11,11 @@
         </div>
     </div>
 
+
+
     <style>
+        /*        <button type="submit" >Einloggen</button> alter login button*/
+
         #Registrieren {
             width: 80%;
             max-width: 960px;
@@ -179,7 +183,6 @@
         #Beschreibung {
             text-align: justify;
         }
-
     </style>
 </head>
 
@@ -211,7 +214,9 @@
                             </div>
                         </div>
                         <div class="LoginButtons">
-                            <button type="submit" href="index.html">Einloggen</button>
+                            <button type="submit" onclick="window.location.replace('index.html')">Einloggen</button>
+
+
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
@@ -226,7 +231,6 @@
                         modal.style.display = "none";
                     }
                 }
-
             </script>
             <div id="id02" class="modal">
                 <form class="modal-content animate" action="/action_page.php">
@@ -256,7 +260,6 @@
                         modal.style.display = "none";
                     }
                 }
-
             </script>
         </div>
         <div id="Beschreibung">
@@ -286,7 +289,6 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
-
     </script>
 </footer>
 
