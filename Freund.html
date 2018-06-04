@@ -109,13 +109,88 @@
 
         .block {
             display: block;
-            width: 100%;
+            width: 150%;
             border: none;
             background-color: red;
-            padding: 14px 5px;
+            padding: 10px 5px;
             font-size: 16px;
             cursor: pointer;
             text-align: center;
+            margin: 0.4em auto;
+            color: white;
+
+        }
+
+        #nachricht {
+            background-color: green;
+
+        }
+
+
+
+
+
+
+
+
+        #Kurs {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        #KursZusammenfassung p {
+            margin: 0.2em;
+        }
+
+        #ts {
+            display: table;
+        }
+
+        .luls {
+            display: table-cell;
+        }
+
+        #KursBeschreibung {
+            text-align: justify;
+        }
+
+
+
+
+        /*listen*/
+
+        #KurseUebersicht {
+            width: 80%;
+            max-width: 960;
+            margin: 0 auto;
+        }
+
+        #MeineKurseListe,
+        .AlleKurseListe {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #MeineKurseListe li,
+        .AlleKurseListe li {
+            border: 1px solid #ddd;
+            /* Add a border to all links */
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            /* Grey background color */
+            padding: 12px;
+            /* Add some padding */
+            text-decoration: none;
+            /* Remove default text underline */
+            font-size: 18px;
+            /* Increase the font-size */
+            color: black;
+            /* Add a black text color */
+            display: block;
+            /* Make it into a block element to fill the whole list */
         }
     </style>
 </head>
@@ -134,20 +209,21 @@
 
 
 
-            <div class="card">
-                <img src="rainer.jpeg" alt="John" style="width:150%">
-                <h1>Rainer 187</h1>
-                <p class="title">Informatik</p>
-                <p>Hochschule Bochum</p>
-                <div style="margin: 24px 0;">
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                </div>
-                <button type="button" class="block">Freund entfernen</button>
 
+            <img src="rainer.jpeg" alt="John" style="width:150%">
+
+
+            <div style="margin: 4px 0px;">
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
             </div>
+
+
+
+            <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
+            <button type="button" id="" class="block">Freund entfernen</button>
 
         </div>
 
@@ -161,8 +237,67 @@
             <h1>Beschreibung</h1>
             <a>Hallo ich bin der Rainer. War 8 Jahre im Knast und hab da über 15 Männer Vergewaltigt. Es ist aber nicht schwul da ich immer #noHomo gesagt hab und wie bekannt ist "nur der gefickte ist schwul". Das wäres dann von mir meld dich falls du eine Latina bist oder ein Mann der gerne mal die Seife fallen lässt</a>
         </div>
-    </div>
 
+        <div id="Kurs">
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <div id="KursZusammenfassung">
+                            <div id="MeineKurseDiv">
+                                <h2 id="MeineKurseUeberschrift">Rainers Kurse</h2>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="Kurs.html">Java Programmierung</a></li>
+                                    <li><a href="#">C Programmierung</a></li>
+                                    <li><a href="#">Rechnerarchitektur</a></li>
+                                    <li><a href="#">Webtechnologien</a></li>
+                                    <li><a href="#">IT-Sicherheit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <div id="KursZusammenfassung">
+                            <div id="MeineKurseDiv">
+                                <h2 id="MeineKurseUeberschrift"> Rainer bietet Hilfe bei...</h2>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="Kurs.html">Java Programmierung</a></li>
+                                    <li><a href="#">C Programmierung</a></li>
+                                    <li><a href="#">Rechnerarchitektur</a></li>
+                                    <li><a href="#">Webtechnologien</a></li>
+                                    <li><a href="#">IT-Sicherheit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <div id="KursZusammenfassung">
+                            <div id="MeineKurseDiv">
+                                <h2 id="MeineKurseUeberschrift"> Benötigt Hilfe bei...</h2>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="#">Java: Aufgabe 1</a></li>
+                                    <li><a href="#">C Programmierung: Pointer</a></li>
+
+                                    <li><a href="#">Mathe: Aufgabe 9</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
 
 </body>
 
