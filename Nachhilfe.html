@@ -215,7 +215,7 @@
                                         <h4>Wähle das Fach aus, für welches du Nachhilfe anbietest</h4>
                                         <li>
                                             <button class="collapsible">Java Programmierung</button>
-                                            <div class="content2">
+                                            <div class="content">
                                                 <ul class="AlleKurseListe">
                                                     <h4>Nenne Themen, bei denen du helfen kannst</h4>
                                                     
@@ -235,7 +235,7 @@
                                         </li>
                                         <li>
                                             <button class="collapsible">C Programmierung</button>
-                                            <div class="content2">
+                                            <div class="content">
                                                 <ul class="AlleKurseListe">
 
                                                     <h4>Nenne Themen, bei denen du helfen kannst</h4>
@@ -316,17 +316,6 @@
         </div>
         <button id="nHilfeButton" type="button" class="block">Nachhilfe eintragen</button>
     </div>
-
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
-
-    </div>
-
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -338,7 +327,7 @@
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.maxHeight = content.scrollHeight + "em";
                 }
             });
         }
