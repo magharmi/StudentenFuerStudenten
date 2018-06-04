@@ -88,29 +88,22 @@
 
         .content {
             padding: 0 18px;
-            max-height: 1;
+            max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
         }
-        
-        .chip {
-    display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-}
 
-.chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #4CAF50;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -119,7 +112,7 @@
     <p class="headerabstand"> </p>
     <div id="KurseUebersicht">
         <div id="AlleKurseDiv">
-            <h1 id="AlleKurseUeberschrift">Aufgabensammlung</h1>
+            <h1 id="AlleKurseUeberschrift">Nachhilfe anbieten</h1>
             <h4>Wähle eine Studiengangrichtung aus</h4>
             <ul class="AlleKurseListe">
                 <li>
@@ -131,64 +124,14 @@
                                 <button class="collapsible">Informatik</button>
                                 <div class="content">
                                     <ul class="AlleKurseListe">
-                                        <h4>Wähle das Fach aus, für welches du Aufgaben suchst</h4>
+                                        <h4>Wähle das Fach aus, für welches du Nachhilfe anbietest</h4>
                                         <li>
                                             <button class="collapsible">Java Programmierung</button>
                                             <div class="content">
                                                 <ul class="AlleKurseListe">
-                                                    <li>
-                                                        <input type="text" id="myInput" placeholder="Was bietest du genau?">
-                                                        <script>
-                                                            var input = document.getElementById("myInput");
-                                                            input.addEventListener("keyup", function(event) {
-                                                            event.preventDefault();
-                                                                if (event.keyCode === 13) {
-                                                                    newElement();
-                                                                }
-                                                            });
-
-                                                        </script>
-                                                        <span onclick="newElement()" class="addBtn">Hinzufuegen</span>
-                                                        <ul id="Prog">
-                                                         
-                                                        </ul>
-                                                        <script>
-                                                         // Create a new list item when clicking on the "Add" button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("Du musst etwas eingeben!");
-                            } else {
-                                document.getElementById("Prog").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
-                            for (i = 0; i < close.length; i++) {
-                                close[i].onclick = function() {
-                                    var div = this.parentElement;
-                                    div.style.display = "none";
-                                }
-                            }
-                        }
-                        
-                        var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    alert("Hallo");
-  }
-}, false);
-                                                            
-                           </script>                             
-                                                    </li>
+                                                    <h4>Gib an, wofür du Hilfe anbietest</h4>
+                                                    <input>
+                                                    
                                                 </ul>
                                             </div>
                                         </li>
@@ -196,7 +139,11 @@ list.addEventListener('click', function(ev) {
                                             <button class="collapsible">C Programmierung</button>
                                             <div class="content">
                                                 <ul class="AlleKurseListe">
-                                                   
+                                                    <h4>Wähle aus, was für Aufgaben zu haben willst</h4>
+                                                    <li><a href="#">C Grundlagen</a></li>
+                                                    <li><a href="#">Zeiger und Arrays</a></li>
+                                                    <li><a href="#">Schleifen</a></li>
+                                                    <li><a href="#">Wie kompiliere ich ein C-Programm</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -204,7 +151,11 @@ list.addEventListener('click', function(ev) {
                                             <button class="collapsible">Objektorientierte Programmierung</button>
                                             <div class="content">
                                                 <ul class="AlleKurseListe">
-                                                 
+                                                    <h4>Wähle aus, was für Aufgaben zu haben willst</h4>
+                                                    <li><a href="#">Java Grundlagen</a></li>
+                                                    <li><a href="#">Konstruktoren</a></li>
+                                                    <li><a href="#">JavaFX</a></li>
+                                                    <li><a href="#">Wie installier ich Eclipse</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -250,9 +201,33 @@ list.addEventListener('click', function(ev) {
                         </ul>
                     </div>
                 </li>
-                
+                <li>
+                    <button class="collapsible">Bauingenieurwesen</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="collapsible">Geodäsie</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="collapsible">Wirtschaft</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="collapsible">Mechatronik und Maschinenbau</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </li>
             </ul>
         </div>
+        <button type="button" class="block">Nachhilfe eintragen</button>
     </div>
 
     <script>
