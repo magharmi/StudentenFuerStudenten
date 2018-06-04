@@ -4,49 +4,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
-        <div class="topbartexte" id="topbartexte">
-            <a href="index.html">Startseite</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a class="active" href="FreundeUebersicht.html">Freunde</a>
-            <a href="Profil.html">Profil</a>
-            <a href="login.html">Login</a>
-        </div>
-        <input type="text" id="suchfeld" placeholder="Suche...">
-        <div class="container" onclick="myFunction(this)" id="burgerbutton">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-
-            var y = document.getElementById("topbartexte");
-            if (y.className === "topbartexte") {
-                y.className += " responsive";
-            } else {
-                y.className = "topbartexte";
-            }
-        }
-    </script>
-
-
-
     <style>
         #userlogo {
             margin: -15% 0% 0% 160%;
         }
 
-
         .title {
             color: grey;
             font-size: 18px;
         }
-
-
 
         #profilbild {
             margin: -30% 40% 50% 30%;
@@ -74,7 +40,6 @@
         }
 
 
-
         #profilbild card {
             width: 50px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -85,13 +50,9 @@
 
         }
 
-
-
-
         #txtbox {
-            margin: 210px 5px 30em 26em;
+            margin: 210px 1em 0 26em;
         }
-
 
         div.personbeschreibung {
             background-color: darkgrey;
@@ -110,7 +71,6 @@
                 font-size: 20px;
             }
         }
-
 
         .block {
             display: block;
@@ -131,18 +91,10 @@
 
         }
 
-
-
-
-
-
-
-
         #Kurs {
-            width: 960px;
-            max-width: 200%;
-            padding-top: 2%;
-            margin-left: 10%;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         #KursZusammenfassung p {
@@ -160,11 +112,6 @@
         #KursBeschreibung {
             text-align: justify;
         }
-
-
-
-
-        /*listen*/
 
         #KurseUebersicht {
             width: 80%;
@@ -199,156 +146,161 @@
             display: block;
             /* Make it into a block element to fill the whole list */
         }
+
     </style>
 </head>
 
 <body>
+    <!-- Kopierenstart -->
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a class="active" href="index.html">Startseite</a>
+            <a href="Profil.html">Profil</a>
+            <a href="KurseUebersicht.html">Kurse</a>
+            <a href="FreundeUebersicht.html">Freunde</a>
+            <a href="Nachhilfe.html">Nachhilfe</a>
+        </div>
 
+        <input type="text" id="suchfeld" placeholder="Suche...">
 
+        <div class="container" onclick="myFunction(this)" id="burgerbutton">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
 
-    <p class="headerabstand"> </p>
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
+        }
+
+    </script>
+    <p class="headerabstand"></p>
+    <div class="footerContent">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#agb">AGB</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
+    <footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+        </script>
+    </footer>
+    <!-- Kopierenende -->
+
     <div style="width: 500px; height: 60px; background: laven">
         <img src="banner.jpg" class="" width="2100px" height="250px" />
         <p id="name">Max Mustermann</p>
         <p id="hochschule">Hochschule Bochum</p>
         <p id="studiengang">BWL-Student</p>
         <div id="profilbild">
-
-
-
             <img id="userlogo" src="freund.png" width="75em">
-
-
-
-
-
-
-
             <img src="bwlJustus.jpg" alt="John" style="width:150%">
-
-
-            <div style="margin: 4px 0px;">
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-            </div>
-
-
-
             <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
             <button type="button" id="" class="block">Freund entfernen</button>
-
         </div>
-
     </div>
-
-
-
     <div id="txtbox">
-
         <div class="personbeschreibung">
             <h1>Beschreibung</h1>
             <a>
             Hallo, ich bin Max Mustermann und studiere BWL seit 9 Semestern an der Hochschule Bochum. Ich bin 30 Jahre alt und gebe schon seit 9 Jahren Nachhilfe zu günstigen Preisen. Das Feedback meiner "Schüler" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Natürlich möchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
             </a>
         </div>
+    </div>
 
-        <div id="Kurs">
-            <div class="w3-row-padding w3-margin-top">
-                <div class="w3-half">
-                    <div class="w3-card w3-container">
-                        <div id="KursZusammenfassung">
-                            <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift">Max´s Kurse</h2>
-                                <ul id="MeineKurseListe">
-                                    <li><a href="Kurs.html">Java Programmierung</a></li>
-                                    <li><a href="#">C Programmierung</a></li>
-                                    <li><a href="#">Rechnerarchitektur</a></li>
-                                    <li><a href="#">Webtechnologien</a></li>
-                                    <li><a href="#">IT-Sicherheit</a></li>
-                                </ul>
-                            </div>
+    <div id="Kurs">
+        <div class="w3-row-padding w3-margin-top">
+            <div class="w3-half">
+                <div class="w3-card w3-container">
+                    <div id="KursZusammenfassung">
+                        <div id="MeineKurseDiv">
+                            <h2 id="MeineKurseUeberschrift">Max´s Kurse</h2>
+                            <ul id="MeineKurseListe">
+                                <li><a href="Kurs.html">Java Programmierung</a></li>
+                                <li><a href="#">C Programmierung</a></li>
+                                <li><a href="#">Rechnerarchitektur</a></li>
+                                <li><a href="#">Webtechnologien</a></li>
+                                <li><a href="#">IT-Sicherheit</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="w3-half">
-                    <div class="w3-card w3-container">
-                        <div id="KursZusammenfassung">
-                            <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift">Max bietet Hilfe bei ...</h2>
-                                <ul id="MeineKurseListe">
-                                    <li><a href="Kurs.html">Java Programmierung</a></li>
-                                    <li><a href="#">C Programmierung</a></li>
-                                    <li><a href="#">Rechnerarchitektur</a></li>
-                                    <li><a href="#">Webtechnologien</a></li>
-                                    <li><a href="#">IT-Sicherheit</a></li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card w3-container">
+                    <div id="KursZusammenfassung">
+                        <div id="MeineKurseDiv">
+                            <h2 id="MeineKurseUeberschrift">Max bietet Hilfe bei ...</h2>
+                            <ul id="MeineKurseListe">
+                                <li><a href="Kurs.html">Java Programmierung</a></li>
+                                <li><a href="#">C Programmierung</a></li>
+                                <li><a href="#">Rechnerarchitektur</a></li>
+                                <li><a href="#">Webtechnologien</a></li>
+                                <li><a href="#">IT-Sicherheit</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="w3-half">
-                    <div class="w3-card w3-container">
-                        <div id="KursZusammenfassung">
-                            <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift">Benötigt Hilfe bei ...</h2>
-                                <ul id="MeineKurseListe">
-                                    <li><a href="#">Java: Aufgabe 1</a></li>
-                                    <li><a href="#">C Programmierung: Pointer</a></li>
-                                    <li><a href="#">Mathe: Aufgabe 9</a></li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card w3-container">
+                    <div id="KursZusammenfassung">
+                        <div id="MeineKurseDiv">
+                            <h2 id="MeineKurseUeberschrift">Benötigt Hilfe bei ...</h2>
+                            <ul id="MeineKurseListe">
+                                <li><a href="#">Java: Aufgabe 1</a></li>
+                                <li><a href="#">C Programmierung: Pointer</a></li>
+                                <li><a href="#">Mathe: Aufgabe 9</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="w3-half">
-                    <div class="w3-card w3-container">
-                        <div id="KursZusammenfassung">
-                            <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift">Zuletzt bearbeitete Aufgaben ...</h2>
-                                <ul id="MeineKurseListe">
-                                    <li><a href="#">Java: Aufgabe 1</a></li>
-                                    <li><a href="#">C Programmierung: Pointer</a></li>
-                                    <li><a href="#">Mathe: Aufgabe 9</a></li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card w3-container">
+                    <div id="KursZusammenfassung">
+                        <div id="MeineKurseDiv">
+                            <h2 id="MeineKurseUeberschrift">Zuletzt bearbeitete Aufgaben ...</h2>
+                            <ul id="MeineKurseListe">
+                                <li><a href="#">Java: Aufgabe 1</a></li>
+                                <li><a href="#">C Programmierung: Pointer</a></li>
+                                <li><a href="#">Mathe: Aufgabe 9</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </body>
-
-
-
-
-<footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
-</footer>
 
 </html>
