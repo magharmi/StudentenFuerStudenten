@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 article,
@@ -1954,7 +1954,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 100000;
-
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Style the links inside the navigation bar */
@@ -2003,9 +2003,9 @@ a {
     /* Hidden by default */
     position: fixed;
     /* Fixed/sticky position */
-    bottom: 20px;
+    bottom: 2em;
     /* Place the button at the bottom of the page */
-    right: 30px;
+    right: 2em;
     /* Place the button 30px from the right */
     z-index: 99;
     /* Make sure it does not overlap */
@@ -2280,15 +2280,17 @@ input {
 .headerabstand {
     font-size: 1px;
     padding-bottom: 55px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.seiteninhalt {
+    margin-bottom: 10em;
 }
 
 
-
-
 .footerContent {
+    height: 7.5em;
     background-color: #ff9900;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     text-align: center;
     width: 100%;
