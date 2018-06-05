@@ -2311,3 +2311,10 @@ input {
 .footerContent p {
     margin: 0;
 }
+
+.mittig {
+    display: block;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
