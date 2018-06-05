@@ -109,148 +109,152 @@
 
 
     <div class="w3-row-padding w3-center w3-margin-top seiteninhalt">
-        <div class="w3-half">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div id="MeineKurseDiv">
-                    <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-                    <ul id="MeineKurseListe">
-                        <li><a href="Kursbeigetreten.html">Java Programmierung</a></li>
-                        <li><a href="#">C Programmierung</a></li>
-                        <li><a href="#">Rechnerarchitektur</a></li>
-                        <li><a href="#">Webtechnologien</a></li>
-                        <li><a href="#">IT-Sicherheit</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="w3-half">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <div class="card">
-                    <div id="myDIV" class="header">
-                        <h2>To-Do-Liste</h2>
-                        <div class="button-group">
-                            <input type="text" id="myInput" placeholder="Was merken?">
-                            <script>
-                                var input = document.getElementById("myInput");
-                                input.addEventListener("keyup", function(event) {
-                                    event.preventDefault();
-                                    if (event.keyCode === 13) {
-                                        newElement();
-                                    }
-                                });
-
-                            </script>
-
-                            <span onclick="newElement()" class="addBtn">Hinzuf&uumlgen</span>
-                        </div>
+        <div class="mittig">
+            <div class="w3-half">
+                <div class="w3-card w3-container" style="min-height:460px">
+                    <div id="MeineKurseDiv">
+                        <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
+                        <ul id="MeineKurseListe">
+                            <li><a href="Kursbeigetreten.html">Java Programmierung</a></li>
+                            <li><a href="#">C Programmierung</a></li>
+                            <li><a href="#">Rechnerarchitektur</a></li>
+                            <li><a href="#">Webtechnologien</a></li>
+                            <li><a href="#">IT-Sicherheit</a></li>
+                        </ul>
                     </div>
 
-                    <ul id="ToDoListe">
-                        <li>Mathe lernen</li>
-                        <li class="checked">Vortrag vorbereiten</li>
-                        <li>Physikhefter ordnen</li>
-                        <li>Hausarbeit abgeben</li>
-                    </ul>
+                </div>
+            </div>
 
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
-                        }
+            <div class="w3-half">
+                <div class="w3-card w3-container" style="min-height:460px">
+                    <div class="card">
+                        <div id="myDIV" class="header">
+                            <h2>To-Do-Liste</h2>
+                            <div class="button-group">
+                                <input type="text" id="myInput" placeholder="Was merken?">
+                                <script>
+                                    var input = document.getElementById("myInput");
+                                    input.addEventListener("keyup", function(event) {
+                                        event.preventDefault();
+                                        if (event.keyCode === 13) {
+                                            newElement();
+                                        }
+                                    });
 
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
-                        for (i = 0; i < close.length; i++) {
-                            close[i].onclick = function() {
-                                var div = this.parentElement;
-                                div.style.display = "none";
+                                </script>
+
+                                <span onclick="newElement()" class="addBtn">Hinzuf&uumlgen</span>
+                            </div>
+                        </div>
+
+                        <ul id="ToDoListe">
+                            <li>Mathe lernen</li>
+                            <li class="checked">Vortrag vorbereiten</li>
+                            <li>Physikhefter ordnen</li>
+                            <li>Hausarbeit abgeben</li>
+                        </ul>
+
+                        <script>
+                            // Create a "close" button and append it to each list item
+                            var myNodelist = document.getElementsByTagName("LI");
+                            var i;
+                            for (i = 0; i < myNodelist.length; i++) {
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                myNodelist[i].appendChild(span);
                             }
-                        }
 
-                        // Add a "checked" symbol when clicking on a list item
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function(ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                        }, false);
-
-                        // Create a new list item when clicking on the "Add" button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("Du musst etwas eingeben!");
-                            } else {
-                                document.getElementById("ToDoListe").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
+                            // Click on a close button to hide the current list item
+                            var close = document.getElementsByClassName("close");
+                            var i;
                             for (i = 0; i < close.length; i++) {
                                 close[i].onclick = function() {
                                     var div = this.parentElement;
                                     div.style.display = "none";
                                 }
                             }
-                        }
 
-                    </script>
+                            // Add a "checked" symbol when clicking on a list item
+                            var list = document.querySelector('ul');
+                            list.addEventListener('click', function(ev) {
+                                if (ev.target.tagName === 'LI') {
+                                    ev.target.classList.toggle('checked');
+                                }
+                            }, false);
+
+                            // Create a new list item when clicking on the "Add" button
+                            function newElement() {
+                                var li = document.createElement("li");
+                                var inputValue = document.getElementById("myInput").value;
+                                var t = document.createTextNode(inputValue);
+                                li.appendChild(t);
+                                if (inputValue === '') {
+                                    alert("Du musst etwas eingeben!");
+                                } else {
+                                    document.getElementById("ToDoListe").appendChild(li);
+                                }
+                                document.getElementById("myInput").value = "";
+
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                li.appendChild(span);
+
+                                for (i = 0; i < close.length; i++) {
+                                    close[i].onclick = function() {
+                                        var div = this.parentElement;
+                                        div.style.display = "none";
+                                    }
+                                }
+                            }
+
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="w3-half">
-            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
+        <div class="mittig">
+            <div class="w3-half">
+                <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
 
-                <h2>Aufgaben &Uumlbersicht</h2>
-                <p>
-                    <img src="aufgaben.jpg" alt="John" style="width:20%">
+                    <h2>Aufgaben &Uumlbersicht</h2>
                     <p>
-                        <div id="MeineKurseDiv">
+                        <img src="aufgaben.jpg" alt="John" style="width:20%">
+                        <p>
+                            <div id="MeineKurseDiv">
 
-                            <ul id="MeineKurseListe">
-                                <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
-                                <li><a href="#">Mathe: Aufgabe 3</a></li>
-                                <li><a href="#">Java: Aufgabe 2</a></li>
-                                <li><a href="#">Java: Aufgabe 1</a></li>
-                                <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
-                            </ul>
-                        </div>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
+                                    <li><a href="#">Mathe: Aufgabe 3</a></li>
+                                    <li><a href="#">Java: Aufgabe 2</a></li>
+                                    <li><a href="#">Java: Aufgabe 1</a></li>
+                                    <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
+                                </ul>
+                            </div>
+                </div>
             </div>
-        </div>
 
 
-        <div class="w3-half">
-            <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
-                <h2>Zuletzt bearbeitete Aufgabe</h2>
-                <p> <img src="aufgaben.jpg" alt="John" style="width:20%">
-                    <p>
-                        <div id="MeineKurseDiv">
+            <div class="w3-half">
+                <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
+                    <h2>Zuletzt bearbeitete Aufgabe</h2>
+                    <p> <img src="aufgaben.jpg" alt="John" style="width:20%">
+                        <p>
+                            <div id="MeineKurseDiv">
 
-                            <ul id="MeineKurseListe">
-                                <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
-                                <li><a href="#">Mathe: Aufgabe 3</a></li>
-                                <li><a href="#">Java: Aufgabe 2</a></li>
-                                <li><a href="#">Java: Aufgabe 1</a></li>
-                                <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
-                            </ul>
-                        </div>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
+                                    <li><a href="#">Mathe: Aufgabe 3</a></li>
+                                    <li><a href="#">Java: Aufgabe 2</a></li>
+                                    <li><a href="#">Java: Aufgabe 1</a></li>
+                                    <li><a href="#">IT-Sicherheit: Aufgabe 5</a></li>
+                                </ul>
+                            </div>
+                </div>
             </div>
         </div>
     </div>
