@@ -111,11 +111,20 @@
         #aHochladen{
             background-color: green;
             width: auto;
+            position: absolute;
+            left: 25%;
+            right: 40%;
+            top: 80%;
+            
         }
         
         #abbrechen{
             background-color: red;
             width: auto;
+            position: absolute;
+            left: 55%;
+            right: 25%;
+            top: 80%;
         }
 
 
@@ -203,6 +212,16 @@
             margin: 2em;
             padding: 2em;
             border: 1px dotted;
+            position: absolute;
+            max-width: 30em;
+            left: 17.5%;
+            
+        }
+        #modalinput{
+            background-color: lightgrey;
+            max-width: 30em;
+            position: absolute;
+            left: 20%;
         }
     </style>
 </head>
@@ -373,7 +392,7 @@
                                             <label> W&aumlhle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.
 			<input name="datei" type="file" size="50" accept="text/*"></label>
                                             <p><br/><br/><br/><br/><br/><br/><br/>Gib den Titel f&uumlr deine Aufgabe ein.</p>
-                                            <input>
+                                            <input id ="modalinput">
                                             
                                             <button id="aHochladen">Aufgaben hochladen</button>
                                             <button id="abbrechen"type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
