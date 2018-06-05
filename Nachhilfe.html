@@ -207,8 +207,8 @@
 
 
         main {
-            min-height: 30em;
-            padding: 3em;
+            min-height: 27em;
+            padding: 1em;
 
             width: 70%;
             margin: auto;
@@ -228,11 +228,19 @@
         }
 
 
-        #confirm,
-        #cancelbtn {
+        .modalButton {
             /* BUTTONS SEITE AN SEITE; GEHT NICHT */
-            display: inline-block;
+            float: left;
         }
+        
+        #confirm{
+            background-color: green;
+        }
+        
+        #cancelbtn{
+            background-color: red;
+        }
+        
     </style>
 </head>
 
@@ -342,10 +350,13 @@
                                                                                     <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung.">
                                                                                     <label for="preis">Preis</label>
                                                                                     <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde">
-                                                                                </main>
+                                                                                    
+                                                                                    <div modalButton>
                                                                                 <button id="confirm" type="button" onclick="document.getElementById('id03').style.display='none'" class="confirm">Abschicken</button>
-                                                                                <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
-
+                                                                                <button id="cancelbtn" type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
+                                                                                </div>
+                                                                                </main>
+                                                                               
 
                                                                                 <script>
                                                                                     // Get the modal
@@ -358,6 +369,7 @@
                                                                                     }
                                                                                 </script>
                                                                             </div>
+                                                                             
 
                                                                         </form>
                                                                     </div>
