@@ -4,22 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
-        <div class="topbartexte" id="topbartexte">
-            <a href="index.html">Studenten f&uumlr Studenten</a>
-        </div>
-    </div>
-
-
 
     <style>
-        /*        <button type="submit" >Einloggen</button> alter login button*/
-
         #Registrieren {
             width: 80%;
             max-width: 960px;
-            margin: 0 auto;
+            margin: 0 auto 5em auto;
         }
 
         * {
@@ -188,7 +178,44 @@
 </head>
 
 <body>
-    <p class="headerabstand"> </p>
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <div class="topbartexte" id="topbartexte">
+            <a href="index.html">Studenten f&uumlr Studenten</a>
+        </div>
+    </div>
+    <p class="headerabstand"></p>
+    <div class="footerContent">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#agb">AGB</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
+    <footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+        </script>
+    </footer>
+
     <div id="Registrieren">
         <div id="Loginbereich" class="card">
             <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
@@ -270,30 +297,5 @@
         </div>
     </div>
 </body>
-
-<footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-
-    </script>
-</footer>
 
 </html>
