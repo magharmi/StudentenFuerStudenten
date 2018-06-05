@@ -108,6 +108,15 @@
 
 
         }
+        #aHochladen{
+            background-color: green;
+            width: auto;
+        }
+        
+        #abbrechen{
+            background-color: red;
+            width: auto;
+        }
 
 
 
@@ -163,6 +172,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             /* Black w/ opacity */
             padding-top: 50px;
+            margin: auto;
         }
 
         /* Modal Content/Box */
@@ -172,19 +182,17 @@
             margin: 6% auto 15% auto;
             /* 6% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
-            width: 80%;
+            width: 70%;
             /* Could be more or less, depending on screen size */
         }
 
 
         main {
             min-height: 30em;
-            padding: 3em;
-
             width: 70%;
             margin: auto;
             border-color: orange;
-            border-width: medium;
+            border-width: auto;
             border-style: solid;
         }
 
@@ -364,11 +372,13 @@
 			<input name="datei" type="file" size="50" accept="text/*"></label>
                                             <p><br/><br/><br/><br/><br/><br/><br/>Gib den Titel f&uumlr deine Aufgabe ein.</p>
                                             <input>
+                                            
                                             <button id="aHochladen">Aufgaben hochladen</button>
+                                            <button id="abbrechen"type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
+                                            
                                         </form>
                                     </main>
-                                    <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
-
+                                    
 
                                     <script>
                                         // Get the modal
