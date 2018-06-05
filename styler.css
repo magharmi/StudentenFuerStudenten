@@ -2382,5 +2382,6 @@ input {
 }
 
 .modalcontainer {
+    text-align: center;
     margin: 1em 5em 0em 5em;
 }
