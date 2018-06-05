@@ -145,6 +145,95 @@
             margin-top: 0.5em;
         }
 
+        <style>.imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+
+
+        /* Add Zoom Animation */
+
+        #hochladen .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Modal (background) */
+
+        #hochladen #modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+
+        #hochladen .modal-content {
+            background-color: #fefefe;
+            margin: 6% auto 15% auto;
+            /* 6% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+
+        main {
+            min-height: 30em;
+            padding: 3em;
+
+            width: 70%;
+            margin: auto;
+            border-color: orange;
+            border-width: medium;
+            border-style: solid;
+        }
+        
+        input{
+            width: 100%;
+            border: 2px solid darkorange;
+            border-radius: 4px;
+        }
+        
+        label{
+            display: block;
+        }
+        
+        
+        #confirm, #cancelbtn{   /* BUTTONS SEITE AN SEITE; GEHT NICHT */
+            display: inline-block;
+        }
+    
+
+
     </style>
 </head>
 
@@ -237,15 +326,48 @@
                                                             <ul class="AlleKurseListe">
                                                                 <h4>Nenne Themen, bei denen du helfen kannst</h4>
 
-                                                                <a href="#openModal"><button>Mathe Nachhilfe</button></a>
+                                                                <a href="#id03"><button>Nachhilfe eintragen</button></a>
 
-                                                                <div id="openModal" class="modalDialog">
-                                                                    <div>
-                                                                        <a href="#close" title="Close" class="close">X</a>
-                                                                        <h2>Mathe Hilfe</h2>
-                                                                        <p>Hier k&oumlnnte ihre Werbung stehen2</p>
-                                                                    </div>
-                                                                </div>
+                                                                        <div id="hochladen">
+                                                                            
+                                                                            <div id="id03" class="modalDialog">
+                                                                                <form class="modal-content animate" action="/action_page.php">
+                                                                                    <div class="imgcontainer">
+                                                                                        <p class="headerabstand"> </p>
+                                                                                        <h1>Nachhilfe anbieten</h1>
+                                                                                        <main>
+                                                                                            <h2>Bitte fülle folgende Felder aus</h2>
+                                                                                            <label for="titel">Titel (wird bei Nachhilfeangebote angezeigt)</label>
+                                                                                            <input type="text" id="titel" placeholder="Beispiel: Biete Hilfe für Java an, insbesondere für JavaFX">
+                                                                                            <label for="ort">Bevorzugter Ort</label>
+                                                                                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum">
+                                                                                            <label for="titel">Voraussichtliche Verfügbarkeit</label>
+                                                                                            <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung. Genaue Uhrzeiten per Nachricht vereinbaren.">
+                                                                                            <label for="preis">Preis</label>
+                                                                                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde">
+                                                                                        </main>
+                                                                                        <button id="confirm" type="button" onclick="document.getElementById('id03').style.display='none'" class="confirm">Abschicken</button>
+                                                                                        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
+
+
+                                                                                        <script>
+                                                                                            // Get the modal
+                                                                                            var modal = document.getElementById('id03');
+                                                                                            // When the user clicks anywhere outside of the modal, close it
+                                                                                            window.onclick = function(event) {
+                                                                                                if (event.target == modal) {
+                                                                                                    modal.style.display = "none";
+                                                                                                }
+                                                                                            }
+
+                                                                                        </script>
+                                                                                    </div>
+
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    
+                                                                
 
 
                                                             </ul>
@@ -362,15 +484,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Nenne Themen, bei denen du Hilfe brauchst</h4>
 
-                                                                    <a href="#openModal"><button>Mathe Nachhilfe</button></a>
-
-                                                                    <div id="openModal" class="modalDialog">
-                                                                        <div>
-                                                                            <a href="#close" title="Close" class="close">X</a>
-                                                                            <h2>Mathe Hilfe</h2>
-                                                                            <p>Hier k&oumlnnte ihre Werbung stehen2</p>
-                                                                        </div>
-                                                                    </div>
+                                                                    
 
 
                                                                 </ul>
