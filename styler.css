@@ -2322,3 +2322,65 @@ input {
     max-width: 1450px;
     margin: 0 auto;
 }
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 6% auto 15% auto;
+    /* 6% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 666px;
+    /* Could be more or less, depending on screen size */
+}
+
+
+
+.LoginButtons {
+    padding-bottom: 2em;
+    margin: 0.4em auto;
+    width: 100%;
+}
+
+.LoginButtons button {
+    width: 150px;
+    max-width: 960px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    /*  cursor: pointer;*/
+}
+
+.LoginButtons button:hover {
+    opacity: 0.8;
+}
+
+.LoginButtons .cancelbtn {
+    background-color: #f44336;
+}
+
+.modalcontainer {
+    margin: 1em 5em 0em 5em;
+}

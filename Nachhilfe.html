@@ -31,41 +31,6 @@
             text-align: center;
         }
 
-        /* The Modal (background) 
-
-        .modalDialog {
-            position: fixed;
-            font-family: Arial, Helvetica, sans-serif;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-            opacity: 0;
-            width: 100% -webkit-transition: opacity 400ms ease-in;
-            -moz-transition: opacity 400ms ease-in;
-            transition: opacity 400ms ease-in;
-            pointer-events: none;
-        }
-
-
-
-        .modalDialog:target {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .modalDialog>div {
-            width: 400px;
-            position: relative;
-            margin: 10% auto;
-            padding: 5px 20px 13px 20px;
-            background: #fefefe;
-        }
-
-*/
-
         .close {
             background: #606061;
             color: #FFFFFF;
@@ -88,10 +53,6 @@
         .close:hover {
             background: #00d9ff;
         }
-
-
-
-
 
         .collapsible {
             background-color: #777;
@@ -145,22 +106,6 @@
             margin-top: 0.5em;
         }
 
-        <style>.imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-
-
-
-        /* Add Zoom Animation */
-
-        #hochladen .animate {
-            -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
-        }
-
-
         @keyframes animatezoom {
             from {
                 transform: scale(0)
@@ -170,73 +115,12 @@
             }
         }
 
-        /* The Modal (background) */
-
-        #hochladen .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-            padding-top: 50px;
-        }
-
-        /* Modal Content/Box */
-
-        #hochladen .modal-content {
-            background-color: #fefefe;
-            margin: 6% auto 15% auto;
-            /* 6% from the top, 15% from the bottom and centered */
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-
-        main {
-            min-height: 27em;
-            padding: 1em;
-
-            width: 70%;
-            margin: auto;
-            border-color: orange;
-            border-width: medium;
-            border-style: solid;
+        .NachhilfeEintragen {
+            background-color: #4CAF50;
         }
 
         label {
             display: block;
-        }
-
-
-        .modalButton {
-            /* BUTTONS SEITE AN SEITE; GEHT NICHT */
-            float: left;
-        }
-
-        #confirm {
-            background-color: #4CAF50;
-        }
-
-        #cancelbtn {
-            background-color: #f44336;
-        }
-
-        .NachhilfeEintragen {
-            background-color: #4CAF50;
         }
 
         .mittig input {
@@ -337,55 +221,7 @@
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe für Java-Programmierung anbieten?</h4>
-
-                                                                    <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
-
-                                                                    <div id="hochladen">
-
-                                                                        <div id="id03" class="modal">
-                                                                            <form class="modal-content animate" action="/action_page.php">
-                                                                                <div class="imgcontainer">
-                                                                                    <p class="headerabstand"> </p>
-                                                                                    <h1>Nachhilfe anbieten</h1>
-                                                                                    <main>
-                                                                                        <h2>Bitte fülle folgende Felder aus</h2>
-                                                                                        <label for="titel">Titel (wird bei Nachhilfeangebote angezeigt)</label>
-                                                                                        <input type="text" id="titel" placeholder="Beispiel: Biete Hilfe für Java an, insbesondere für JavaFX">
-                                                                                        <label for="ort">Bevorzugter Ort</label>
-                                                                                        <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum">
-                                                                                        <label for="titel">Voraussichtliche Verfügbarkeit</label>
-                                                                                        <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung.">
-                                                                                        <label for="preis">Preis</label>
-                                                                                        <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde">
-
-                                                                                        <div modalButton>
-                                                                                            <button id="confirm" type="button" onclick="document.getElementById('id03').style.display='none'" class="confirm">Abschicken</button>
-                                                                                            <button id="cancelbtn" type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
-                                                                                        </div>
-                                                                                    </main>
-
-
-                                                                                    <script>
-                                                                                        // Get the modal
-                                                                                        var modal = document.getElementById('id03');
-                                                                                        // When the user clicks anywhere outside of the modal, close it
-                                                                                        window.onclick = function(event) {
-                                                                                            if (event.target == modal) {
-                                                                                                modal.style.display = "none";
-                                                                                            }
-                                                                                        }
-
-                                                                                    </script>
-                                                                                </div>
-
-
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-
-
-
-
+                                                                    <button onclick="document.getElementById('id03').style.display='block'" class="NachhilfeEintragen">Nachhilfe eintragen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -472,12 +308,41 @@
                         </div>
                     </div>
                 </div>
+                <div id="id03" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="modalcontainer">
+                            <h1>Nachhilfe anbieten</h1>
+                            <h2>Bitte fülle folgende Felder aus</h2>
+                            <label for="titel">Titel (wird bei Nachhilfeangebote angezeigt)</label>
+                            <input type="text" id="titel" placeholder="Beispiel: Biete Hilfe für Java an, insbesondere für JavaFX" required>
+                            <label for="ort">Bevorzugter Ort</label>
+                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required>
+                            <label for="titel">Voraussichtliche Verfügbarkeit</label>
+                            <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung." required>
+                            <label for="preis">Preis</label>
+                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required>
+                            <div class="LoginButtons">
+                                <button type="button" onclick="document.getElementById('id03').style.display='none'">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id03');
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                </script>
             </div>
 
             <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
-
-
                     <div id="MeineKurseDiv">
                         <div id="KurseUebersicht">
                             <div id="AlleKurseDiv">
@@ -496,53 +361,7 @@
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe für Java-Programmierung anfordern?</h4>
-
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
-
-                                                                        <div id="hochladen">
-
-                                                                            <div id="id04" class="modal">
-                                                                                <form class="modal-content animate" action="/action_page.php">
-                                                                                    <div class="imgcontainer">
-                                                                                        <p class="headerabstand"> </p>
-                                                                                        <h1>Hilfe anfordern</h1>
-                                                                                        <main>
-                                                                                            <h2>Bitte fülle folgende Felder aus</h2>
-                                                                                            <label for="titel">Titel (wird bei Hilfesuchenden angezeigt)</label>
-                                                                                            <input type="text" id="titel" placeholder="Beispiel: Suche Hilfe für Java, insbesondere für JavaFX">
-                                                                                            <label for="ort">Bevorzugter Ort</label>
-                                                                                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum">
-                                                                                            <label for="titel">Voraussichtliche Verfügbarkeit</label>
-                                                                                            <input type="text" id="zeit" placeholder="Beispiel: Benötige Hilfe von dd.mm.yyyy bis dd.mm.yyyy.">
-                                                                                            <label for="preis">Preisvorstellung</label>
-                                                                                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde">
-
-                                                                                            <div modalButton>
-                                                                                                <button id="confirm" type="button" onclick="document.getElementById('id04').style.display='none'" class="confirm">Abschicken</button>
-                                                                                                <button id="cancelbtn" type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Abbrechen</button>
-                                                                                            </div>
-                                                                                        </main>
-
-
-                                                                                        <script>
-                                                                                            // Get the modal
-                                                                                            var modal = document.getElementById('id04');
-                                                                                            // When the user clicks anywhere outside of the modal, close it
-                                                                                            window.onclick = function(event) {
-                                                                                                if (event.target == modal) {
-                                                                                                    modal.style.display = "none";
-                                                                                                }
-                                                                                            }
-
-                                                                                        </script>
-                                                                                    </div>
-
-
-                                                                                </form>
-                                                                            </div>
-                                                                        </div>
-
-
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -550,9 +369,7 @@
                                                                 <button class="collapsible">C Programmierung</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-
                                                                         <h4>Hilfe für C-Programmierung anfordern?</h4>
-
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -562,7 +379,6 @@
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe für OO-Programmierung anfordern?</h4>
-
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -572,7 +388,6 @@
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe für Moderne Webtechnologien anfordern?</h4>
-
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -582,7 +397,6 @@
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe für IT-Sicherheit anfordern?</h4>
-
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -633,7 +447,6 @@
                                 <script>
                                     var coll = document.getElementsByClassName("collapsible");
                                     var i;
-
                                     for (i = 0; i < coll.length; i++) {
                                         coll[i].addEventListener("click", function() {
                                             this.classList.toggle("active");
@@ -647,50 +460,44 @@
                                     }
 
                                 </script>
-
-
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
+                <div id="id04" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="modalcontainer">
+                            <h1>Hilfe anfordern</h1>
+                            <h2>Bitte fülle folgende Felder aus</h2>
+                            <label for="titel">Titel (wird bei Hilfesuchenden angezeigt)</label>
+                            <input type="text" id="titel" placeholder="Beispiel: Suche Hilfe für Java, insbesondere für JavaFX" required>
+                            <label for="ort">Bevorzugter Ort</label>
+                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required>
+                            <label for="titel">Voraussichtliche Verfügbarkeit</label>
+                            <input type="text" id="zeit" placeholder="Beispiel: Benötige Hilfe von dd.mm.yyyy bis dd.mm.yyyy." required>
+                            <label for="preis">Preisvorstellung</label>
+                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required>
+
+                            <div class="LoginButtons">
+                                <button type="button" onclick="document.getElementById('id04').style.display='none'">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id04');
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                </script>
             </div>
         </div>
-        <script>
-            function myFunction(x) {
-                x.classList.toggle("change");
-            }
-
-
-            // Get the modal
-            var modal = document.getElementById('myModal');
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("nHilfeButton");
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on the button, open the modal 
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-        </script>
     </div>
 
 </body>
