@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include ("login.php"); ?>
 <html>
 
 <head>
@@ -115,6 +115,7 @@
 </head>
 
 <body>
+
     <!-- Header und Footer -->
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
@@ -165,7 +166,7 @@
                 <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
             </div>
             <div id="id01" class="modal">
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
                         <img src="logo.png" alt="Avatar" class="avatar">
                     </div>
@@ -181,7 +182,7 @@
                             </div>
                         </div>
                         <div class="LoginButtons">
-                            <button type="submit" onclick="window.location.replace('Startseite.html')">Einloggen</button>
+                            <button type="submit"  name=login value="Einloggen">Einloggen</button>
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
@@ -199,7 +200,7 @@
 
             </script>
             <div id="id02" class="modal">
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
                         <img src="logo.png" alt="Avatar" class="avatar">
                     </div>
@@ -207,11 +208,11 @@
                         <h1>Registrieren</h1>
                         <p>Um ein Konto zu erstellen, f&uumllle bitte die Felder aus.</p>
                         <input type="text" placeholder="E-Mail" name="email" required>
-                        <input type="password" placeholder="Passwort" name="psw" required>
+                        <input type="password" placeholder="Passwort" name="psw1" required>
                         <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
                         <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
                         <div class="LoginButtons">
-                            <button type="submit" class="signupbtn">Registrieren</button>
+                            <button type="Submit" name="register" class="signupbtn">Registrieren</button>
                             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
