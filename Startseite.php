@@ -133,19 +133,18 @@
                         <div id="myDIV" class="header">
                             <h2>To-Do-Liste</h2>
                             <div class="button-group">
-                                <input type="text" id="myInput" name="task" placeholder="Was merken?">
-                                <script>
-                                    var input = document.getElementById("myInput");
-                                    input.addEventListener("keyup", function(event) {
-                                        event.preventDefault();
-                                        if (event.keyCode === 13) {
-                                            newElement();
-                                        }
-                                    });
+								<input type="text" id="myInput" name="task" placeholder="Was merken?">
+								<script>
+									var input = document.getElementById("myInput");
+									input.addEventListener("keyup", function(event) {
+										event.preventDefault();
+										if (event.keyCode === 13) {
+											newElement();
+										}
+									});
 
-                                </script>
-
-                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+								</script>
+								<span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
                             </div>
                         </div>
 

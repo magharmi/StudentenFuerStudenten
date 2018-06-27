@@ -212,7 +212,7 @@
                         <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
                         <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
                         <div class="LoginButtons">
-                            <button type="Submit" name="register" class="signupbtn">Registrieren</button>
+                            <button type="submit" name="register" class="signupbtn">Registrieren</button>
                             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
