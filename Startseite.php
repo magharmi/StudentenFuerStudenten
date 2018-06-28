@@ -150,6 +150,37 @@
                             </div>
                         </div>
 
+						<?php
+							$link = mysqli_connect("localhost", "root"); 
+							if (!$link) 
+							{ 
+								die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
+							} 
+							$datenbank = mysqli_select_db($link, "StudentenFuerStudenten"); 
+
+							if (!$datenbank) 
+								{ 
+								echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
+								mysqli_close($link);
+								exit;
+								} 
+								
+							if (!$datenbank) 
+								{ 
+								echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
+								mysqli_close($link);
+								exit;
+								} 
+								
+							$result = mysqli_query($link, "SELECT * FROM todolist");
+							
+							while($row = mysqli_fetch_array($result))
+							{
+								newElementDB($row["aufgabe"]);
+							}
+						?>
+						
+						
 						<ul id="ToDoListe">
 							<li>Mathe lernen</li>
 							<li class="checked">Vortrag vorbereiten</li>
@@ -212,8 +243,35 @@
                                         div.style.display = "none";
                                     }
                                 }
-								
                             }
+							
+                            function newElementDB(aufgabe) {
+                                var li = document.createElement("li");
+                                var inputValue = document.getElementById(aufgabe).value;
+                                var t = document.createTextNode(inputValue);
+                                li.appendChild(t);
+                                if (inputValue === '') {
+                                    alert("Du musst etwas eingeben!");
+                                } else {
+                                    document.getElementById("ToDoListe").appendChild(li);
+                                }
+                                document.getElementById(aufgabe).value = "";
+
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                li.appendChild(span);
+
+                                for (i = 0; i < close.length; i++) {
+                                    close[i].onclick = function() {
+                                        var div = this.parentElement;
+                                        div.style.display = "none";
+                                    }
+                                }
+                            }							
+							
+							
 
                         </script>
                     </div>
