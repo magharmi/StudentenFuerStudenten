@@ -133,27 +133,44 @@
                         <div id="myDIV" class="header">
                             <h2>To-Do-Liste</h2>
                             <div class="button-group">
-								<input type="text" id="myInput" name="task" placeholder="Was merken?">
-								<script>
-									var input = document.getElementById("myInput");
-									input.addEventListener("keyup", function(event) {
-										event.preventDefault();
-										if (event.keyCode === 13) {
-											newElement();
-										}
-									});
+<<<<<<< HEAD
+<<<<<<< HEAD
+							<form method="POST">
+=======
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
+=======
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
+                                <input type="text" id="myInput" name="task" placeholder="Was merken?">
+								
+                                <script>
+                                    var input = document.getElementById("myInput");
+                                    input.addEventListener("keyup", function(event) {
+                                        event.preventDefault();
+                                        if (event.keyCode === 13) {
+                                            newElement();
+                                        }
+                                    });
 
-								</script>
-								<span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+                                </script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                <span onclick="newElement()" type="submit" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+							</form>
+=======
+                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
+=======
+                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
                             </div>
                         </div>
 
-                        <ul id="ToDoListe">
-                            <li>Mathe lernen</li>
-                            <li class="checked">Vortrag vorbereiten</li>
-                            <li>Physikhefter ordnen</li>
-                            <li>Hausarbeit abgeben</li>
-                        </ul>
+						<ul id="ToDoListe">
+							<li>Mathe lernen</li>
+							<li class="checked">Vortrag vorbereiten</li>
+							<li>Physikhefter ordnen</li>
+							<li>Hausarbeit abgeben</li>
+						</ul>
 
                         <script>
                             // Create a "close" button and append it to each list item
