@@ -43,7 +43,7 @@
             } 
         }
 		
-    if (!empty($_POST["register"])) 
+    if (isset($_POST["register"])) 
         { 
         $_registerEmail = mysqli_real_escape_string($link, $_POST["email"]); 
         $_registerPasswort = mysqli_real_escape_string($link, $_POST["psw1"]);
@@ -51,6 +51,8 @@
         $_sql = "SELECT * FROM benutzer WHERE 
                     email='$_registerEmail'
                 LIMIT 1"; 
+				
+		echo("Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>");
 
         # Prüfen, ob der User in der Datenbank existiert ! 
         $_res = mysqli_query($link, $_sql); 

@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="LoginButtons">
-                            <button type="submit"  name=login value="Einloggen">Einloggen</button>
+                            <button type="submit"  name="login" value="Einloggen">Einloggen</button>
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>
