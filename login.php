@@ -23,7 +23,7 @@
         $_loginEmail = mysqli_real_escape_string($link, $_POST["uname"]); 
         $_loginPasswort = mysqli_real_escape_string($link, $_POST["psw"]); 
 
-        $_sql = "SELECT * FROM user WHERE 
+        $_sql = "SELECT * FROM benutzer WHERE 
                     email='$_loginEmail' AND 
                     passwort='$_loginPasswort'
                 LIMIT 1"; 
@@ -42,18 +42,18 @@
             echo "Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>"; 
             } 
         }
-	
+		
     if (isset($_POST["register"])) 
         { 
         $_registerEmail = mysqli_real_escape_string($link, $_POST["email"]); 
         $_registerPasswort = mysqli_real_escape_string($link, $_POST["psw1"]);
 		$_registerPasswortRepeat = mysqli_real_escape_string($link, $_POST["psw-repeat"]);
 		
-		if($_registerPasswortRepeat != $_registerPasswort || strpos($_registerEmail, '@') == false){
+		if($_registerPasswortRepeat != $_registerPasswort){
 			echo("Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>");
 		}
 		else{
-			$_sql = "SELECT * FROM user WHERE 
+			$_sql = "SELECT * FROM benutzer WHERE 
 						email='$_registerEmail'
 					LIMIT 1"; 
 
@@ -67,7 +67,7 @@
 				}
 			else 
 				{ 
-				$_sql = "INSERT INTO user (email, passwort) VALUES('$_registerEmail', '$_registerPasswort')";
+				$_sql = "INSERT INTO benutzer (email, passwort) VALUES('$_registerEmail', '$_registerPasswort')";
 				$_res = mysqli_query($link, $_sql); 
 				} 
 			}		
