@@ -135,7 +135,10 @@
                             <div class="button-group">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 							<form method="POST">
+=======
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
 =======
 >>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
 =======
@@ -154,8 +157,12 @@
                                 </script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <span onclick="newElement()" type="submit" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
 							</form>
+=======
+                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+>>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
 =======
                                 <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
 >>>>>>> 5dcd9b44dfa238e08f875f7e252c88055943ace1
