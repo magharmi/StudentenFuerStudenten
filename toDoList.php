@@ -3,26 +3,26 @@
 	$errors = "";
 
 	// connect to database
-    $link = mysql_connect("localhost", "root"); 
+    $link = mysqli_connect("localhost", "root"); 
  
     if (!$link) 
         { 
-        die("Keine Datenbankverbindung möglich: " . mysql_error()); 
+        die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
         } 
 
-    $datenbank = mysql_select_db("StudentenFuerStudenten", $link); 
+    $datenbank = mysqli_select_db($link, "StudentenFuerStudenten"); 
 
     if (!$datenbank) 
         { 
-        echo "Kann die Datenbank nicht benutzen: " . mysql_error(); 
-        mysql_close($link);
+        echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
+        mysqli_close($link);
         exit;
         } 
 		
     if (!$datenbank) 
         { 
-        echo "Kann die Datenbank nicht benutzen: " . mysql_error(); 
-        mysql_close($db);
+        echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
+        mysqli_close($db);
         exit;
         } 
 	

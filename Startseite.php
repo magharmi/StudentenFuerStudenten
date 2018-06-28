@@ -133,27 +133,28 @@
                         <div id="myDIV" class="header">
                             <h2>To-Do-Liste</h2>
                             <div class="button-group">
-								<input type="text" id="myInput" name="task" placeholder="Was merken?">
-								<script>
-									var input = document.getElementById("myInput");
-									input.addEventListener("keyup", function(event) {
-										event.preventDefault();
-										if (event.keyCode === 13) {
-											newElement();
-										}
-									});
+                                <input type="text" id="myInput" name="task" placeholder="Was merken?">
+								
+                                <script>
+                                    var input = document.getElementById("myInput");
+                                    input.addEventListener("keyup", function(event) {
+                                        event.preventDefault();
+                                        if (event.keyCode === 13) {
+                                            newElement();
+                                        }
+                                    });
 
-								</script>
-								<span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+                                </script>
+                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
                             </div>
                         </div>
 
-                        <ul id="ToDoListe">
-                            <li>Mathe lernen</li>
-                            <li class="checked">Vortrag vorbereiten</li>
-                            <li>Physikhefter ordnen</li>
-                            <li>Hausarbeit abgeben</li>
-                        </ul>
+						<ul id="ToDoListe">
+							<li>Mathe lernen</li>
+							<li class="checked">Vortrag vorbereiten</li>
+							<li>Physikhefter ordnen</li>
+							<li>Hausarbeit abgeben</li>
+						</ul>
 
                         <script>
                             // Create a "close" button and append it to each list item

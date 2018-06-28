@@ -47,28 +47,31 @@
         { 
         $_registerEmail = mysqli_real_escape_string($link, $_POST["email"]); 
         $_registerPasswort = mysqli_real_escape_string($link, $_POST["psw1"]);
-
-        $_sql = "SELECT * FROM benutzer WHERE 
-                    email='$_registerEmail'
-                LIMIT 1"; 
-				
-		echo("Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>Hallo<br>");
-
-        # Prüfen, ob der User in der Datenbank existiert ! 
-        $_res = mysqli_query($link, $_sql); 
-        $_anzahl = @mysqli_num_rows($_res); 
-
-        if ($_anzahl > 0) 
-            { 
-            echo "E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>";
-			}
-        else 
-            { 
-			$_sql = "INSERT INTO benutzer (email, passwort) VALUES('$_registerEmail', '$_registerPasswort')";
-			$_res = mysqli_query($link, $_sql); 
-			} 
-		}		
+		$_registerPasswortRepeat = mysqli_real_escape_string($link, $_POST["psw-repeat"]);
 		
+		if($_registerPasswortRepeat != $_registerPasswort){
+			echo("Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>");
+		}
+		else{
+			$_sql = "SELECT * FROM benutzer WHERE 
+						email='$_registerEmail'
+					LIMIT 1"; 
+
+			# Prüfen, ob der User in der Datenbank existiert ! 
+			$_res = mysqli_query($link, $_sql); 
+			$_anzahl = @mysqli_num_rows($_res); 
+
+			if ($_anzahl > 0) 
+				{ 
+				echo "E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>E-mail existiert bereits<br>";
+				}
+			else 
+				{ 
+				$_sql = "INSERT INTO benutzer (email, passwort) VALUES('$_registerEmail', '$_registerPasswort')";
+				$_res = mysqli_query($link, $_sql); 
+				} 
+			}		
+		}
 		
     mysqli_close($link); 
 ?>
