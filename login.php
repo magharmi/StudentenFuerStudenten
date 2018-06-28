@@ -42,7 +42,7 @@
             echo "Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>"; 
             } 
         }
-		
+	
     if (isset($_POST["register"])) 
         { 
         $_registerEmail = mysqli_real_escape_string($link, $_POST["email"]); 
