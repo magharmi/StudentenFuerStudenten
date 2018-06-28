@@ -37,7 +37,6 @@
 			$sql = "INSERT INTO todolist (aufgabe) VALUES ('$task')";
 			mysqli_query($link, $sql);
 			echo("In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>");
-
 		}
 	}
 ?>
