@@ -132,25 +132,21 @@
                     <div class="card">
                         <div id="myDIV" class="header">
                             <h2>To-Do-Liste</h2>
-                            <div class="button-group">
+                            <form method="POST">
+								<div class="button-group">
+									<input type="text" id="myInput" name="task" placeholder="Was merken?">	
+									<script>
+										var input = document.getElementById("myInput");
+										input.addEventListener("keyup", function(event) {
+											event.preventDefault();
+											if (event.keyCode === 13) {
+												newElement();
+											}
+										});
 
-							<form method="POST">
-
-                                <input type="text" id="myInput" name="task" placeholder="Was merken?">
-								
-                                <script>
-                                    var input = document.getElementById("myInput");
-                                    input.addEventListener("keyup", function(event) {
-                                        event.preventDefault();
-                                        if (event.keyCode === 13) {
-                                            newElement();
-                                        }
-                                    });
-
-                                </script>
-                                <span onclick="newElement()" type="submit" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
-							</form>
-
+									</script>
+									<span type="submit" onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+								</form>
                             </div>
                         </div>
 
