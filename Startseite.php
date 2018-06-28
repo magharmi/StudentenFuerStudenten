@@ -148,15 +148,8 @@
                                     });
 
                                 </script>
-
                                 <span onclick="newElement()" type="submit" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
 							</form>
-
-                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
-
-
-                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
-                                <span onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
 
                             </div>
                         </div>
