@@ -135,13 +135,13 @@
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" style="height: 56px" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="Startseite.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a class="active" href="Nachhilfe.html">Nachhilfe</a>
+            <a href="Startseite.php">Startseite</a>
+            <a href="Profil.php">Profil</a>
+            <a href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a class="active" href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">

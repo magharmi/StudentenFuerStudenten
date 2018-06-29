@@ -118,9 +118,9 @@
 
     <!-- Header und Footer -->
     <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="index.html">Studenten f&uumlr Studenten</a>
+            <a href="index.php">Studenten f&uumlr Studenten</a>
         </div>
     </div>
     <p class="headerabstand"></p>

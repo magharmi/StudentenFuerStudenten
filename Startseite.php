@@ -45,13 +45,13 @@
     <!-- Kopierenstart -->
     <!-- Header und Footer, active Tab zuweisen-->
     <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a class="active" href="Startseite.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
+            <a class="active" href="Startseite.php">Startseite</a>
+            <a href="Profil.php">Profil</a>
+            <a href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -116,7 +116,7 @@
                     <div id="MeineKurseDiv">
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
                         <ul id="MeineKurseListe">
-                            <li><a href="Kursbeigetreten.html">Java Programmierung</a></li>
+                            <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
                             <li><a href="#">C Programmierung</a></li>
                             <li><a href="#">Rechnerarchitektur</a></li>
                             <li><a href="#">Webtechnologien</a></li>
@@ -289,7 +289,7 @@
                             <div id="MeineKurseDiv">
 
                                 <ul id="MeineKurseListe">
-                                    <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
+                                    <li><a href="Kursbeigetreten.php">Java: Aufgabe 3</a></li>
                                     <li><a href="#">Mathe: Aufgabe 3</a></li>
                                     <li><a href="#">Java: Aufgabe 2</a></li>
                                     <li><a href="#">Java: Aufgabe 1</a></li>
@@ -308,7 +308,7 @@
                             <div id="MeineKurseDiv">
 
                                 <ul id="MeineKurseListe">
-                                    <li><a href="Kursbeigetreten.html">Java: Aufgabe 3</a></li>
+                                    <li><a href="Kursbeigetreten.php">Java: Aufgabe 3</a></li>
                                     <li><a href="#">Mathe: Aufgabe 3</a></li>
                                     <li><a href="#">Java: Aufgabe 2</a></li>
                                     <li><a href="#">Java: Aufgabe 1</a></li>

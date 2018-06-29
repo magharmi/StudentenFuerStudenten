@@ -7,11 +7,11 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="index.html">Startseite</a>
-            <a class="active" href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Profil.html">Profil</a>
-            <a href="login.html">Login</a>
+            <a href="index.php">Startseite</a>
+            <a class="active" href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a href="Profil.php">Profil</a>
+            <a href="login.php">Login</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -112,13 +112,13 @@
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="Startseite.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a class="active" href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
+            <a href="Startseite.php">Startseite</a>
+            <a href="Profil.php">Profil</a>
+            <a class="active" href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -179,7 +179,7 @@
         <div id="MeineKurseDiv">
             <h1 id="MeineKurseUeberschrift">Meine Kurse</h1>
             <ul id="MeineKurseListe">
-                <li><a href="Kursbeigetreten%20C.html">C Programmierung</a></li>
+                <li><a href="Kursbeigetreten C.php">C Programmierung</a></li>
                 <li><a href="#">Rechnerarchitektur</a></li>
                 <li><a href="#">Webtechnologien</a></li>
                 <li><a href="#">IT-Sicherheit</a></li>
@@ -196,7 +196,7 @@
                                 <button class="collapsible">Informatik</button>
                                 <div class="content">
                                     <ul class="AlleKurseListe">
-                                        <li><a href="Kurs.html">Java Programmierung</a></li>
+                                        <li><a href="Kurs.php">Java Programmierung</a></li>
                                         <li><a href="#">Rechnerarchitektur</a></li>
                                         <li><a href="#">Webtechnologien</a></li>
                                         <li><a href="#">IT-Sicherheit</a></li>
