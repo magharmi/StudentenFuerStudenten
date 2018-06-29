@@ -43,4 +43,5 @@
 	}
 	
 	echo("<script>console.log('Eingeloggte User-Session: ".$_SESSION["userSession"]."');</script>");
+    echo("<script>console.log('Eingeloggte User-Session-ID: ".$_SESSION["userID"]."');</script>");
 ?>

@@ -32,10 +32,14 @@
         $_res = mysqli_query($link, $_sql);
 		$_user = mysqli_query($link, $_sql);
         $_anzahl = @mysqli_num_rows($_res); 
-
+        
         if ($_anzahl > 0) 
             {
 			$_SESSION["userSession"] = $_loginEmail;
+            $_sql = "SELECT userID FROM user WHERE email='$_loginEmail'";
+            $_result = mysqli_query($link, $_sql);
+            while($_row = mysqli_fetch_array($_result))
+                echo("<script>console.log('Eingeloggte User-ID: ".$_SESSION["userID"] = $_row["userID"]."');</script>");  
             echo "Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>"; 
 			header("Location: Startseite.php");
 			}
@@ -77,6 +81,3 @@
 		
     mysqli_close($link); 
 ?>
-
-
-
