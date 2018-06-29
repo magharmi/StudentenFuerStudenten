@@ -61,10 +61,10 @@
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-        <a href="#agb">AGB</a>
-        <a href="#kontakt">Kontakt</a>
+       <a href="impressum.php">Impressum</a>
+        <a href="datenschutz.php">Datenschutz</a>
+        <a href="datenschutz.php">AGB</a>
+        <a href="impressum.php">Kontakt</a>
     </div>
     <footer>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
