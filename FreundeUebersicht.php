@@ -34,7 +34,7 @@
             box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19)
         }
 
-        .content img {
+        .Profilbild {
             display: block;
             margin: 0 auto 5px auto;
             height: auto;
@@ -84,6 +84,7 @@
         #FreundeUeberschrift {
             margin: 0.8em 0 0 0.5em;
         }
+
     </style>
 </head>
 
@@ -118,6 +119,7 @@
                 y.className = "topbartexte";
             }
         }
+
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
@@ -147,6 +149,7 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
+
         </script>
     </footer>
     <!-- Kopierenende -->
