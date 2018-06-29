@@ -91,7 +91,7 @@ CREATE TABLE `nachhilfesuche` (
   `titel` varchar(255) NOT NULL,
   `ort` varchar(255) NOT NULL,
   `zeit` varchar(255) NOT NULL,
-  `preis` decimal(10,0) NOT NULL,
+  `preis` decimal(10,2) NOT NULL,
   `beschreibung` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -235,7 +235,7 @@ ALTER TABLE `todoliste`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
