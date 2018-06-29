@@ -2,24 +2,28 @@
 <html>
 
 <head>
-    <title>Impressum</title>
+    <title>Datenschutz</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
 
     <style>
-        #impressumseite {
+        #datenschutzseite {
             width: 80%;
             max-width: 960px;
             margin: 2em auto 5em auto;
         }
 
-        #impressumtext {
+        #datenschutztext {
             width: 90%;
             max-width: 960px;
             margin: 1em auto 2em auto;
             padding-top: 1em;
+        }
+
+        #datenschutztext h4 {
+            text-align: justify;
         }
 
     </style>
@@ -92,15 +96,17 @@
     </footer>
     <!-- Kopierenende -->
 
-    <div id="impressumseite">
+    <div id="datenschutzseite">
         <div class="w3-card">
-            <div id="impressumtext">
-                <h1>Impressum</h1>
-                <h4>StudentenFuerStudenten<br />Hochschule Bochum C5-14<br />Lennershofstraße 140<br />44801 Bochum<br />Deutschland<br /><br /></h4>
-                <h1>Kontakt</h1>
-                <h4>E-Mail: support@studentenfuerstudenten.com<br /><br /></h4>
-                <h1>Haftung f&uumlr Inhalte</h1>
-                <h4>Haftung wird nur von Haftbefehl pers&oumlhnlich &uumlbernommen. Niemand hat je weNiger Sinn ergeben als dieser Text. Bli Bla Blup wir haften f&uumlr garnichts.<br /></h4>
+            <div id="datenschutztext">
+                <h1>Haftung f&uuml;r Inhalte</h1>
+                <h4>Es wird keinerlei Haftung vom Betreiber der Website f&uuml;r die Inhalte &uuml;bernommen. Jeder kann hier Inhalte ver&ouml;ffentlichen und wir haben keine Uploadfilter in unser System eingebaut. Niemand hat je weniger Sinn ergeben als dieser Text. Bli Bla Blup wir haften f&uuml;r garnichts.<br /></h4>
+                <h1>Haftung f&uuml;r Links</h1>
+                <h4>F&uuml;r Links auf unserer Website haften wir noch weniger. Es gibt zwar kaum welche aber hier sollte ein sch&ouml;ner Text stehen. Und was gibt es sch&ouml;neres als Freestyle vom Boss. Aber mal ehrlich benutzt euer Gehirn und verklagt uns nicht.<br /></h4>
+                <h1>Uhrheberrecht</h1>
+                <h4>Das Uhrheberrecht ist uns irgendwie ziemlich egal. Wenn ihr umbedingt Uhren aufheben wollt macht das, aber was genau hat unsere Website damit zu tun.<br /></h4>
+                <h1>Allgemeine Nutzungsbedingungen</h1>
+                <h4>Mit dem benutzen unserer Website stimmt ihr unseren AGBs zu. Ihr &uuml;bergebt uns das Recht an euerer Seele nach dem Tod und solange ihr noch auf dieser sterblichen Welt wandelt verliert ihr jegliches Recht jemals gegen uns zu Klagen oder unsere M&uuml;tter zu beleidigen. Diese Allgemeinen Nutzungsbedingungen sowie die Nutzung der Dienste bestimmen sich nach deutschem Recht bestimmt.<br /></h4>
             </div>
         </div>
     </div>

@@ -22,6 +22,10 @@
             padding-top: 1em;
         }
 
+        #impressumtext h4 {
+            text-align: justify;
+        }
+
     </style>
 </head>
 
@@ -99,8 +103,8 @@
                 <h4>StudentenFuerStudenten<br />Hochschule Bochum C5-14<br />Lennershofstraße 140<br />44801 Bochum<br />Deutschland<br /><br /></h4>
                 <h1>Kontakt</h1>
                 <h4>E-Mail: support@studentenfuerstudenten.com<br /><br /></h4>
-                <h1>Haftung f&uumlr Inhalte</h1>
-                <h4>Haftung wird nur von Haftbefehl pers&oumlhnlich &uumlbernommen. Niemand hat je weNiger Sinn ergeben als dieser Text. Bli Bla Blup wir haften f&uumlr garnichts.<br /></h4>
+                <h1>Haftung f&uuml;r Inhalte</h1>
+                <h4>Es wird keinerlei Haftung vom Betreiber der Website f&uuml;r die Inhalte &uuml;bernommen. Jeder kann hier Inhalte ver&ouml;ffentlichen und wir haben keine Uploadfilter in unser System eingebaut. Niemand hat je weniger Sinn ergeben als dieser Text. Bli Bla Blup wir haften f&uuml;r garnichts.<br /></h4>
             </div>
         </div>
     </div>
