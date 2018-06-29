@@ -128,11 +128,11 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="Startseite.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a class="active" href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
+            <a href="Startseite.php">Startseite</a>
+            <a href="Profil.php">Profil</a>
+            <a class="active" href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">

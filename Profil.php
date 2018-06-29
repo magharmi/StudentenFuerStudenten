@@ -178,11 +178,11 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="Startseite.html">Startseite</a>
-            <a class="active" href="Profil.html">Profil</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
+            <a href="Startseite.php">Startseite</a>
+            <a class="active" href="Profil.php">Profil</a>
+            <a href="KurseUebersicht.php">Kurse</a>
+            <a href="FreundeUebersicht.php">Freunde</a>
+            <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -286,7 +286,7 @@
                         <div id="MeineKurseDiv">
                             <h2 id="MeineKurseUeberschrift">Sulfikar's Kurse</h2>
                             <ul id="MeineKurseListe">
-                                <li><a href="Kurs.html">Java Programmierung</a></li>
+                                <li><a href="Kurs.php">Java Programmierung</a></li>
                                 <li><a href="#">C Programmierung</a></li>
                                 <li><a href="#">Rechnerarchitektur</a></li>
                                 <li><a href="#">Webtechnologien</a></li>
@@ -302,7 +302,7 @@
                         <div id="MeineKurseDiv">
                             <h2 id="MeineKurseUeberschrift"> Sulfikar bietet Hilfe bei...</h2>
                             <ul id="MeineKurseListe">
-                                <li><a href="Kurs.html">Java Programmierung</a></li>
+                                <li><a href="Kurs.php">Java Programmierung</a></li>
                                 <li><a href="#">C Programmierung</a></li>
                                 <li><a href="#">Rechnerarchitektur</a></li>
                                 <li><a href="#">Webtechnologien</a></li>
@@ -318,7 +318,7 @@
                         <div id="MeineKurseDiv">
                             <h2 id="MeineKurseUeberschrift"> Ben&oumltigt Hilfe bei...</h2>
                             <ul id="MeineKurseListe">
-                                <li><a href="Kursbeigetreten.html">Java: Aufgabe 1</a></li>
+                                <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
                                 <li><a href="#">C Programmierung: Pointer</a></li>
 
                                 <li><a href="#">Mathe: Aufgabe 9</a></li>
@@ -333,7 +333,7 @@
                         <div id="MeineKurseDiv">
                             <h2 id="MeineKurseUeberschrift"> Zuletzt bearbeitete Aufgaben ...</h2>
                             <ul id="MeineKurseListe">
-                                <li><a href="Kursbeigetreten.html">Java: Aufgabe 1</a></li>
+                                <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
                                 <li><a href="#">C Programmierung: Pointer</a></li>
 
                                 <li><a href="#">Mathe: Aufgabe 9</a></li>

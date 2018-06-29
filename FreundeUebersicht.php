@@ -92,11 +92,11 @@
     <div class="topnav" id="myTopnav">
         <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="Startseite.html">Startseite</a>
-            <a href="Profil.html">Profil</a>
-            <a href="KurseUebersicht.html">Kurse</a>
-            <a class="active" href="FreundeUebersicht.html">Freunde</a>
-            <a href="Nachhilfe.html">Nachhilfe</a>
+            <a href="Startseite.php">Startseite</a>
+            <a href="Profil.php">Profil</a>
+            <a href="KurseUebersicht.php">Kurse</a>
+            <a class="active" href="FreundeUebersicht.php">Freunde</a>
+            <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
@@ -166,21 +166,21 @@
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="bwlJustus.jpg" alt="Profilbild">
-                    <a href="Freund.html">Max Mustermann</a>
+                    <a href="Freund.php">Max Mustermann</a>
                     <p>BWL-Student,<br/>Hochschule Bochum</p>
                 </div>
             </div>
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="froherStudent.jpg" alt="Profilbild">
-                    <a href="Freund.html">Maks Mustamann</a>
+                    <a href="Freund.php">Maks Mustamann</a>
                     <p>Jura-Student,<br/>TU Dortmund</p>
                 </div>
             </div>
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="sulf.jpeg" alt="Profilbild">
-                    <a href="Freund.html">Sulfikar Hamka</a>
+                    <a href="Freund.php">Sulfikar Hamka</a>
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                     <img class="Profilbild" src="logo.png" alt="Profilbild">
 
 
-                    <a href="Freund.html">Armin Maghsoudloo</a>
+                    <a href="Freund.php">Armin Maghsoudloo</a>
 
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
@@ -197,14 +197,14 @@
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="logo.png" alt="Profilbild">
-                    <a href="Freund.html">Vincent Br&uumlcher</a>
+                    <a href="Freund.php">Vincent Br&uumlcher</a>
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="logo.png" alt="Profilbild">
-                    <a href="Freund.html">Alexander Schmidt</a>
+                    <a href="Freund.php">Alexander Schmidt</a>
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
