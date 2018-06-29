@@ -2,7 +2,8 @@
 
 	SESSION_START();
 
-    $link = mysqli_connect("localhost", "root"); 
+    $link = mysqli_connect("localhost", "root");
+    $extraSchutz = "QVpdoz4b1dGdHAd8kIiAL20cWoypIGA2WBU1Ko7R";
  
     if (!$link) 
         { 
@@ -21,7 +22,7 @@
     if (!empty($_POST["login"])) 
         { 
         $_loginEmail = mysqli_real_escape_string($link, $_POST["uname"]); 
-        $_loginPasswort = mysqli_real_escape_string($link, $_POST["psw"]); 
+        $_loginPasswort = md5(mysqli_real_escape_string($link, $_POST["psw"]).$extraSchutz); 
 
         $_sql = "SELECT * FROM user WHERE 
                     email='$_loginEmail' AND 
@@ -52,8 +53,8 @@
     if (isset($_POST["register"])) 
         { 
         $_registerEmail = mysqli_real_escape_string($link, $_POST["email"]); 
-        $_registerPasswort = mysqli_real_escape_string($link, $_POST["psw1"]);
-		$_registerPasswortRepeat = mysqli_real_escape_string($link, $_POST["psw-repeat"]);
+        $_registerPasswort = md5(mysqli_real_escape_string($link, $_POST["psw1"]).$extraSchutz);
+		$_registerPasswortRepeat = md5(mysqli_real_escape_string($link, $_POST["psw-repeat"]).$extraSchutz);
 		
 		if($_registerPasswortRepeat != $_registerPasswort || strpos($_registerEmail, '@') == false){
 			echo("Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>Passwörter stimmen nicht überein.<br>");

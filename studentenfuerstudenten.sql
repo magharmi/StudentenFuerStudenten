@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 29. Jun 2018 um 19:07
+-- Erstellungszeit: 29. Jun 2018 um 23:01
 -- Server-Version: 10.1.33-MariaDB
 -- PHP-Version: 7.2.6
 
@@ -104,7 +104,7 @@ CREATE TABLE `nachhilfesuche` (
 CREATE TABLE `todoliste` (
   `todoID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `beschreibung` int(11) NOT NULL,
+  `beschreibung` varchar(255) NOT NULL,
   `checked` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -130,8 +130,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `passwort`, `email`, `userID`, `uni`, `fach`, `beschreibung`, `bild`) VALUES
-('ein deutiger Nutzername', 'SicheresPassw0rt', 'test@email.com', 1, '', '', '', ''),
-('', 'a', 'a', 2, '', '', '', '');
+('Albert', '0ffc87443c705daa3b344a0bd30fba05', 'a', 1, 'Hochschule Bochum', 'Informatik', 'Ich bin Albert', '');
 
 -- --------------------------------------------------------
 
@@ -236,7 +235,7 @@ ALTER TABLE `todoliste`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
