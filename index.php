@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <title>Login</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
 
@@ -125,7 +128,7 @@
     </div>
     <p class="headerabstand"></p>
     <div class="footerContent">
-       <a href="impressum.php">Impressum</a>
+        <a href="impressum.php">Impressum</a>
         <a href="datenschutz.php">Datenschutz</a>
         <a href="datenschutz.php">AGB</a>
         <a href="impressum.php">Kontakt</a>
@@ -182,7 +185,7 @@
                             </div>
                         </div>
                         <div class="LoginButtons">
-                            <button type="submit"  name="login" value="Einloggen">Einloggen</button>
+                            <button type="submit" name="login" value="Einloggen">Einloggen</button>
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Abbrechen</button>
                         </div>
                     </div>

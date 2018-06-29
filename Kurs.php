@@ -4,6 +4,9 @@
 <html>
 
 <head>
+    <title>Kurs</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <style>
@@ -124,9 +127,9 @@
                         <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
                         <h3>Teilnehmeranzahl:</h3>
                         <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
-						<form method="POST">
-							<button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
-						</form>
+                        <form method="POST">
+                            <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
+                        </form>
                     </div>
                 </div>
             </div>

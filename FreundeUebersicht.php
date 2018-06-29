@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <title>Freunde</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <style>
@@ -123,7 +126,7 @@
     </script>
     <p class="headerabstand"></p>
     <div class="footerContent">
-       <a href="impressum.php">Impressum</a>
+        <a href="impressum.php">Impressum</a>
         <a href="datenschutz.php">Datenschutz</a>
         <a href="datenschutz.php">AGB</a>
         <a href="impressum.php">Kontakt</a>
