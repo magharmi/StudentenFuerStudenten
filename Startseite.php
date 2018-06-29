@@ -149,8 +149,8 @@
 
                                     </script>
                                     <span type="submit" onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
+                                </div>
                             </form>
-                            </div>
                         </div>
 
                         <?php
@@ -246,6 +246,7 @@
                                             div.style.display = "none";
                                         }
                                     }
+                                
                                 }
 
                                 function newElementDB(aufgabe) {
