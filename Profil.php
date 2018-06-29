@@ -169,6 +169,25 @@
             display: block;
             /* Make it into a block element to fill the whole list */
         }
+         #img_div{
+   	width: 80%;
+   	padding: 5px;
+   	margin: 15px auto;
+   	border: 1px solid #cbcbcb;
+   }
+   #img_div:after{
+   	content: "";
+   	display: block;
+   	clear: both;
+   }
+  /*      img{
+            float: left;
+   	margin: 5px;
+   	width: 300px;
+   	height: 140px;
+        }
+        */
+   
     </style>
 
 </head>
@@ -257,7 +276,7 @@
     }
   ?>
   <form method="POST" action="Profil.php" enctype="multipart/form-data">
-  	<input type="hidden" name="size" value="1000000">
+  	<input type="hidden" name="size" value="100">
       <div>
   	  <input type="file" name="bild">
   	</div>
