@@ -27,8 +27,9 @@ Kurs			- Teilnehmer anzeigen
 Profil			- Modal zum Hochladen des Bildes
 Nachhilfe		- Kurse interaktiv oder alle vorher einfügen?
 Startseite		- ToDoListe fixen
-
-
+Profil			- Beschreibung bearbeiten
+Profil/Freund		- Beschreibung blinkt wenn Mauszeiger drüber
+Profil/Freund		- Was wenn kein Bild?
 
 
 
