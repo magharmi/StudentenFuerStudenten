@@ -1,4 +1,6 @@
 <?php 
+	SESSION_START();
+	
     // initialize errors variable
 	$errors = "";
 
@@ -39,4 +41,6 @@
 			echo("In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>In Datenbank eingetragen<br>");
 		}
 	}
+	
+	echo("<script>console.log('Eingeloggte User-Session: ".$_SESSION["userSession"]."');</script>");
 ?>

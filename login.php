@@ -1,6 +1,6 @@
 <?php  
 
-    SESSION_START(); 
+	SESSION_START();
 
     $link = mysqli_connect("localhost", "root"); 
  
@@ -29,18 +29,20 @@
                 LIMIT 1"; 
 
         # Prüfen, ob der User in der Datenbank existiert ! 
-        $_res = mysqli_query($link, $_sql); 
+        $_res = mysqli_query($link, $_sql);
+		$_user = mysqli_query($link, $_sql);
         $_anzahl = @mysqli_num_rows($_res); 
 
         if ($_anzahl > 0) 
-            { 
+            {
+			$_SESSION["userSession"] = $_loginEmail;
             echo "Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>Der Login war erfolgreich.<br>"; 
-			header("Location: Startseite.html");
+			header("Location: Startseite.php");
 			}
         else 
             { 
             echo "Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>Die Logindaten sind nicht korrekt.<br>"; 
-            } 
+			} 
         }
 	
     if (isset($_POST["register"])) 
