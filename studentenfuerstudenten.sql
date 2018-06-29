@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 28. Jun 2018 um 20:43
+-- Erstellungszeit: 29. Jun 2018 um 19:07
 -- Server-Version: 10.1.33-MariaDB
 -- PHP-Version: 7.2.6
 
@@ -35,6 +35,17 @@ CREATE TABLE `aufgabe` (
   `userID` int(11) NOT NULL,
   `kursID` int(11) NOT NULL,
   `datei` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `freund`
+--
+
+CREATE TABLE `freund` (
+  `userid1` int(11) NOT NULL,
+  `userid2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -119,7 +130,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `passwort`, `email`, `userID`, `uni`, `fach`, `beschreibung`, `bild`) VALUES
-('ein deutiger Nutzername', 'SicheresPassw0rt', 'test@email.com', 1, '', '', '', '');
+('ein deutiger Nutzername', 'SicheresPassw0rt', 'test@email.com', 1, '', '', '', ''),
+('', 'a', 'a', 2, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -224,7 +236,7 @@ ALTER TABLE `todoliste`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
