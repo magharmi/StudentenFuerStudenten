@@ -94,15 +94,6 @@
 
         }
 
-        @keyframes animatezoom {
-            from {
-                transform: scale(0)
-            }
-            to {
-                transform: scale(1)
-            }
-        }
-
         input[type="file"] {
             width: 100%;
             border: 2px solid darkorange;
@@ -273,7 +264,7 @@
                     </script>
 
                     <div id="HochladModal" class="modal">
-                        <form class="modal-content animate" action="/action_page.php">
+                        <form class="modal-content animate">
                             <div class="modalcontainer">
                                 <h1>Teile Aufgaben mit Anderen</h1>
                                 <h2>Lade deine Aufgaben hoch</h2>
