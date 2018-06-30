@@ -225,7 +225,6 @@
                     $_freundName = $_zeile["name"];
                     echo "<script>console.log('".$_freundName."');</script>";
                 }
-                echo "<script>console.log('hi');</script>";
             ?>
         </div>
     </div>
