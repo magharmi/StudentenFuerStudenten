@@ -1,4 +1,8 @@
+
 <?php
+	 include ("login.php");
+
+
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
 
     $msg = "";
@@ -63,6 +67,17 @@
         }
 
 
+	
+		
+		#registerbild
+		{
+			width:100%;
+			 padding: 12px 10px;
+			   margin: 8px 18em;
+		}
+		
+		
+		
         #txtbox {
             margin: 210px 1em 0 26em;
         }
@@ -290,11 +305,47 @@
     <div id="txtbox">
         <div class="personbeschreibung">
             <h1>Beschreibung</h1>
-            <a>
-            Hallo, ich bin Sulfikar Hamka und studiere Informatik seit vier Semestern an der Hochschule Bochum. Ich bin 21 Jahre alt und gebe schon seit einem Jahr Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
-            </a>
+            <h3>
+            Hallo, ich bin Sulfikar Hamka und studiere Informatik seit vier Semestern an der Hochschule Bochum. Ich bin 22 Jahre alt und gebe schon seit einem Jahr Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
+            </h3>
         </div>
-        <button type="button" id="beschreibungbutton" class="block">Beschreibung bearbeiten</button>
+        <!--<button type="button" name="beschreibungbutton" id="beschreibungbutton" class="block">Beschreibung bearbeiten</button>-->
+		
+		
+		
+		<!--
+		-->
+		 <button name="beschreibungbutton" id="beschreibungbutton" class="block" onclick="document.getElementById('id02').style.display='block'">Beschreibung bearbeiten</button>
+				
+				 <div id="id02" class="modal">
+                <form class="modal-content animate" method="POST">
+                    <div class="imgcontainer">
+						<img src="user.png" id="registerbild"  style="width:18%"/>     
+               </div>
+                    <div class="modalcontainer">
+                        <h2>Geben sie ihre Beschreibung ein </h2>
+							
+						<form action="textarea.html" method="post"> 
+						   <div>  
+							  <label for="text"></label>
+								 <textarea id="text" name="text" cols="50" rows="7"></textarea> 	
+							 <!-- <input type="submit" value="Senden" /> -->
+						   </div> 
+						</form> 
+						
+                        <div class="LoginButtons">
+                            <button type="submit" name="register" class="signupbtn">OK</button>
+                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+		
+		<!--
+		-->
+		
+		
     </div>
     <div id="Kurs">
         <div class="w3-row-padding w3-margin-top">
