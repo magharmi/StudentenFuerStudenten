@@ -113,6 +113,18 @@
             color: white;
 
         }
+		
+		
+		
+		#profilbild {
+           			margin: -25% 40% 15% 25%;
+
+            text-align: center;
+        }
+		
+		
+		
+		
 
         #beschreibungbutton {
             background-color: forestgreen;
@@ -285,7 +297,7 @@
            
     while ($row = mysqli_fetch_array($result)) {
       echo "<div id='img_div' class='Profilbild'>";
-      	echo "<img src='profilbilder/".$row['bild']."' >";
+      	echo "<img src='profilbilder/".$row['bild']."' height=350em width=145% >";
       echo "</div>";
     }
   ?>
