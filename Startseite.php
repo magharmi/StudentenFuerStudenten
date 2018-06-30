@@ -56,17 +56,19 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
-            <form method="POST">
-                  <a href="logoutSeite.php">Logout</a>
-            </form>
         </div>
 
-        <input type="text" id="suchfeld" placeholder="Suche...">
 
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
+
+        <div class="container" id="logoutbtn">
+            <form method="POST">
+                <a href="logoutSeite.php">Logout</a>
+            </form>
         </div>
     </div>
     <script>
@@ -143,28 +145,62 @@
                         </div>
 
 
-                            <ul id="ToDoListe">
-                                <li>Mathe lernen</li>
-                                <li class="checked">Vortrag vorbereiten</li>
-                                <li>Physikhefter ordnen</li>
-                                <li>Hausarbeit abgeben</li>
-                            </ul>
+                        <ul id="ToDoListe">
+                            <li>Mathe lernen</li>
+                            <li class="checked">Vortrag vorbereiten</li>
+                            <li>Physikhefter ordnen</li>
+                            <li>Hausarbeit abgeben</li>
+                        </ul>
 
-                            <script>
-                                // Create a "close" button and append it to each list item
-                                var myNodelist = document.getElementsByTagName("LI");
-                                var i;
-                                for (i = 0; i < myNodelist.length; i++) {
-                                    var span = document.createElement("SPAN");
-                                    var txt = document.createTextNode("\u00D7");
-                                    span.className = "close";
-                                    span.appendChild(txt);
-                                    myNodelist[i].appendChild(span);
+                        <script>
+                            // Create a "close" button and append it to each list item
+                            var myNodelist = document.getElementsByTagName("LI");
+                            var i;
+                            for (i = 0; i < myNodelist.length; i++) {
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                myNodelist[i].appendChild(span);
+                            }
+
+                            // Click on a close button to hide the current list item
+                            var close = document.getElementsByClassName("close");
+                            var i;
+                            for (i = 0; i < close.length; i++) {
+                                close[i].onclick = function() {
+                                    var div = this.parentElement;
+                                    div.style.display = "none";
                                 }
+                            }
 
-                                // Click on a close button to hide the current list item
-                                var close = document.getElementsByClassName("close");
-                                var i;
+                            // Add a "checked" symbol when clicking on a list item
+                            var list = document.querySelector('ul');
+                            list.addEventListener('click', function(ev) {
+                                if (ev.target.tagName === 'LI') {
+                                    ev.target.classList.toggle('checked');
+                                }
+                            }, false);
+
+                            // Create a new list item when clicking on the "Add" button
+                            function newElement() {
+                                var li = document.createElement("li");
+                                var inputValue = document.getElementById("myInput").value;
+                                var t = document.createTextNode(inputValue);
+                                li.appendChild(t);
+                                if (inputValue === '') {
+                                    alert("Du musst etwas eingeben!");
+                                } else {
+                                    document.getElementById("ToDoListe").appendChild(li);
+                                }
+                                document.getElementById("myInput").value = "";
+
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                li.appendChild(span);
+
                                 for (i = 0; i < close.length; i++) {
                                     close[i].onclick = function() {
                                         var div = this.parentElement;
@@ -172,96 +208,62 @@
                                     }
                                 }
 
-                                // Add a "checked" symbol when clicking on a list item
-                                var list = document.querySelector('ul');
-                                list.addEventListener('click', function(ev) {
-                                    if (ev.target.tagName === 'LI') {
-                                        ev.target.classList.toggle('checked');
-                                    }
-                                }, false);
+                            }
 
-                                // Create a new list item when clicking on the "Add" button
-                                function newElement() {
-                                    var li = document.createElement("li");
-                                    var inputValue = document.getElementById("myInput").value;
-                                    var t = document.createTextNode(inputValue);
-                                    li.appendChild(t);
-                                    if (inputValue === '') {
-                                        alert("Du musst etwas eingeben!");
-                                    } else {
-                                        document.getElementById("ToDoListe").appendChild(li);
-                                    }
-                                    document.getElementById("myInput").value = "";
-
-                                    var span = document.createElement("SPAN");
-                                    var txt = document.createTextNode("\u00D7");
-                                    span.className = "close";
-                                    span.appendChild(txt);
-                                    li.appendChild(span);
-
-                                    for (i = 0; i < close.length; i++) {
-                                        close[i].onclick = function() {
-                                            var div = this.parentElement;
-                                            div.style.display = "none";
-                                        }
-                                    }
-                                
+                            function newElementDB(aufgabe) {
+                                var li = document.createElement("li");
+                                var inputValue = document.getElementById(aufgabe).value;
+                                var t = document.createTextNode(inputValue);
+                                li.appendChild(t);
+                                if (inputValue === '') {
+                                    alert("Du musst etwas eingeben!");
+                                } else {
+                                    document.getElementById("ToDoListe").appendChild(li);
                                 }
+                                document.getElementById(aufgabe).value = "";
 
-                                function newElementDB(aufgabe) {
-                                    var li = document.createElement("li");
-                                    var inputValue = document.getElementById(aufgabe).value;
-                                    var t = document.createTextNode(inputValue);
-                                    li.appendChild(t);
-                                    if (inputValue === '') {
-                                        alert("Du musst etwas eingeben!");
-                                    } else {
-                                        document.getElementById("ToDoListe").appendChild(li);
-                                    }
-                                    document.getElementById(aufgabe).value = "";
+                                var span = document.createElement("SPAN");
+                                var txt = document.createTextNode("\u00D7");
+                                span.className = "close";
+                                span.appendChild(txt);
+                                li.appendChild(span);
 
-                                    var span = document.createElement("SPAN");
-                                    var txt = document.createTextNode("\u00D7");
-                                    span.className = "close";
-                                    span.appendChild(txt);
-                                    li.appendChild(span);
-
-                                    for (i = 0; i < close.length; i++) {
-                                        close[i].onclick = function() {
-                                            var div = this.parentElement;
-                                            div.style.display = "none";
-                                        }
+                                for (i = 0; i < close.length; i++) {
+                                    close[i].onclick = function() {
+                                        var div = this.parentElement;
+                                        div.style.display = "none";
                                     }
                                 }
+                            }
 
-                            </script>
+                        </script>
                     </div>
                 </div>
             </div>
-			
-			
-			
-			            <div class="w3-half">
+
+
+
+            <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
                     <div id="MeineKurseDiv">
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-						                    <p>
-                        
-						<a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
                         <p>
-                        <ul id="MeineKurseListe">
-                            <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
-                            <li><a href="#">C Programmierung</a></li>
-                            <li><a href="#">Rechnerarchitektur</a></li>
-                            <li><a href="#">Webtechnologien</a></li>
-                          
-                        </ul>
+
+                            <a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
+                            <p>
+                                <ul id="MeineKurseListe">
+                                    <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
+                                    <li><a href="#">C Programmierung</a></li>
+                                    <li><a href="#">Rechnerarchitektur</a></li>
+                                    <li><a href="#">Webtechnologien</a></li>
+
+                                </ul>
                     </div>
 
                 </div>
             </div>
-			
-			
+
+
         </div>
         <div class="mittig">
             <div class="w3-half">
@@ -269,8 +271,8 @@
 
                     <h2>Aufgaben &Uumlbersicht</h2>
                     <p>
-                        
-						<a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
+
+                        <a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
 
@@ -287,7 +289,7 @@
 
 
             <div class="w3-half">
-                <div class="w3-card w3-container w3-margin-top" href="Kursbeigetreten.php"  style="min-height:460px">
+                <div class="w3-card w3-container w3-margin-top" href="Kursbeigetreten.php" style="min-height:460px">
                     <h2>Zuletzt bearbeitete Aufgabe</h2>
                     <p> <a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
 
