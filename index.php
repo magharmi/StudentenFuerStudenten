@@ -178,10 +178,10 @@
                         <input type="password" placeholder="Passwort" name="psw" required>
                         <div id="LoginTextAusrichten">
                             <div id="DatenMerken">
-                                <input type="checkbox" checked="checked" name="remember">Daten merken
+                                <input type="checkbox" name="remember">Daten merken
                             </div>
                             <div id="PasswortVergessen">
-                                <a href="#">Passwort vergessen?</a>
+                                <a href="Impressum.php">Passwort vergessen?</a>
                             </div>
                         </div>
                         <div class="LoginButtons">
@@ -191,17 +191,6 @@
                     </div>
                 </form>
             </div>
-            <script>
-                // Get the modal
-                var modal = document.getElementById('id01');
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-
-            </script>
             <div id="id02" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
@@ -209,11 +198,11 @@
                     </div>
                     <div class="modalcontainer">
                         <h1>Registrieren</h1>
-                        <p>Um ein Konto zu erstellen, f&uumllle bitte die Felder aus.</p>
+                        <p>Um ein Konto zu erstellen, f&uuml;lle bitte die Felder aus.</p>
                         <input type="text" placeholder="E-Mail" name="email" required>
                         <input type="password" placeholder="Passwort" name="psw1" required>
                         <input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
-                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="#">AGB</a>.</p>
+                        <p>Mit Erstellen des Kontos akzeptierst du unsere <a href="Datenschutz.php">AGB</a>.</p>
                         <div class="LoginButtons">
                             <button type="submit" name="register" class="signupbtn">Registrieren</button>
                             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
@@ -222,19 +211,24 @@
                 </form>
             </div>
             <script>
-                // Get the modal
-                var modal = document.getElementById('id02');
+                // Get the modals
+                var modal = document.getElementById('id01');
+                var modal2 = document.getElementById('id02');
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
+                    }
+
+                    if (event.target == modal2) {
+                        modal2.style.display = "none";
                     }
                 }
 
             </script>
         </div>
         <div id="Beschreibung">
-            <h4>Willkommen auf der Seite Studenten f&uumlr Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese ben&oumltigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die M&oumlglichkeit Aufgaben runter- bzw. hochzuladen, einen Nachhilfelehrer zu finden oder selbst zu einem zu werden. Wir bieten auch die M&oumlglichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu k&oumlnnen.</h4>
+            <h4>Willkommen auf der Seite Studenten f&uuml;r Studenten. Unser Leitmotive ist es Studenten in ganz Deutschland das Lernen zu erleichtern und setzen dabei auf das Prinzip der Gegenseitigkeit. Wir bieten dir hier eine Plattform, auf der du anderen Hilfe bieten sowie bekommen kannst, falls du diese ben&ouml;tigst. Dabei ist es egal, welches Fach du studierst oder im welchem Bundesland du dich befindest. Wir bieten dir die M&ouml;glichkeit Aufgaben runter- bzw. hochzuladen, einen Nachhilfelehrer zu finden oder selbst zu einem zu werden. Wir bieten auch die M&ouml;glichkeit Leute kennenzulernen und sich mit ihnen anzufreunden. Unsere Website ist komplett kostenfrei und unverbindlich. Also registriere dich jetzt, falls noch nicht geschehen, um denn ganzen Umfang unserer Website nutzen zu k&ouml;nnen.</h4>
         </div>
     </div>
 </body>
