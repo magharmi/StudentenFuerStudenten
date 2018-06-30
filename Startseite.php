@@ -114,21 +114,6 @@
 
     <div class="w3-row-padding w3-center w3-margin-top seiteninhalt">
         <div class="mittig">
-            <div class="w3-half">
-                <div class="w3-card w3-container" style="min-height:460px">
-                    <div id="MeineKurseDiv">
-                        <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-                        <ul id="MeineKurseListe">
-                            <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
-                            <li><a href="#">C Programmierung</a></li>
-                            <li><a href="#">Rechnerarchitektur</a></li>
-                            <li><a href="#">Webtechnologien</a></li>
-                            <li><a href="#">IT-Sicherheit</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
 
             <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
@@ -279,6 +264,26 @@
                     </div>
                 </div>
             </div>
+			
+			
+			
+			            <div class="w3-half">
+                <div class="w3-card w3-container" style="min-height:460px">
+                    <div id="MeineKurseDiv">
+                        <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
+                        <ul id="MeineKurseListe">
+                            <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
+                            <li><a href="#">C Programmierung</a></li>
+                            <li><a href="#">Rechnerarchitektur</a></li>
+                            <li><a href="#">Webtechnologien</a></li>
+                            <li><a href="#">IT-Sicherheit</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+			
+			
         </div>
         <div class="mittig">
             <div class="w3-half">
