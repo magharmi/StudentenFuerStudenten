@@ -79,12 +79,6 @@
                 margin-right: 20px;
             }
 
-            @media screen and (min-width: 600px) {
-                div.personbeschreibung {
-                    font-size: 10px;
-                }
-            }
-
             .block {
                 display: block;
                 width: 150%;
