@@ -343,7 +343,7 @@
                             <label for="preis">Preis</label>
                             <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required name="anbietenPreis">
                             <div class="LoginButtons">
-                                <button type="button" onclick="document.getElementById('id03').style.display='none'" name="anbietenAbschicken">Abschicken</button>
+                                <button type="submit" name="anbietenAbschicken" onclick="document.getElementById('id03').style.display='none'">Abschicken</button>
                                 <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
                             </div>
                         </div>
@@ -489,7 +489,7 @@
                             <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required name="anfordernPreis">
 
                             <div class="LoginButtons">
-                                <button type="button" onclick="document.getElementById('id04').style.display='none'" name="anfordernAbschicken">Abschicken</button>
+                                <button type="submit" onclick="document.getElementById('id04').style.display='none'" name="anfordernAbschicken">Abschicken</button>
                                 <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Abbrechen</button>
                             </div>
                         </div>

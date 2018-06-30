@@ -15,6 +15,7 @@
         exit;
     }
 	
+    //NachhilfeAngebot
     if (isset($_POST["anbietenAbschicken"])) {
         $_anbietenTitel = mysqli_real_escape_string($link, $_POST["anbietenTitel"]);
         $_anbietenOrt = mysqli_real_escape_string($link, $_POST["anbietenOrt"]);
@@ -22,6 +23,19 @@
         $_anbietenPreis = mysqli_real_escape_string($link, $_POST["anbietenPreis"]);
 		
         $_sql = "INSERT INTO nachhilfeangebot (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anbietenTitel','$_anbietenOrt', '$_anbietenZeit', '$_anbietenPreis', '1')";
+        //echo "<script>console.log('NachhilfeAngebot eingefuegt!');</script>";
+        $_res = mysqli_query($link, $_sql);	
+	}
+
+    //NachhilfeSuche
+    if (isset($_POST["anfordernAbschicken"])) {
+        $_anfordernTitel = mysqli_real_escape_string($link, $_POST["anfordernTitel"]);
+        $_anfordernOrt = mysqli_real_escape_string($link, $_POST["anfordernOrt"]);
+        $_anfordernZeit = mysqli_real_escape_string($link, $_POST["anfordernZeit"]);
+        $_anfordernPreis = mysqli_real_escape_string($link, $_POST["anfordernPreis"]);
+		
+        $_sql = "INSERT INTO nachhilfesuche (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anfordernTitel','$_anfordernOrt', '$_anfordernZeit', '$_anfordernPreis', '1')";
+        echo "<script>console.log('NachhilfeSuche eingefuegt!');</script>";
         $_res = mysqli_query($link, $_sql);	
 	}
 		
