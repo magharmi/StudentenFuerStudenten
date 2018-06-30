@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 29. Jun 2018 um 23:01
+-- Erstellungszeit: 30. Jun 2018 um 16:34
 -- Server-Version: 10.1.33-MariaDB
 -- PHP-Version: 7.2.6
 
@@ -77,6 +77,13 @@ CREATE TABLE `nachhilfeangebot` (
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `nachhilfeangebot`
+--
+
+INSERT INTO `nachhilfeangebot` (`angebotID`, `kursID`, `titel`, `ort`, `zeit`, `preis`, `userID`) VALUES
+(1, 1, 'Mathe', 'Bochum', '12:00', '12,50â‚¬', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -93,6 +100,13 @@ CREATE TABLE `nachhilfesuche` (
   `preis` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `nachhilfesuche`
+--
+
+INSERT INTO `nachhilfesuche` (`sucheID`, `kursID`, `userID`, `titel`, `ort`, `zeit`, `preis`) VALUES
+(1, 1, 1, 'C Pointer', 'Bochum', '12:15 - 15:00', '8,50â‚¬ pro Stunde');
+
 -- --------------------------------------------------------
 
 --
@@ -105,6 +119,13 @@ CREATE TABLE `todoliste` (
   `beschreibung` varchar(255) NOT NULL,
   `checked` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `todoliste`
+--
+
+INSERT INTO `todoliste` (`todoID`, `userID`, `beschreibung`, `checked`) VALUES
+(2, 1, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -215,7 +236,7 @@ ALTER TABLE `kurs`
 -- AUTO_INCREMENT für Tabelle `nachhilfeangebot`
 --
 ALTER TABLE `nachhilfeangebot`
-  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfesuche`
@@ -227,13 +248,13 @@ ALTER TABLE `nachhilfesuche`
 -- AUTO_INCREMENT für Tabelle `todoliste`
 --
 ALTER TABLE `todoliste`
-  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
