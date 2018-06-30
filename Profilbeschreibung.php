@@ -25,11 +25,9 @@
 	if(isset($_POST["beschreibungOK"])){
         $_userID = ($_SESSION["userID"]);
 		$_beschreibungtxt = mysqli_real_escape_string($link, $_POST["beschreibungtxt"]); 
-
-		echo("<script>console.log('userID: ".$_userID." hat seine Beschreibung zu: ".$_beschreibungtxt." geaendert!');</script>");
         
-        $_sql = "INSERT INTO user WHERE userID = ".$_userID." (beschreibung) VALUES('".$_beschreibungtxt."')";
-        $_res = mysqli_query($link, $_sql);	
-        echo "<script>console.log('Beschreibung geaendert');</script>";        
+        $_sql = "UPDATE user SET beschreibung ='$_beschreibungtxt' WHERE userID = '$_userID'";
+        $_res = mysqli_query($link, $_sql);
+		echo ("<script>console.log('userID: $_userID hat seine Beschreibung zu: $_beschreibungtxt geaendert!');</script>");     
 	}
 ?>

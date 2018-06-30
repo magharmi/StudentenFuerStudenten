@@ -1,6 +1,5 @@
 <?php
-	 include ("Profilbeschreibung.php");
-
+    include ("Profilbeschreibung.php");
 
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
 
