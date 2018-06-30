@@ -150,6 +150,10 @@
             /* Make it into a block element to fill the whole list */
         }
 
+        .banner {
+            margin-top: -1px;
+        }
+
     </style>
 </head>
 
@@ -220,7 +224,7 @@
     <!-- Kopierenende -->
 
     <div style="width: 500px; height: 60px; background: laven">
-        <img src="banner.jpg" class="" width="2100px" height="250px" />
+        <img src="banner.jpg" class="banner" width="2100px" height="250px" />
         <p id="name">Max Mustermann</p>
         <p id="hochschule">Hochschule Bochum</p>
         <p id="studiengang">BWL-Student</p>
@@ -235,7 +239,7 @@
         <div class="personbeschreibung">
             <h1>Beschreibung</h1>
             <h3>
-            Hallo, ich bin Max Mustermann und studiere BWL seit 9 Semestern an der Hochschule Bochum. Ich bin 30 Jahre alt und gebe schon seit 9 Jahren Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
+                Hallo, ich bin Max Mustermann und studiere BWL seit 9 Semestern an der Hochschule Bochum. Ich bin 30 Jahre alt und gebe schon seit 9 Jahren Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
             </h3>
         </div>
     </div>

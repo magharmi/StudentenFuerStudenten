@@ -196,6 +196,10 @@
                 resize: none;
             }
 
+            .banner {
+                margin-top: -1px;
+            }
+
         </style>
 
     </head>
@@ -267,7 +271,7 @@
 
         <div style="width: 500px; height: 60px; background: laven">
 
-            <img src="banner.jpg" class="" width="2100px" height="250px" />
+            <img src="banner.jpg" class="banner" width="2100px" height="250px" />
             <img id="userlogo" src="user.png" width="75em">
             <p id="name">Sulfikar Hamka</p>
             <p id="hochschule">Hochschule Bochum</p>
