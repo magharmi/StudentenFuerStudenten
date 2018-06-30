@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php SESSION_START(); ?>
 <html>
 
 <head>
@@ -193,10 +194,7 @@
             <div class="column">
                 <div class="content">
                     <img class="Profilbild" src="logo.png" alt="Profilbild">
-
-
                     <a href="Freund.php">Armin Maghsoudloo</a>
-
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
@@ -214,6 +212,17 @@
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
+            <?php
+                $userID = $_SESSION["userID"];
+                $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
+                $_sql = "SELECT userID2 FROM freund WHERE userID1='$userID'";
+                $_res = mysqli_query($db, $_sql);
+                while($_row = mysqli_fetch_assoc($_res)){
+                    $_sql[] = "SELECT name FROM user WHERE userID='$_row'";
+                    $_freundName = mysqli_query($db, $_sql);
+                    echo "<script>console.log('".$_freundName."');</script>";
+                }
+            ?>
         </div>
     </div>
 </body>
