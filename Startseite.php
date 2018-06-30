@@ -56,6 +56,9 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
+            <form method="POST">
+                  <a href="logoutSeite.php">Logout</a>
+            </form>
         </div>
 
         <input type="text" id="suchfeld" placeholder="Suche...">
