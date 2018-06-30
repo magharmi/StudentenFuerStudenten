@@ -32,4 +32,3 @@ Profil/Freund	erledigt	- Beschreibung blinkt wenn Mauszeiger drüber
 Profil/Freund		- Was wenn kein Bild?
 
 
-

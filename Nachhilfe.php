@@ -109,6 +109,20 @@
             margin-top: 0.5em;
         }
 
+        .seiteninhalt .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
         @keyframes animatezoom {
             from {
                 transform: scale(0)
@@ -130,6 +144,10 @@
             width: 100%;
             border: 2px solid darkorange;
             border-radius: 4px;
+        }
+
+        .LoginButtons {
+            padding-top: 69px;
         }
 
     </style>
@@ -312,7 +330,7 @@
                     </div>
                 </div>
                 <div id="id03" class="modal">
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate">
                         <div class="modalcontainer">
                             <h1>Nachhilfe anbieten</h1>
                             <h2>Bitte f&uumllle folgende Felder aus</h2>
@@ -331,17 +349,6 @@
                         </div>
                     </form>
                 </div>
-                <script>
-                    // Get the modal
-                    var modal = document.getElementById('id03');
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-
-                </script>
             </div>
 
             <div class="w3-half">
@@ -468,7 +475,7 @@
                     </div>
                 </div>
                 <div id="id04" class="modal">
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate">
                         <div class="modalcontainer">
                             <h1>Hilfe anfordern</h1>
                             <h2>Bitte f&uumllle folgende Felder aus</h2>
@@ -489,12 +496,16 @@
                     </form>
                 </div>
                 <script>
-                    // Get the modal
-                    var modal = document.getElementById('id04');
-                    // When the user clicks anywhere outside of the modal, close it
+                    //Schließt die Modals wenn daneben geklickt wird
+                    var modal = document.getElementById('id03');
+                    var modal2 = document.getElementById('id04');
                     window.onclick = function(event) {
                         if (event.target == modal) {
                             modal.style.display = "none";
+                        }
+
+                        if (event.target == modal2) {
+                            modal2.style.display = "none";
                         }
                     }
 
