@@ -1,8 +1,9 @@
 <?php  
 
 	SESSION_START();
-
     $link = mysqli_connect("localhost", "root");
+    $userID = $_SESSION["userID"];
+
  
     if (!$link) { 
         die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
@@ -22,7 +23,7 @@
         $_anbietenZeit = mysqli_real_escape_string($link, $_POST["anbietenZeit"]);
         $_anbietenPreis = mysqli_real_escape_string($link, $_POST["anbietenPreis"]);
 		
-        $_sql = "INSERT INTO nachhilfeangebot (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anbietenTitel','$_anbietenOrt', '$_anbietenZeit', '$_anbietenPreis', '1')";
+        $_sql = "INSERT INTO nachhilfeangebot (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anbietenTitel','$_anbietenOrt', '$_anbietenZeit', '$_anbietenPreis', '$userID')";
         //echo "<script>console.log('NachhilfeAngebot eingefuegt!');</script>";
         $_res = mysqli_query($link, $_sql);	
 	}
@@ -34,7 +35,7 @@
         $_anfordernZeit = mysqli_real_escape_string($link, $_POST["anfordernZeit"]);
         $_anfordernPreis = mysqli_real_escape_string($link, $_POST["anfordernPreis"]);
 		
-        $_sql = "INSERT INTO nachhilfesuche (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anfordernTitel','$_anfordernOrt', '$_anfordernZeit', '$_anfordernPreis', '1')";
+        $_sql = "INSERT INTO nachhilfesuche (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anfordernTitel','$_anfordernOrt', '$_anfordernZeit', '$_anfordernPreis', '$userID')";
         echo "<script>console.log('NachhilfeSuche eingefuegt!');</script>";
         $_res = mysqli_query($link, $_sql);	
 	}
