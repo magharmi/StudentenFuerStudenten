@@ -122,7 +122,6 @@
                             <h2>To-Do-Liste</h2>
                             <form method="POST">
                                 <div class="button-group">
-                                    <input type="text" id="myInput" name="task" placeholder="Was merken?">
                                     <script>
                                         var input = document.getElementById("myInput");
                                         input.addEventListener("keyup", function(event) {
@@ -133,40 +132,11 @@
                                         });
 
                                     </script>
+                                    <input type="text" id="myInput" name="task" placeholder="Was merken?">
                                     <span type="submit" onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
                                 </div>
                             </form>
                         </div>
-
-                        <?php
-							$link = mysqli_connect("localhost", "root"); 
-							if (!$link) 
-							{ 
-								die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
-							} 
-							$datenbank = mysqli_select_db($link, "StudentenFuerStudenten"); 
-
-							if (!$datenbank) 
-								{ 
-								echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
-								mysqli_close($link);
-								exit;
-								} 
-								
-							if (!$datenbank) 
-								{ 
-								echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
-								mysqli_close($link);
-								exit;
-								} 
-								
-							$result = mysqli_query($link, "SELECT * FROM todolist");
-							
-							while($row = mysqli_fetch_array($result))
-							{
-								newElementDB($row["aufgabe"]);
-							}
-						?>
 
 
                             <ul id="ToDoListe">

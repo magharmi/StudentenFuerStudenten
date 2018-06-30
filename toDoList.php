@@ -1,7 +1,7 @@
 <?php 
 	SESSION_START();
     $_userID = $_SESSION["userID"];
-    $_userID1 = mysqli_real_escape_string($_userID); 
+    $_userID1 = mysqli_real_escape_string($_userID);
     // initialize errors variable
 	$errors = "";
 
@@ -36,9 +36,8 @@
 		}
 	*/
 
-    if(!isset($_POST["addTaskToDB"])){
-        echo("<script>console.log('userID: ".$_userID1." und KursID: 1 in Datenbank gespeichert');</script>");
-        $_task = mysqli_real_escape_string($link, $_POST["task"]);
+    if(!isset($_POST["addTaskToDB"])){                                  // kennt den Button nicht
+        $_task = mysqli_real_escape_string($link, $_POST["task"]);      // kennt task nicht         Fehler wahrscheinlich in Startseite.php
         $_userID = mysqli_real_escape_string($link, $_SESSION["userID"]); 
 		$_sql = "INSERT INTO todoliste (userID, beschreibung) VALUES('$_userID', '$_task')"; 
 		$_res = mysqli_query($link, $_sql);
