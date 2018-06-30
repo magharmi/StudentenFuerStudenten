@@ -211,18 +211,23 @@
                     <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
-            <?php
+            <?php      
                 $userID = $_SESSION["userID"];
                 $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                $_sql = "SELECT userID2 FROM freund WHERE userID1='$userID'";
-                $_res = mysqli_query($db, $_sql);
+                $sql = "SELECT userID2 FROM freund WHERE userID1='$userID'";
+                $_res = mysqli_query($db, $sql);
                 while($_row = mysqli_fetch_assoc($_res)){
                     $_freundID = $_row["userID2"];
-                    $_sql = "SELECT name FROM user WHERE userID='$_freundID'";
+                    $_sql = "SELECT * FROM user WHERE userID='$_freundID'";
                     $_erg = mysqli_query($db, $_sql);
-                    $_zeile = $_erg->fetch_assoc();
-                    $_freundName = $_zeile["name"];
-                    echo "<script>console.log('".$_freundName."');</script>";
+                    while($_zeile = $_erg->fetch_assoc()){
+                        $_freundName = $_zeile["name"];
+                        $_uni = $_zeile["uni"];
+                        $_fach = $_zeile["fach"];
+                        echo "<script>console.log('".$_freundName."');</script>";
+                        echo "<script>console.log('".$_fach."');</script>";
+                        echo "<script>console.log('".$_uni."');</script>";
+                    }
                 }
             ?>
         </div>
