@@ -32,7 +32,6 @@
         $_anzahl = @mysqli_num_rows($_res);
         
         if ($_anzahl > 0) {
-			$_SESSION["userSession"] = $_loginEmail; //Kann weg?
             $_sql = "SELECT userID FROM user WHERE email='$_loginEmail'";
             $_result = mysqli_query($link, $_sql);
             $row = $_result->fetch_assoc();
