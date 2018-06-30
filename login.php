@@ -38,7 +38,7 @@
             $_SESSION["userID"] = $row["userID"];
             header("Location: Startseite.php");
 		}
-        else { 
+        else {
             echo("<script>console.log('Logindaten nicht korrekt!');</script>");   
 		} 
     }

@@ -24,7 +24,7 @@
         $_anbietenPreis = mysqli_real_escape_string($link, $_POST["anbietenPreis"]);
 		
         $_sql = "INSERT INTO nachhilfeangebot (kursID, titel, ort, zeit, preis, userID) VALUES('1','$_anbietenTitel','$_anbietenOrt', '$_anbietenZeit', '$_anbietenPreis', '$userID')";
-        //echo "<script>console.log('NachhilfeAngebot eingefuegt!');</script>";
+        echo "<script>console.log('NachhilfeAngebot eingefuegt!');</script>";
         $_res = mysqli_query($link, $_sql);	
 	}
 
