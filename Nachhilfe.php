@@ -132,6 +132,10 @@
             border-radius: 4px;
         }
 
+        .LoginButtons {
+            padding-top: 69px;
+        }
+
     </style>
 </head>
 
@@ -331,17 +335,6 @@
                         </div>
                     </form>
                 </div>
-                <script>
-                    // Get the modal
-                    var modal = document.getElementById('id03');
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-
-                </script>
             </div>
 
             <div class="w3-half">
@@ -489,12 +482,16 @@
                     </form>
                 </div>
                 <script>
-                    // Get the modal
-                    var modal = document.getElementById('id04');
-                    // When the user clicks anywhere outside of the modal, close it
+                    //Schließt die Modals wenn daneben geklickt wird
+                    var modal = document.getElementById('id03');
+                    var modal2 = document.getElementById('id04');
                     window.onclick = function(event) {
                         if (event.target == modal) {
                             modal.style.display = "none";
+                        }
+
+                        if (event.target == modal2) {
+                            modal2.style.display = "none";
                         }
                     }
 
