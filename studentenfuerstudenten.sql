@@ -73,7 +73,7 @@ CREATE TABLE `nachhilfeangebot` (
   `titel` varchar(255) NOT NULL,
   `ort` varchar(255) NOT NULL,
   `zeit` varchar(255) NOT NULL,
-  `preis` decimal(10,2) NOT NULL,
+  `preis` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -90,7 +90,7 @@ CREATE TABLE `nachhilfesuche` (
   `titel` varchar(255) NOT NULL,
   `ort` varchar(255) NOT NULL,
   `zeit` varchar(255) NOT NULL,
-  `preis` decimal(10,2) NOT NULL
+  `preis` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

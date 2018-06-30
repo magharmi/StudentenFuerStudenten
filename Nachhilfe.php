@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <?php include ("nachhilfeDatenbank.php"); ?>
     <title>Nachhilfe</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.png">
@@ -224,7 +225,6 @@
         <div class="mittig">
             <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
-
                     <div id="KurseUebersicht">
                         <div id="AlleKurseDiv">
                             <h1 id="AlleKurseUeberschrift">Nachhilfe anbieten</h1>
@@ -241,7 +241,7 @@
                                                             <button class="collapsible">Java Programmierung</button>
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
-                                                                    <h4>Hilfe f&uumlr Java-Programmierung anbieten?</h4>
+                                                                    <h4>Hilfe f&uuml;r Java-Programmierung anbieten?</h4>
                                                                     <button onclick="document.getElementById('id03').style.display='block'" class="NachhilfeEintragen">Nachhilfe eintragen</button>
                                                                 </ul>
                                                             </div>
@@ -250,7 +250,7 @@
                                                             <button class="collapsible">C Programmierung</button>
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
-                                                                    <h4>Hilfe f&uumlr C-Programmierung anbieten?</h4>
+                                                                    <h4>Hilfe f&uuml;r C-Programmierung anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
                                                                 </ul>
                                                             </div>
@@ -259,7 +259,7 @@
                                                             <button class="collapsible">Objektorientierte Programmierung</button>
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
-                                                                    <h4>Hilfe f&uumlr OO-Programmierung anbieten?</h4>
+                                                                    <h4>Hilfe f&uuml;r OO-Programmierung anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
                                                                 </ul>
                                                             </div>
@@ -268,7 +268,7 @@
                                                             <button class="collapsible">Moderne Webtechnologien</button>
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
-                                                                    <h4>Hilfe f&uumlr Moderne Webtechnologien anbieten?</h4>
+                                                                    <h4>Hilfe f&uuml;r Moderne Webtechnologien anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
                                                                 </ul>
                                                             </div>
@@ -277,7 +277,7 @@
                                                             <button class="collapsible">IT Sicherheit</button>
                                                             <div class="content">
                                                                 <ul class="AlleKurseListe">
-                                                                    <h4>Hilfe f&uumlr IT-Sicherheit anbieten?</h4>
+                                                                    <h4>Hilfe f&uuml;r IT-Sicherheit anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
 
                                                                 </ul>
@@ -308,7 +308,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <button class="collapsible">Geod&aumlsie</button>
+                                    <button class="collapsible">Geod&auml;sie</button>
                                     <div class="content">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
                                     </div>
@@ -330,20 +330,20 @@
                     </div>
                 </div>
                 <div id="id03" class="modal">
-                    <form class="modal-content animate">
+                    <form class="modal-content animate" method="POST">
                         <div class="modalcontainer">
                             <h1>Nachhilfe anbieten</h1>
-                            <h2>Bitte f&uumllle folgende Felder aus</h2>
+                            <h2>Bitte f&uuml;lle folgende Felder aus</h2>
                             <label for="titel">Titel (wird bei Nachhilfeangebote angezeigt)</label>
-                            <input type="text" id="titel" placeholder="Beispiel: Biete Hilfe für Java an, insbesondere für JavaFX" required>
+                            <input type="text" id="titel" placeholder="Beispiel: Biete Hilfe für Java an, insbesondere für JavaFX" required name="anbietenTitel">
                             <label for="ort">Bevorzugter Ort</label>
-                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required>
-                            <label for="titel">Voraussichtliche Verf&uumlgbarkeit</label>
-                            <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung." required>
+                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required name="anbietenOrt">
+                            <label for="titel">Voraussichtliche Verf&uuml;gbarkeit</label>
+                            <input type="text" id="zeit" placeholder="Beispiel: Stehe von dd.mm.yyyy bis dd.mm.yyyy zur Verfügung." required name="anbietenZeit">
                             <label for="preis">Preis</label>
-                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required>
+                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required name="anbietenPreis">
                             <div class="LoginButtons">
-                                <button type="button" onclick="document.getElementById('id03').style.display='none'">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id03').style.display='none'" name="anbietenAbschicken">Abschicken</button>
                                 <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Abbrechen</button>
                             </div>
                         </div>
@@ -370,7 +370,7 @@
                                                                 <button class="collapsible">Java Programmierung</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-                                                                        <h4>Hilfe f&uumlr Java-Programmierung anfordern?</h4>
+                                                                        <h4>Hilfe f&uuml;r Java-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -379,7 +379,7 @@
                                                                 <button class="collapsible">C Programmierung</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-                                                                        <h4>Hilfe f&uumlr C-Programmierung anfordern?</h4>
+                                                                        <h4>Hilfe f&uuml;r C-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -388,7 +388,7 @@
                                                                 <button class="collapsible">Objektorientierte Programmierung</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-                                                                        <h4>Hilfe f&uumlr OO-Programmierung anfordern?</h4>
+                                                                        <h4>Hilfe f&uuml;r OO-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -397,7 +397,7 @@
                                                                 <button class="collapsible">Moderne Webtechnologien</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-                                                                        <h4>Hilfe f&uumlr Moderne Webtechnologien anfordern?</h4>
+                                                                        <h4>Hilfe f&uuml;r Moderne Webtechnologien anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -406,7 +406,7 @@
                                                                 <button class="collapsible">IT Sicherheit</button>
                                                                 <div class="content">
                                                                     <ul class="AlleKurseListe">
-                                                                        <h4>Hilfe f&uumlr IT-Sicherheit anfordern?</h4>
+                                                                        <h4>Hilfe f&uuml;r IT-Sicherheit anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                     </ul>
                                                                 </div>
@@ -436,7 +436,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <button class="collapsible">Geod&aumlsie</button>
+                                        <button class="collapsible">Geod&auml;sie</button>
                                         <div class="content">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
                                         </div>
@@ -475,21 +475,21 @@
                     </div>
                 </div>
                 <div id="id04" class="modal">
-                    <form class="modal-content animate">
+                    <form class="modal-content animate" method="POST">
                         <div class="modalcontainer">
                             <h1>Hilfe anfordern</h1>
-                            <h2>Bitte f&uumllle folgende Felder aus</h2>
+                            <h2>Bitte f&uuml;lle folgende Felder aus</h2>
                             <label for="titel">Titel (wird bei Hilfesuchenden angezeigt)</label>
-                            <input type="text" id="titel" placeholder="Beispiel: Suche Hilfe für Java, insbesondere für JavaFX" required>
+                            <input type="text" id="titel" placeholder="Beispiel: Suche Hilfe für Java, insbesondere für JavaFX" required name="anfordernTitel">
                             <label for="ort">Bevorzugter Ort</label>
-                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required>
-                            <label for="titel">Voraussichtliche Verf&uumlgbarkeit</label>
-                            <input type="text" id="zeit" placeholder="Beispiel: Benötige Hilfe von dd.mm.yyyy bis dd.mm.yyyy." required>
+                            <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required name="anfordernOrt">
+                            <label for="titel">Voraussichtliche Verf&uuml;gbarkeit</label>
+                            <input type="text" id="zeit" placeholder="Beispiel: Benötige Hilfe von dd.mm.yyyy bis dd.mm.yyyy." required name="anfordernZeit">
                             <label for="preis">Preisvorstellung</label>
-                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required>
+                            <input type="text" id="preis" placeholder="Beispiel: 8,50€/Stunde" required name="anfordernPreis">
 
                             <div class="LoginButtons">
-                                <button type="button" onclick="document.getElementById('id04').style.display='none'">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id04').style.display='none'" name="anfordernAbschicken">Abschicken</button>
                                 <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Abbrechen</button>
                             </div>
                         </div>
