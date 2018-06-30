@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 30. Jun 2018 um 16:34
+-- Erstellungszeit: 30. Jun 2018 um 21:20
 -- Server-Version: 10.1.33-MariaDB
 -- PHP-Version: 7.2.6
 
@@ -37,6 +37,19 @@ CREATE TABLE `aufgabe` (
   `datei` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `aufgabe`
+--
+
+INSERT INTO `aufgabe` (`aufgabenID`, `name`, `beschreibung`, `userID`, `kursID`, `datei`) VALUES
+(1, 'wt2 Projektaufgabe', 'das ist die Projektaufgabe von 2018', 1, 2, ''),
+(2, 'Java 1', 'das ist die erste Aufgabe in Java 1', 1, 1, ''),
+(3, 'Mathe 1', 'Mathe Arbeitsblatt 1 handelt vom Dreisatz', 3, 4, ''),
+(4, 'Java 2 Aufgabe 3', 'diese Aufgabe handelt von getter und setter', 3, 7, ''),
+(5, 'IT-Sicherheit', 'ein DDoS-Angriff: wie funktioniert es', 7, 9, ''),
+(6, 'Java 2 Aufgabe 9', 'Einführung in Javafx', 7, 4, ''),
+(7, 'Mathe 2: Vektoren', 'Betrag von Vektoren berechnen', 3, 4, '');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +60,19 @@ CREATE TABLE `freund` (
   `userid1` int(11) NOT NULL,
   `userid2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `freund`
+--
+
+INSERT INTO `freund` (`userid1`, `userid2`) VALUES
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
+(1, 8);
 
 -- --------------------------------------------------------
 
@@ -60,6 +86,19 @@ CREATE TABLE `kurs` (
   `beschreibung` varchar(1024) NOT NULL,
   `voraussetzung` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `kurs`
+--
+
+INSERT INTO `kurs` (`kursID`, `name`, `beschreibung`, `voraussetzung`) VALUES
+(1, 'Java 1', 'Grundlagen der Progrmmierung', 'Für diesen Kurs gibt es keine Voraussetzungen'),
+(2, 'Java 2', 'Einführung in die OOP', 'Voraussetzung für diesen Kurs ist Java 1'),
+(3, 'Mathe 1', 'In diesem Kurs geht es Hauptsächlich um die Kurvendiskussion', 'Für diesen Kurs gibt es keine Voraussetzungen'),
+(4, 'Mathe 2', 'Der Schwerpunkt in diesem Kurs ist die Vektorrechnung', 'Es ist Vorteilhaft Mathe 1 Vorher abgeschlossen zu haben'),
+(5, 'IT-Sicherheit', 'Wie kann ich mich vor Angriffe schützen und wie funktionieren diese', 'Für diesen Kurs gibt es keine Voraussetzungen'),
+(6, 'Datenbanken', 'Erlerne den Umgang mit Datenbanken in der Sprache MySql', 'Für diesen Kurs gibt es keine Voraussetzungen'),
+(7, 'C Programmierung', 'Grundlagen in der Programmiersprache C', 'Für diesen Kurs gibt es keine Voraussetzungen');
 
 -- --------------------------------------------------------
 
@@ -82,7 +121,9 @@ CREATE TABLE `nachhilfeangebot` (
 --
 
 INSERT INTO `nachhilfeangebot` (`angebotID`, `kursID`, `titel`, `ort`, `zeit`, `preis`, `userID`) VALUES
-(1, 1, 'Mathe', 'Bochum', '12:00', '12,50â‚¬', 1);
+(1, 1, 'Mathe', 'Bochum', '12:00', '12,50â‚¬', 1),
+(2, 2, 'Nachhilfe Java 2', 'Bochum', '19:00 Uhr', '12€', 5),
+(3, 3, 'Mathe Nachhilfe', 'Recklinghausen', '23.7 14:30 Uhr', '10€', 0);
 
 -- --------------------------------------------------------
 
@@ -125,7 +166,8 @@ CREATE TABLE `todoliste` (
 --
 
 INSERT INTO `todoliste` (`todoID`, `userID`, `beschreibung`, `checked`) VALUES
-(2, 1, '', NULL);
+(2, 1, '', NULL),
+(3, 1, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -224,37 +266,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT für Tabelle `aufgabe`
 --
 ALTER TABLE `aufgabe`
-  MODIFY `aufgabenID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `aufgabenID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `kurs`
 --
 ALTER TABLE `kurs`
-  MODIFY `kursID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kursID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfeangebot`
 --
 ALTER TABLE `nachhilfeangebot`
-  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfesuche`
 --
 ALTER TABLE `nachhilfesuche`
-  MODIFY `sucheID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sucheID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT für Tabelle `todoliste`
 --
 ALTER TABLE `todoliste`
-  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
