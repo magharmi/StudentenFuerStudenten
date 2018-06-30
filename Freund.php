@@ -234,9 +234,9 @@
     <div id="txtbox">
         <div class="personbeschreibung">
             <h1>Beschreibung</h1>
-            <a>
+            <h3>
             Hallo, ich bin Max Mustermann und studiere BWL seit 9 Semestern an der Hochschule Bochum. Ich bin 30 Jahre alt und gebe schon seit 9 Jahren Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
-            </a>
+            </h3>
         </div>
     </div>
 
