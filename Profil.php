@@ -86,12 +86,6 @@
                 }
             }
 
-            @media screen and (max-width: 601px) {
-                div. div.personbeschreibung {
-                    font-size: 20px;
-                }
-            }
-
             .block {
                 display: block;
                 width: 150%;
