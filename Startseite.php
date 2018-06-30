@@ -271,12 +271,16 @@
                 <div class="w3-card w3-container" style="min-height:460px">
                     <div id="MeineKurseDiv">
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
+						                    <p>
+                        
+						<a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
+                        <p>
                         <ul id="MeineKurseListe">
                             <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
                             <li><a href="#">C Programmierung</a></li>
                             <li><a href="#">Rechnerarchitektur</a></li>
                             <li><a href="#">Webtechnologien</a></li>
-                            <li><a href="#">IT-Sicherheit</a></li>
+                          
                         </ul>
                     </div>
 
@@ -291,7 +295,8 @@
 
                     <h2>Aufgaben &Uumlbersicht</h2>
                     <p>
-                        <img src="aufgaben.jpg" alt="John" style="width:20%">
+                        
+						<a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
 
@@ -308,9 +313,10 @@
 
 
             <div class="w3-half">
-                <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
+                <div class="w3-card w3-container w3-margin-top" href="Kursbeigetreten.php"  style="min-height:460px">
                     <h2>Zuletzt bearbeitete Aufgabe</h2>
-                    <p> <img src="aufgaben.jpg" alt="John" style="width:20%">
+                    <p> <a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
+
                         <p>
                             <div id="MeineKurseDiv">
 

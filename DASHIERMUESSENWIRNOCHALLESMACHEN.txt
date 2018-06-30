@@ -12,7 +12,7 @@ profil/freund		- kurse, aufgaben, hilfe mit datenbank verknüpfen
 profil/freund		- Was wenn leer?
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
 Startseite		- Was wenn leer?
-Startseite		- Titel/Bild der Kachel zu Seiten verlinken
+Startseite	erledigt	- Titel/Bild der Kachel zu Seiten verlinken
 Generell		- Fehlermeldungen in Konsole und nicht 20mal oben auf die Seite schreiben
 Startseite	erledigt	- X hinter meine Kurse entfernen
 Login		erledigt	- Verlinkung im Icon entfernen, Login kann sonst umgangen werden
