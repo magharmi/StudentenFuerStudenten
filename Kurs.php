@@ -1,5 +1,5 @@
 <?php include ("kursBeitreten.php"); ?>
-
+<?php include ("loginCheck.php"); ?>
 <!DOCTYPE html>
 <html>
 
