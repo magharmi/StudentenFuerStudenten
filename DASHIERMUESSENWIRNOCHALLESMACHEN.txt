@@ -1,34 +1,25 @@
 Seite			- Was getan werden muss
 
-KurseUebersicht		- MeineKurse mit Datenbank verbinden
-FreundeUebersicht	- Mit Datenbank verbinden
-Generell		- Genug Beispieldatensaetze erstellen
-Nachhilfe		- Modals mit Datenbank verbinden
-FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild
-Kurs		erledigt	- Mit Datenbank verbinden
-Kursbeigetreten		- download button funktionsfähig
-kursbeigetreten		- uploadbutton mit Datenbank
-profil/freund		- kurse, aufgaben, hilfe mit datenbank verknüpfen
-profil/freund		- Was wenn leer?
+Generell		- Mehr Beispieldatensaetze erstellen
+Generell		- Logout Button Responsive und DANACH verteilen
+Generell		- automatischer Logout verteilen
+Startseite		- ToDoListe fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
-Startseite		- Was wenn leer?
-Startseite	erledigt	- Titel/Bild der Kachel zu Seiten verlinken
-Generell	erledigt	- Fehlermeldungen in Konsole und nicht 20mal oben auf die Seite schreiben
-Startseite	erledigt	- X hinter meine Kurse entfernen
-Login		erledigt	- Verlinkung im Icon entfernen, Login kann sonst umgangen werden
-Generell	erledigt	- Wie loggt man sich aus? Button im Header?
-Generell	erledigt	- Wenn nicht eingeloggt automatisch zu login schicken, sonst kann mit direktem Link der Login umgangen werden
 Profil			- Name, Hochschule, Fach, Beschreibung aus Datenbank entnehmen
-Suche		erledigt	- Entfernen? 
+Profil			- Modal zum Hochladen des Bildes
+Profil			- nur eigenes Bild nicht alle laden
+Profil/Freund		- Standartbild, wenn noch keins hochgeladen einfuegen
+profil/freund		- kurse, aufgaben, hilfe mit datenbank verknüpfen
 Freund			- Nachricht schreiben button soll email anzeigen
 Freund			- Freundhinzufügen/freundentfernen Button umwandeln
 Freund			- Wie findet man eigentlich neue Freunde? Über Kurs? Über Nachhilfe?
+FreundeUebersicht	- Mit Datenbank verbinden
+FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild
+KurseUebersicht		- MeineKurse mit Datenbank verbinden
 Kurs			- Teilnehmer anzeigen
-Profil			- Modal zum Hochladen des Bildes
+Kurs			- Mit Datenbank verbinden
+Kursbeigetreten		- download button funktionsfähig
+kursbeigetreten		- uploadbutton mit Datenbank
 Nachhilfe		- Kurse interaktiv oder alle vorher einfügen?
-Startseite		- ToDoListe fixen
-Profil			- Beschreibung bearbeiten
-Profil/Freund	erledigt	- Beschreibung blinkt wenn Mauszeiger drüber
-Profil/Freund	dann das logo	- Was wenn kein Bild?
 
 
