@@ -227,7 +227,6 @@
             <a href="Nachhilfe.php">Nachhilfe</a>
         </div>
 
-        <input type="text" id="suchfeld" placeholder="Suche...">
 
         <div class="container" onclick="myFunction(this)" id="burgerbutton">
             <div class="bar1"></div>
