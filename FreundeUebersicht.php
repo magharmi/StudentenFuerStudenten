@@ -218,10 +218,14 @@
                 $_sql = "SELECT userID2 FROM freund WHERE userID1='$userID'";
                 $_res = mysqli_query($db, $_sql);
                 while($_row = mysqli_fetch_assoc($_res)){
-                    $_sql = "SELECT name FROM user WHERE userID='$_row[userID]'";
-                    $_freundName = mysqli_query($db, $_sql);
+                    $_freundID = $_row["userID2"];
+                    $_sql = "SELECT name FROM user WHERE userID='$_freundID'";
+                    $_erg = mysqli_query($db, $_sql);
+                    $_zeile = $_erg->fetch_assoc();
+                    $_freundName = $_zeile["name"];
                     echo "<script>console.log('".$_freundName."');</script>";
                 }
+                echo "<script>console.log('hi');</script>";
             ?>
         </div>
     </div>
