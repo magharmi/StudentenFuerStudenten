@@ -73,8 +73,7 @@ CREATE TABLE `nachhilfeangebot` (
   `titel` varchar(255) NOT NULL,
   `ort` varchar(255) NOT NULL,
   `zeit` varchar(255) NOT NULL,
-  `preis` decimal(10,0) NOT NULL,
-  `beschreibung` varchar(255) NOT NULL,
+  `preis` decimal(10,2) NOT NULL,
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -91,8 +90,7 @@ CREATE TABLE `nachhilfesuche` (
   `titel` varchar(255) NOT NULL,
   `ort` varchar(255) NOT NULL,
   `zeit` varchar(255) NOT NULL,
-  `preis` decimal(10,2) NOT NULL,
-  `beschreibung` varchar(255) NOT NULL
+  `preis` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -130,7 +128,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `passwort`, `email`, `userID`, `uni`, `fach`, `beschreibung`, `bild`) VALUES
-('Albert', '0ffc87443c705daa3b344a0bd30fba05', 'a', 1, 'Hochschule Bochum', 'Informatik', 'Ich bin Albert', '');
+('Albert', 'cb69ade06bce5180f20a96b1fc3960f3', 'a', 1, 'Hochschule Bochum', 'Informatik', 'Ich bin Albert', 'sulf.jpeg');
 
 -- --------------------------------------------------------
 

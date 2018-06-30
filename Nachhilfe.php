@@ -109,6 +109,20 @@
             margin-top: 0.5em;
         }
 
+        .seiteninhalt .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
         @keyframes animatezoom {
             from {
                 transform: scale(0)
@@ -316,7 +330,7 @@
                     </div>
                 </div>
                 <div id="id03" class="modal">
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate">
                         <div class="modalcontainer">
                             <h1>Nachhilfe anbieten</h1>
                             <h2>Bitte f&uumllle folgende Felder aus</h2>
@@ -461,7 +475,7 @@
                     </div>
                 </div>
                 <div id="id04" class="modal">
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate">
                         <div class="modalcontainer">
                             <h1>Hilfe anfordern</h1>
                             <h2>Bitte f&uumllle folgende Felder aus</h2>
