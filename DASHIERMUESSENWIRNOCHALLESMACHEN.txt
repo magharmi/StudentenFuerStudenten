@@ -15,7 +15,7 @@ Startseite		- Was wenn leer?
 Startseite		- Titel/Bild der Kachel zu Seiten verlinken
 Generell		- Fehlermeldungen in Konsole und nicht 20mal oben auf die Seite schreiben
 Startseite		- X hinter meine Kurse entfernen
-Login			- Verlinkung im Icon entfernen, Login kann sonst umgangen werden
+Login		erledigt	- Verlinkung im Icon entfernen, Login kann sonst umgangen werden
 Generell		- Wie loggt man sich aus? Button im Header?
 Generell		- Wenn nicht eingeloggt automatisch zu login schicken, sonst kann mit direktem Link der Login umgangen werden
 Profil			- Name, Hochschule, Fach, Beschreibung aus Datenbank entnehmen
