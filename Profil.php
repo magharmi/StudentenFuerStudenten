@@ -296,7 +296,7 @@
 
            
     while ($row = mysqli_fetch_array($result)) {
-      echo "<div id='img_div' class='Profilbild'>";
+      echo "<div id='profilbild' class='Profilbild'>";
       	echo "<img src='profilbilder/".$row['bild']."' height=350em width=145% >";
       echo "</div>";
     }
