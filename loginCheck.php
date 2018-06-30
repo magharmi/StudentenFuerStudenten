@@ -1,9 +1,6 @@
 <?php 
     if (isset($_SESSION['userID'])) {  
-
-        echo("<script>console.log('Eingeloggte User-Session: ".$_SESSION["userID"]."');</script>");
     } else {
-        echo("<script>console.log('Nicht eingeloggt!');</script>");
         header('Location: index.php');
     }
     // initialize errors variable

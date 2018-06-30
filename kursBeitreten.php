@@ -2,6 +2,7 @@
 	SESSION_START();
 
     $_userID = ($_SESSION["userID"]);
+   
     // initialize errors variable
 	$errors = "";
 
@@ -24,8 +25,7 @@
 
 		
 	if(isset($_POST["joinKurs"])){
-		echo("<script>console.log('userID: ".$_userID." und KursID: 1 in Datenbank gespeichert');</script>");		// userID ist leer?
-        $_sql = "INSERT INTO userkurse (userID, kursID) VALUES('".$_SESSION['userID']."','1')";                       // userID auch leer? In Datenbank 0
+        $_sql = "INSERT INTO userkurse (userID, kursID) VALUES('$_userID', '1')";                                    // userID auch leer? In Datenbank 0
         echo $_sql;
         
 	}
