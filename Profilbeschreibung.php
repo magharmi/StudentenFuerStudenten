@@ -1,7 +1,6 @@
 <?php 
 	SESSION_START();
 
-    $_userID = ($_SESSION["userID"]);
     // initialize errors variable
 	$errors = "";
 
@@ -23,14 +22,14 @@
         } 
 
 		
-	if(isset($_POST["ok"])){
-		
-		 $_beschreibungtxt = mysqli_real_escape_string($link, $_POST["beschreibungtxt"]); 
+	if(isset($_POST["beschreibungOK"])){
+        $_userID = ($_SESSION["userID"]);
+		$_beschreibungtxt = mysqli_real_escape_string($link, $_POST["beschreibungtxt"]); 
 
-		echo("<script>console.log('userID: ".$_userID." und KursID: 1 in Datenbank gespeichert');</script>");		// userID ist leer?
-        $_sql = "INSERT INTO user where userID = 1(beschreibung) VALUES('".$_beschreibungtxt."')";    // userID auch leer? In Datenbank 0
-        echo $_sql;
+		echo("<script>console.log('userID: ".$_userID." hat seine Beschreibung zu: ".$_beschreibungtxt." geaendert!');</script>");
         
+        $_sql = "INSERT INTO user WHERE userID = ".$_userID." (beschreibung) VALUES('".$_beschreibungtxt."')";
+        $_res = mysqli_query($link, $_sql);	
+        echo "<script>console.log('Beschreibung geaendert');</script>";        
 	}
 ?>
-
