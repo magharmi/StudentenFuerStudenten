@@ -218,7 +218,7 @@
                 $_sql = "SELECT userID2 FROM freund WHERE userID1='$userID'";
                 $_res = mysqli_query($db, $_sql);
                 while($_row = mysqli_fetch_assoc($_res)){
-                    $_sql[] = "SELECT name FROM user WHERE userID='$_row'";
+                    $_sql = "SELECT name FROM user WHERE userID='$_row[userID]'";
                     $_freundName = mysqli_query($db, $_sql);
                     echo "<script>console.log('".$_freundName."');</script>";
                 }
