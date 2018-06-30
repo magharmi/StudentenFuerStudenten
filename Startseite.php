@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php include ("toDoList.php"); ?>
+<?php include ("loginCheck.php"); ?>
 <html>
 
 <head>
