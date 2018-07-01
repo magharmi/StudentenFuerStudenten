@@ -3,6 +3,7 @@ Seite			- Was getan werden muss
 Generell		- Mehr Beispieldatensaetze erstellen
 Generell		- Logout Button Responsive und DANACH verteilen
 Generell		- automatischer Logout verteilen
+Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
 Startseite		- ToDoListe fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
 Profil			- Modal zum Hochladen des Bildes
@@ -15,7 +16,7 @@ Freund			- Freundhinzufügen/Freundentfernen Button umwandeln und funktionstüchti
 Freund			- Wie findet man eigentlich neue Freunde? Über Kurs? Über Nachhilfe?
 FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild, oder kleines Bild
 FreundeUebersicht	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
-KurseUebersicht		- MeineKurse mit Datenbank verbinden
+KurseUebersicht		erledigt	- MeineKurse mit Datenbank verbinden
 KurseUebersicht		- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
 Kurs			- prüfen ob man diesem beigetreten ist
 Kurs/Kursbeigetreten	- zusammen legen wenn oberer Punkt klappt
@@ -29,10 +30,10 @@ kursbeigetretenC	- kann weg?
 Nachhilfe		- KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		- Nachhilfeanfragen/angebote anzeigen lassen, bisher werden sie nur in die Datenbank eingetragen
 Datenschutz/Impressum	- Box mittig?(unwichtig)
-fml.txt			- kann weg?
+fml.txt			erledigt	- kann weg?
 Müllbilder		- ersetzten und entfernen
+beispielaufgaben	erledigt	- "hochladen"
 profilbilder		- in richtigen ordner(inklusive möglicher noch vorhandener verlinkungen)
-beispielaufgaben	- "hochladen"
 styler.css		- aufräumen
 
 

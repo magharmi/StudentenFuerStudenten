@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php SESSION_START(); ?>
 <html>
 
 <head>
@@ -184,6 +185,45 @@
                 <li><a href="#">Rechnerarchitektur</a></li>
                 <li><a href="#">Webtechnologien</a></li>
                 <li><a href="#">IT-Sicherheit</a></li>
+
+                <?php
+                $link = mysqli_connect("localhost", "root");
+                if (!$link) {
+                    die("Keine Datenbankverbindung möglich: " . mysqli_error());
+                } 
+                $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+                if (!$datenbank) {
+                    echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+                    mysqli_close($link);
+                    exit;
+                }
+                
+                $_userID = $_SESSION["userID"];
+                //echo("<script>console.log('User: $_userID');</script>");
+                $sql1 = "SELECT kursID FROM userkurse WHERE userID='$_userID'";
+                $_res1 = mysqli_query($link, $sql1);
+                
+                $_anzahl = mysqli_num_rows($_res1);
+                //echo("<script>console.log('Anzahl: $_anzahl');</script>");
+                if ($_anzahl == 0) {
+                    echo("<script>console.log('Kein beigetretener Kurs gefunden');</script>");
+                    echo "<li><a href='#'>Hier k&ouml;nnten deine Kurse stehen</a></li>";
+                    echo "<li><a href='#'>Trete daf&uuml;r einem Kurs bei</a></li>";
+                }
+                else {
+                    while($_row1 = $_res1->fetch_assoc()){
+                        $_kursID = $_row1["kursID"];
+                        $_sql2 = "SELECT name FROM kurs WHERE kursID='$_kursID'";
+                        $_res2 = mysqli_query($link, $_sql2);
+                        while($_row2 = $_res2->fetch_assoc()){
+                            $_kursName = $_row2["name"];
+                            echo "<li><a href='Kurs.php'>$_kursName</a></li>";
+                            echo("<script>console.log('Kurs angezeigt, ID: $_kursID Name: $_kursName');</script>");
+                        }
+                    }
+                }
+                mysqli_close($link);
+                ?>
             </ul>
         </div>
         <div id="AlleKurseDiv">
