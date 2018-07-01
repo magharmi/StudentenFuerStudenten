@@ -25,7 +25,7 @@ Kursbeigetreten		- nur vorhandene Aufgaben anzeigen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
-kursbeigetretenC	- kann weg?
+kursbeigetretenC	erledigt	- kann weg?
 Nachhilfe		- KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		- Nachhilfeanfragen/angebote anzeigen lassen, bisher werden sie nur in die Datenbank eingetragen
 Datenschutz/Impressum	- Box mittig?(unwichtig)
