@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php SESSION_START(); ?>
+<?php include ("loginCheck.php"); ?>
 <html>
 
 <head>
@@ -199,9 +200,9 @@
             </div>
             <div class="column">
                 <div class="content">
-                    <img class="Profilbild" src="logo.png" alt="Profilbild">
-                    <a href="Freund.php">Vincent Br&uumlcher</a>
-                    <p>Informatik,<br/>Hochschule Bochum</p>
+                        <img class="Profilbild" src="logo.png" alt="Profilbild">
+                        <a href="Freund.php">Vincent Br&uumlcher</a>
+                        <p>Informatik,<br/>Hochschule Bochum</p>
                 </div>
             </div>
             <div class="column">
@@ -237,11 +238,11 @@
                         else{
                             echo "<img class='Profilbild' src='profilbilder/".$_bild."' alt='Profilbild'>";
                         }
-                        echo "<a href='Freund.php'>".$_freundName."</a>";
+                        echo "<a href='Freund.php?fID=".$_freundID."'>".$_freundName."</a>";
                         echo "<p>".$_fach.",<br/>".$_uni."</p>";
+                        echo "</form>";
                         echo "</div>";
                         echo "</div>";
-                        
                     }
                 }
             ?>

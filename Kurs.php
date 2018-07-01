@@ -1,4 +1,4 @@
-<?php include ("kursBeitreten.php"); ?>
+<?php SESSION_START(); ?>
 <?php include ("loginCheck.php"); ?>
 <!DOCTYPE html>
 <html>
@@ -115,30 +115,80 @@
     <!-- Kopierenende -->
 
     <div id="Kurs">
-        <div class="w3-row-padding w3-margin-top">
-            <div class="w3-half">
-                <div class="w3-card w3-container">
-                    <div id="KursZusammenfassung">
-                        <h2>Kurs:</h2>
-                        <h4 id="KursTitel">Java Programmierung</h4>
-                        <p> </p>
-                        <h3>Voraussetzungen:</h3>
-                        <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
-                        <h3>Teilnehmeranzahl:</h3>
-                        <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
-                        <form method="POST">
-                            <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
-                        </form>
+        <?php
+        $link = mysqli_connect("localhost", "root");
+        if (!$link) {
+            die("Keine Datenbankverbindung möglich: " . mysqli_error());
+        } 
+        $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+        if (!$datenbank) {
+            echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+            mysqli_close($link);
+            exit;
+        }
+        
+        $_userID = $_SESSION["userID"];
+        echo("<script>console.log('User: $_userID');</script>");
+        $_kursID = $_GET["kid"];
+        echo("<script>console.log('Kurs: $_kursID');</script>");
+        
+        //Kurs beitreten Button
+        if(isset($_POST["joinKurs"])){
+            $_sql = "INSERT INTO userkurse (userID, kursID) VALUES('$_userID', '$_kursID')";
+            $_res = mysqli_query($link, $_sql);
+            echo "<script>console.log('Kurs beigetreten!');</script>";
+        }
+        
+        $_sql = "SELECT * FROM userkurse WHERE userID='$_userID' AND kursID='$_kursID'";
+        $_res = mysqli_query($link, $_sql);
+        $_anzahl = @mysqli_num_rows($_res);        
+        if ($_anzahl > 0) { //Kurs bereits beigetreten!
+            header("Location: Kursbeigetreten.php?kid=$_kursID");
+		}
+        else {
+            echo("<script>console.log('Kurs noch nicht beigetreten, du bist hier richtig!');</script>");
+            
+            //Frage Daten ab
+            $_sql2 = "SELECT * FROM kurs WHERE kursID='$_kursID'";
+            $_res2 = mysqli_query($link, $_sql2);
+            $_row = mysqli_fetch_assoc($_res2);
+            $_titel = $_row["name"];
+            $_beschreibung = $_row["beschreibung"];
+            $_voraussetzung = $_row["voraussetzung"];
+		} 
+        mysqli_close($link);
+        ?>
+
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <div id="KursZusammenfassung">
+                            <h2>Kurs:</h2>
+                            <h4 id="KursTitel">
+                                <?php echo "$_titel" ?>
+                            </h4>
+                            <p> </p>
+                            <h3>Voraussetzungen:</h3>
+                            <p id="KursVoraussetzung">
+                                <?php echo "$_voraussetzung" ?>
+                            </p>
+                            <h3>Teilnehmeranzahl:</h3>
+                            <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
+                            <form method="POST">
+                                <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <h1>Beschreibung</h1>
+                        <p id="KursBeschreibung">
+                            <?php echo "$_beschreibung" ?>
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="w3-half">
-                <div class="w3-card w3-container">
-                    <h1>Beschreibung</h1>
-                    <p id="KursBeschreibung">Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und f&uumlr die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren erm&oumlglicht, k&oumlnnen Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.</p>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 

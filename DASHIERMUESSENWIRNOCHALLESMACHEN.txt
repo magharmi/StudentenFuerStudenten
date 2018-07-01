@@ -12,21 +12,21 @@ Profil/Freund		- Name, Hochschule, Fach, Beschreibung aus Datenbank entnehmen
 Profil/Freund		- Standartbild, wenn noch kein eigenes hochgeladen wurde, einfuegen
 profil/freund		- kurse, aufgaben, hilfe mit datenbank verknüpfen
 Freund			- Nachricht schreiben button soll email anzeigen
-Freund			- Freundhinzufügen/Freundentfernen Button umwandeln und funktionstüchtig machen
+Freund			erledigt	- Freundhinzufügen/Freundentfernen Button umwandeln und funktionstüchtig machen
 Freund			- Wie findet man eigentlich neue Freunde? Über Kurs? Über Nachhilfe?
 FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild, oder kleines Bild
 FreundeUebersicht	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
 KurseUebersicht		erledigt	- MeineKurse mit Datenbank verbinden
-KurseUebersicht		- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
-Kurs			- prüfen ob man diesem beigetreten ist
-Kurs/Kursbeigetreten	- zusammen legen wenn oberer Punkt klappt
+KurseUebersicht		erledigt	- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
+Kurs			erledigt	- prüfen ob man diesem beigetreten ist
 Kurs			- Teilnehmer anzeigen(so oder durch Nachhilfe werden neue Freunde gefunden)
-Kurs			- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
+Kurs			erledigt	- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
-kursbeigetretenC	- kann weg?
+Kursbeigetreten		erledigt	- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
+kursbeigetretenC	erledigt	- kann weg?
 Nachhilfe		- KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		- Nachhilfeanfragen/angebote anzeigen lassen, bisher werden sie nur in die Datenbank eingetragen
 Datenschutz/Impressum	- Box mittig?(unwichtig)
@@ -40,6 +40,10 @@ styler.css		- aufräumen
 PowerPoint
 was bisher geschah
 schönes diagramm für Datenbank(ansatz in tabellen.ods)
+bewertung des projektmanagements
+	hat gesuckt
+	nächstes mal mit plan
+	arbeitsteilung nicht optimal
 
 
 
