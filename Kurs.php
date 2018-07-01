@@ -115,30 +115,60 @@
     <!-- Kopierenende -->
 
     <div id="Kurs">
-        <div class="w3-row-padding w3-margin-top">
-            <div class="w3-half">
-                <div class="w3-card w3-container">
-                    <div id="KursZusammenfassung">
-                        <h2>Kurs:</h2>
-                        <h4 id="KursTitel">Java Programmierung</h4>
-                        <p> </p>
-                        <h3>Voraussetzungen:</h3>
-                        <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
-                        <h3>Teilnehmeranzahl:</h3>
-                        <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
-                        <form method="POST">
-                            <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
-                        </form>
+        <?php
+        SESSION_START();
+        $link = mysqli_connect("localhost", "root");
+        if (!$link) {
+            die("Keine Datenbankverbindung möglich: " . mysqli_error());
+        } 
+        $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+        if (!$datenbank) {
+            echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+            mysqli_close($link);
+            exit;
+        }
+        
+        $_userID = $_SESSION["userID"];
+        echo("<script>console.log('User: $_userID');</script>");
+        $_kursID = $_GET["kid"];
+        echo("<script>console.log('Kurs: $_kursID');</script>");
+        
+        $_sql = "SELECT * FROM userkurse WHERE userID='$_userID' AND kursID='$_kursID'";
+        $_res = mysqli_query($link, $_sql);
+        $_anzahl = @mysqli_num_rows($_res);        
+        if ($_anzahl > 0) { //Kurs bereits beigetreten!
+            header("Location: Kursbeigetreten.php?kid=$_kursID");
+		}
+        else {
+            echo("<script>console.log('Kurs noch nicht beigetreten, du bist hier richtig!');</script>");   
+		} 
+        mysqli_close($link);
+        ?>
+
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <div id="KursZusammenfassung">
+                            <h2>Kurs:</h2>
+                            <h4 id="KursTitel">Java Programmierung</h4>
+                            <p> </p>
+                            <h3>Voraussetzungen:</h3>
+                            <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
+                            <h3>Teilnehmeranzahl:</h3>
+                            <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
+                            <form method="POST">
+                                <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container">
+                        <h1>Beschreibung</h1>
+                        <p id="KursBeschreibung">Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und f&uumlr die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren erm&oumlglicht, k&oumlnnen Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.</p>
                     </div>
                 </div>
             </div>
-            <div class="w3-half">
-                <div class="w3-card w3-container">
-                    <h1>Beschreibung</h1>
-                    <p id="KursBeschreibung">Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und f&uumlr die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren erm&oumlglicht, k&oumlnnen Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.</p>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 

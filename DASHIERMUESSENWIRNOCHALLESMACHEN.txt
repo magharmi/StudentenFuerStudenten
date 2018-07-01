@@ -18,8 +18,7 @@ FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild, oder kleines Bild
 FreundeUebersicht	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
 KurseUebersicht		erledigt	- MeineKurse mit Datenbank verbinden
 KurseUebersicht		- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
-Kurs			- prüfen ob man diesem beigetreten ist
-Kurs/Kursbeigetreten	- zusammen legen wenn oberer Punkt klappt
+Kurs			erledigt	- prüfen ob man diesem beigetreten ist
 Kurs			- Teilnehmer anzeigen(so oder durch Nachhilfe werden neue Freunde gefunden)
 Kurs			- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen
@@ -40,6 +39,10 @@ styler.css		- aufräumen
 PowerPoint
 was bisher geschah
 schönes diagramm für Datenbank(ansatz in tabellen.ods)
+bewertung des projektmanagements
+	hat gesuckt
+	nächstes mal mit plan
+	arbeitsteilung nicht optimal
 
 
 
