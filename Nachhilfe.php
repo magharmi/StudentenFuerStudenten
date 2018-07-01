@@ -1,8 +1,8 @@
 <!DOCTYPE html>
+<?php SESSION_START(); ?>
 <html>
 
 <head>
-    <?php include ("nachhilfeDatenbank.php"); ?>
     <title>Nachhilfe</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.png">
@@ -169,14 +169,13 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
-		
 
-		
-			.gesuchteNachhilfe
-		{
-			background-color: #4CAF50;
-			margin-top : 10px;
-		}
+
+
+        .gesuchteNachhilfe {
+            background-color: #4CAF50;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
@@ -269,7 +268,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r Java-Programmierung anbieten?</h4>
                                                                     <button onclick="document.getElementById('id03').style.display='block'" class="NachhilfeEintragen">Nachhilfe eintragen</button>
-																	<button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -399,7 +398,7 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r Java-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
-																		<button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
+                                                                        <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
 
                                                                     </ul>
                                                                 </div>
@@ -524,316 +523,126 @@
                         </div>
                     </form>
                 </div>
-				
-				
-				
-				
+
+
+
+
                 <div id="id05" class="modal">
                     <form class="modal-content animate" method="POST">
                         <div class="modalcontainer">
-                            <h1>Diese User suchen Hilfe</h1>
-                            <h2>Suche einen Studenten aus um ihn zu Kontaktieren</h2>
-
-                            <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Aufgabe</th>
-                                    <th>Ort</th>
-									    
-									<th>geplante Uhrzeit</th>
-									<th>Angebot</th>
-
-
-                                </tr>
-                                <tr>
-                                     <td>Centro comercial Moctezuma</td>                                    
-
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
-									<td>19€</td>
-
-									
-           
-                                </tr>
-                                <tr>
-                                    <td>Centro comercial Moctezuma</td>                                    
-
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Island Trading</td>
-                                    <td>Helen Bennett</td>
-                                    <td>UK</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Laughing Bacchus Winecellars</td>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Magazzini Alimentari Riuniti</td>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                            </table>
-
-                            <div class="LoginButtons">
-                                <button type="submit" onclick="document.getElementById('id05').style.display='none'" name="anfordernAbschicken">Abschicken</button>
-                                <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Abbrechen</button>
-                            </div>
+                            <?php
+                                echo "<h1>Diese User suchen Hilfe</h1>";
+                                echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
+                                echo "<table>";
+                                echo "<tr>";
+                                echo "<th>Name</th>";
+                                echo "<th>Aufgabe</th>";
+                                echo "<th>geplante Uhrzeit</th>";
+                                echo "<th>Preis</th>";
+                                echo "</tr>";
+                                $userID = $_SESSION["userID"];
+                                $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
+                                $sql1 = "SELECT * FROM nachhilfesuche";
+                                $_res = mysqli_query($db, $sql1);
+                                while($_row = mysqli_fetch_assoc($_res)){
+                                    $_userID = $_row["userID"];
+                                    $_ort = $_row["ort"];
+                                    $_zeit = $_row["zeit"];
+                                    $_preis = $_row["preis"];
+                                    $_sql = "SELECT name FROM user WHERE userID='$_userID'";
+                                    $_erg = mysqli_query($db, $_sql);
+                                    while($_zeile = $_erg->fetch_assoc()){
+                                        $_freundName = $_zeile["name"];
+                                        echo "<tr>";
+                                        echo "<script>console.log('".$_freundName."');</script>";
+                                        echo "<td>".$_freundName."</td>";
+                                        echo "<td>".$_ort."</td>";
+                                        echo "<td>".$_zeit."</td>";
+                                        echo "<td>".$_preis."</td>";
+                                        echo "</tr>";
+                                    }
+                                }
+                                echo "</table>";
+                            ?>
                         </div>
                     </form>
                 </div>
-
-				
-				
-				
-				
-				 <div id="id06" class="modal">
-                    <form class="modal-content animate" method="POST">
-                        <div class="modalcontainer">
-                            <h1>Diese User bieten Hilfe</h1>
-                            <h2>Suche einen Studenten aus um ihn zu Kontaktieren</h2>
-
-                            <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Aufgabe</th>
-                                    <th>Ort</th>
-									    
-									<th>geplante Uhrzeit</th>
-									<th>Angebot</th>
+            </div>
 
 
-                                </tr>
-                                <tr>
-                                     <td>Centro comercial Moctezuma</td>                                    
 
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
-									<td>19€</td>
 
-									
-           
-                                </tr>
-                                <tr>
-                                    <td>Centro comercial Moctezuma</td>                                    
 
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Island Trading</td>
-                                    <td>Helen Bennett</td>
-                                    <td>UK</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Laughing Bacchus Winecellars</td>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                                <tr>
-                                    <td>Magazzini Alimentari Riuniti</td>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-								 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-									<td>12 Uhr</td>
-									<td>19€</td>
-                                </tr>
-                            </table>
-
-                            <div class="LoginButtons">
-                                <button type="submit" onclick="document.getElementById('id06').style.display='none'" name="anfordernAbschicken">Abschicken</button>
-                                <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Abbrechen</button>
-                            </div>
+            <div id="id06" class="modal">
+                <form class="modal-content animate" method="POST">
+                    <div class="modalcontainer">
+                        <?php
+                                echo "<h1>Diese User bieten Hilfe an</h1>";
+                                echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
+                                echo "<table>";
+                                echo "<tr>";
+                                echo "<th>Name</th>";
+                                echo "<th>Aufgabe</th>";
+                                echo "<th>geplante Uhrzeit</th>";
+                                echo "<th>Preis</th>";
+                                echo "</tr>";
+                                $userID = $_SESSION["userID"];
+                                $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
+                                $sql1 = "SELECT * FROM nachhilfeangebot";
+                                $_res = mysqli_query($db, $sql1);
+                                while($_row = mysqli_fetch_assoc($_res)){
+                                    $_userID = $_row["userID"];
+                                    $_ort = $_row["ort"];
+                                    $_zeit = $_row["zeit"];
+                                    $_preis = $_row["preis"];
+                                    $_sql = "SELECT name FROM user WHERE userID='$_userID'";
+                                    $_erg = mysqli_query($db, $_sql);
+                                    while($_zeile = $_erg->fetch_assoc()){
+                                        $_freundName = $_zeile["name"];
+                                        echo "<tr>";
+                                        echo "<script>console.log('".$_freundName."');</script>";
+                                        echo "<td>".$_freundName."</td>";
+                                        echo "<td>".$_ort."</td>";
+                                        echo "<td>".$_zeit."</td>";
+                                        echo "<td>".$_preis."</td>";
+                                        echo "</tr>";
+                                    }
+                                }
+                                echo "</table>";
+                            ?>
                         </div>
                     </form>
                 </div>
-				
-				
-				
-                <script>
-                    //Schließt die Modals wenn daneben geklickt wird
-                    var modal = document.getElementById('id03');
-                    var modal2 = document.getElementById('id04');
-					var modal3 = document.getElementById('id05');
-					var modal4 = document.getElementById('id06');
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
+            </div>
 
-                        if (event.target == modal2) {
-                            modal2.style.display = "none";
-                        }
-						 if (event.target == modal3) {
-                            modal3.style.display = "none";
-                        }
-						
-						 if (event.target == modal4) {
-                            modal4.style.display = "none";
-                        }
+
+
+            <script>
+                //Schließt die Modals wenn daneben geklickt wird
+                var modal = document.getElementById('id03');
+                var modal2 = document.getElementById('id04');
+                var modal3 = document.getElementById('id05');
+                var modal4 = document.getElementById('id06');
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
                     }
 
-                </script>
-            </div>
+                    if (event.target == modal2) {
+                        modal2.style.display = "none";
+                    }
+                    if (event.target == modal3) {
+                        modal3.style.display = "none";
+                    }
+
+                    if (event.target == modal4) {
+                        modal4.style.display = "none";
+                    }
+                }
+
+            </script>
         </div>
+    </div>
     </div>
 
 </body>
