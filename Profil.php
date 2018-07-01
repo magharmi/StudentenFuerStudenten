@@ -10,17 +10,18 @@
         // image file directory
         $target = $dir.basename($image);
 
-  	     
-		  $_userID = $_SESSION["userID"];
-  	     $sql = "update user set bild = '$image' where userID = '$_userID';";
-  	     // execute query
-  	     mysqli_query($db, $sql);
+        if(!empty($image)){
+            $_userID = $_SESSION["userID"];
+            $sql = "update user set bild = '$image' where userID = '$_userID';";
+            // execute query
+            mysqli_query($db, $sql);
 
-  	     if (move_uploaded_file($_FILES['bild']['tmp_name'], $target)) {
-  		    $msg = "Image uploaded successfully";
-  	     }else{
-            $msg = "Failed to upload image";
-  	     }
+            if (move_uploaded_file($_FILES['bild']['tmp_name'], $target)) {
+                $msg = "Image uploaded successfully";
+            }else{
+                $msg = "Failed to upload image";
+            }
+        }
     }
     $result = mysqli_query($db, "SELECT bild FROM user");
 ?>
@@ -287,6 +288,7 @@
                         $_uni = $row["uni"];
                         $_fach = $row["fach"];
                         $_bild = $row["bild"];
+                        $_beschreibung = $row["beschreibung"];
                         echo "<p id='name'>".$_name."</p>";
                         echo "<p id='hochschule'>".$_uni."</p>";
                         echo "<p id='studiengang'>".$_fach."</p>";
@@ -312,7 +314,7 @@
             <div class="personbeschreibung">
                 <h1>Beschreibung</h1>
                 <h3>
-                    Hallo, ich bin Sulfikar Hamka und studiere Informatik seit vier Semestern an der Hochschule Bochum. Ich bin 22 Jahre alt und gebe schon seit einem Jahr Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
+                    <?php echo "$_beschreibung"; ?>
                 </h3>
             </div>
 
