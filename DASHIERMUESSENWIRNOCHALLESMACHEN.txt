@@ -1,39 +1,30 @@
 Seite			- Was getan werden muss
 
 Generell		- Mehr Beispieldatensaetze erstellen
-Generell		- Logout Button Responsive und DANACH verteilen
-Generell		- automatischer Logout verteilen
+Generell		- Logout Button verteilen()
+Generell		- automatischer Logout verteilen, aufpassen mit SESSION_START
 Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
-Startseite		erledigt	- ToDoListe fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
+Startseite		~ ToDoliste chcked mit Datenbank
 Profil			- Modal zum Hochladen des Bildes
-Profil/Freund		- nur eigenes Bild und nicht alle laden
 Profil/Freund		- Name, Hochschule, Fach, Beschreibung aus Datenbank entnehmen
 Profil/Freund		- Standartbild, wenn noch kein eigenes hochgeladen wurde, einfuegen
-profil/freund		- kurse, aufgaben, hilfe mit datenbank verknüpfen
 Freund			- Nachricht schreiben button soll email anzeigen
-Freund			erledigt	- Freundhinzufügen/Freundentfernen Button umwandeln und funktionstüchtig machen
-FreundeUebersicht	- Text in Karte untenbündig wenn kein Bild, oder kleines Bild
+Freund			- Suche entfernen
+FreundeUebersicht	~ Text in Karte untenbündig wenn kein Bild, oder kleines Bild
 FreundeUebersicht	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
-KurseUebersicht		erledigt	- MeineKurse mit Datenbank verbinden
-KurseUebersicht		erledigt	- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
-Kurs			erledigt	- prüfen ob man diesem beigetreten ist
-Kurs			- Teilnehmer anzeigen(so oder durch Nachhilfe werden neue Freunde gefunden)
-Kurs			erledigt	- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
+Kurs			- Teilnehmerzahl anzeigen
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
-Kursbeigetreten		erledigt	- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
-kursbeigetretenC	erledigt	- kann weg?
-Nachhilfe		- KursID in nachhilfedatenbank echt einfügen nicht immer 1
-Nachhilfe		- Nachhilfeanfragen/angebote anzeigen lassen, bisher werden sie nur in die Datenbank eingetragen
-Datenschutz/Impressum	- Box mittig?(unwichtig)
-fml.txt			erledigt	- kann weg?
+Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
+Nachhilfe		- in nachhilfe anzeigen unten rand
+Nachhilfe		- Namen anklickbar besser visualisieren
+Nachhilfe		- Burger Menü fixen
+Datenschutz/Impressum	~ Box mittig?
 Müllbilder		- ersetzten und entfernen
-beispielaufgaben	erledigt	- "hochladen"
 profilbilder		- in richtigen ordner(inklusive möglicher noch vorhandener verlinkungen)
-styler.css		- aufräumen
 
 
 PowerPoint
