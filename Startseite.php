@@ -1,38 +1,14 @@
-<?php 
-	SESSION_START();
-    $_userID = $_SESSION["userID"];
-    $_userID1 = isset($_POST['userID']) ? mysqli_real_escape_string($_userID): false;
-    // initialize errors variable
-	$errors = "";
-
-	// connect to database
-    $link = mysqli_connect("localhost", "root"); 
-    $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-    if (!$link) 
-        { 
-        die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
-        } 
-
-    $datenbank = mysqli_select_db($link, "StudentenFuerStudenten"); 
-
-    if (!$datenbank) 
-        { 
-        echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
-        mysqli_close($link);
-        exit;
-        }
-?>
-
 <!DOCTYPE html>
+<?php SESSION_START(); ?>
 <?php include ("loginCheck.php"); ?>
 <html>
 
 <head>
     <title>Startseite</title>
+    <link rel="stylesheet" href="styler.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styler.css">
 
     <style>
         #MeineKurseListe {
@@ -144,58 +120,32 @@
 
     <div class="w3-row-padding w3-center w3-margin-top seiteninhalt">
         <div class="mittig">
-
             <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
                     <div class="card">
                         <div id="myDIV" class="header">
                             <h2>To-Do-Liste</h2>
-                            <form method="POST">
-                                <div class="button-group">
-                                    <script>
-                                        var input = document.getElementById("myInput");
-                                        input.addEventListener("keyup", function(event) {
-                                            event.preventDefault();
-                                            if (event.keyCode === 13) {
-                                                newElement();
-                                            }
-                                        });
+                            <div class="button-group">
+                                <input type="text" id="myInput" name="task" placeholder="Was merken?">
+                                <span type="submit" onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</span>
+                                <script>
+                                    var input = document.getElementById("myInput");
+                                    input.addEventListener("keyup", function(event) {
+                                        event.preventDefault();
+                                        if (event.keyCode === 13) {
+                                            newElement();
+                                        }
+                                    });
 
-                                    </script>
-                                    <input type="text" id="myInput" name="task" placeholder="Was merken?">
-                                    <span type="submit" onclick="newElement()" name="addTaskToDB" class="addBtn">Hinzuf&uumlgen</span>
-                                </div>
-                            </form>
+                                </script>
+                            </div>
                         </div>
-                        <?php
-                        if(!isset($_POST['addTaskToDB'])){                                  // kennt den Button nicht
-        $_task = isset($_POST['task']) ? mysqli_real_escape_string($link,$_POST['task']): false;  
-        $_userID = mysqli_real_escape_string($link, $_SESSION["userID"]); 
-        if(isset($_POST['addTaskToDB'])){ // wenn 'task' dann immer bei neu laden neuer datensatz
-		$_sql = "INSERT INTO todoliste (userID, beschreibung) VALUES('$_userID', '$_task')"; 
-		$_res = mysqli_query($db, $_sql);
-        }
-      /*  $_checked = isset($_POST['checked']) ? mysqli_real_escape_string($link,$_POST['checked']): false; 
-        $_sql_checked = "UPDATE todoliste SET checked=true where class='checked' ";
-        $_res2 = mysqli_query($db,$_sql_checked);
-        */
-        
-	}
-                        
-                        $daten = "SELECT * from todoliste where userID = $_userID";
-                        $res3 = mysqli_query($db, $daten);
-                        
-                        while($fetch = mysqli_fetch_assoc($res3)){
-                            echo "<ul>";
-                            echo "<li>" . $fetch['beschreibung'] . "</li>";
-                            echo "</ul>";
-                        }
-	
-    echo("<script>console.log('Eingeloggte User-Session-ID: ".$_SESSION["userID"]."');</script>");
-
-
-                     
-                        ?>
+                        <ul id="ToDoListe">
+                            <li>Hit the gym</li>
+                            <li class="checked">Pay bills</li>
+                            <li>Meet George</li>
+                            <li>Read a book</li>
+                        </ul>
 
                         <script>
                             // Create a "close" button and append it to each list item
@@ -229,8 +179,13 @@
 
                             // Create a new list item when clicking on the "Add" button
                             function newElement() {
-                                var li = document.createElement("li");
                                 var inputValue = document.getElementById("myInput").value;
+                                newElementDB(inputValue);
+                            }
+
+                            //newElement mit Datenuebergabe
+                            function newElementDB(inputValue) {
+                                var li = document.createElement("li");
                                 var t = document.createTextNode(inputValue);
                                 li.appendChild(t);
                                 if (inputValue === '') {
@@ -255,72 +210,34 @@
 
                             }
 
-                            function newElementDB(aufgabe) {
-                                var li = document.createElement("li");
-                                var inputValue = document.getElementById(aufgabe).value;
-                                var t = document.createTextNode(inputValue);
-                                li.appendChild(t);
-                                if (inputValue === '') {
-                                    alert("Du musst etwas eingeben!");
-                                } else {
-                                    document.getElementById("ToDoListe").appendChild(li);
-                                }
-                                document.getElementById(aufgabe).value = "";
-
-                                var span = document.createElement("SPAN");
-                                var txt = document.createTextNode("\u00D7");
-                                span.className = "close";
-                                span.appendChild(txt);
-                                li.appendChild(span);
-
-                                for (i = 0; i < close.length; i++) {
-                                    close[i].onclick = function() {
-                                        var div = this.parentElement;
-                                        div.style.display = "none";
-                                    }
-                                }
-                            }
-
                         </script>
                     </div>
                 </div>
             </div>
 
-
-
             <div class="w3-half">
                 <div class="w3-card w3-container" style="min-height:460px">
                     <div id="MeineKurseDiv">
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-                        <p>
-
-                            <a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
+                        <p><a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
                             <p>
                                 <ul id="MeineKurseListe">
                                     <li><a href="Kursbeigetreten.php">Java Programmierung</a></li>
                                     <li><a href="#">C Programmierung</a></li>
                                     <li><a href="#">Rechnerarchitektur</a></li>
                                     <li><a href="#">Webtechnologien</a></li>
-
                                 </ul>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
         <div class="mittig">
             <div class="w3-half">
                 <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
-
-                    <h2>Aufgaben &Uumlbersicht</h2>
-                    <p>
-
-                        <a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
+                    <h2>Aufgaben &Uuml;bersicht</h2>
+                    <p><a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
-
                                 <ul id="MeineKurseListe">
                                     <li><a href="Kursbeigetreten.php">Java: Aufgabe 3</a></li>
                                     <li><a href="#">Mathe: Aufgabe 3</a></li>
@@ -331,16 +248,12 @@
                             </div>
                 </div>
             </div>
-
-
             <div class="w3-half">
                 <div class="w3-card w3-container w3-margin-top" href="Kursbeigetreten.php" style="min-height:460px">
                     <h2>Zuletzt bearbeitete Aufgabe</h2>
-                    <p> <a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
-
+                    <p><a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
-
                                 <ul id="MeineKurseListe">
                                     <li><a href="Kursbeigetreten.php">Java: Aufgabe 3</a></li>
                                     <li><a href="#">Mathe: Aufgabe 3</a></li>

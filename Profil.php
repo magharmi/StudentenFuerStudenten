@@ -80,7 +80,7 @@
                 background-color: darkgrey;
                 padding: 25px;
                 margin-right: 20px;
-                min-height: 32.1em;
+                min-height: 17.7em;
             }
 
             .block {
