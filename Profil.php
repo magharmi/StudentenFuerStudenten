@@ -1,4 +1,5 @@
 <?php
+	SESSION_START();
     include ("Profilbeschreibung.php");
 
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
@@ -10,7 +11,9 @@
         // image file directory
         $target = $dir.basename($image);
 
-  	     $sql = "INSERT INTO user (bild) VALUES ('$image')";
+  	     
+		  $_userID = $_SESSION["userID"];
+  	     $sql = "update user set bild = '$image' where userID = '$_userID';";
   	     // execute query
   	     mysqli_query($db, $sql);
 
