@@ -1,5 +1,4 @@
 <?php
-	SESSION_START();
     include ("Profilbeschreibung.php");
 
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
@@ -80,6 +79,7 @@
                 background-color: darkgrey;
                 padding: 25px;
                 margin-right: 20px;
+                min-height: 32.1em;
             }
 
             .block {
@@ -276,17 +276,22 @@
 
             <img src="banner.jpg" class="banner" width="2100px" height="250px" />
             <img id="userlogo" src="user.png" width="75em">
-            <p id="name">Sulfikar Hamka</p>
-            <p id="hochschule">Hochschule Bochum</p>
-            <p id="studiengang">Informatik</p>
             <div id="content">
                 <?php
+                    $_userID = $_SESSION["userID"];
                     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                    $sql = "SELECT bild from user";
+                    $sql = "SELECT * FROM user WHERE userID='$_userID'";
                     $result = mysqli_query($db, $sql);
                     while ($row = mysqli_fetch_array($result)) {
+                        $_name = $row["name"];
+                        $_uni = $row["uni"];
+                        $_fach = $row["fach"];
+                        $_bild = $row["bild"];
+                        echo "<p id='name'>".$_name."</p>";
+                        echo "<p id='hochschule'>".$_uni."</p>";
+                        echo "<p id='studiengang'>".$_fach."</p>";
                         echo "<div id='profilbild' class='Profilbild'>";
-                        echo "<img src='profilbilder/".$row['bild']."' height=350em width=145% >";
+                        echo "<img src='profilbilder/".$_bild."' height=350em width=145% >";
                         echo "</div>";
                     }
                 ?>
