@@ -1,4 +1,4 @@
-<?php include ("kursBeitreten.php"); ?>
+<?php SESSION_START(); ?>
 <?php include ("loginCheck.php"); ?>
 <!DOCTYPE html>
 <html>
@@ -131,6 +131,13 @@
         echo("<script>console.log('User: $_userID');</script>");
         $_kursID = $_GET["kid"];
         echo("<script>console.log('Kurs: $_kursID');</script>");
+        
+        //Kurs beitreten Button
+        if(isset($_POST["joinKurs"])){
+            $_sql = "INSERT INTO userkurse (userID, kursID) VALUES('$_userID', '$_kursID')";
+            $_res = mysqli_query($link, $_sql);
+            echo "<script>console.log('Kurs beigetreten!');</script>";
+        }
         
         $_sql = "SELECT * FROM userkurse WHERE userID='$_userID' AND kursID='$_kursID'";
         $_res = mysqli_query($link, $_sql);
