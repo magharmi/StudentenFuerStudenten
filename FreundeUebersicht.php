@@ -227,16 +227,14 @@
                         echo "<script>console.log('".$_freundName."');</script>";
                         echo "<script>console.log('".$_fach."');</script>";
                         echo "<script>console.log('".$_uni."');</script>";
-                        while ($row = mysqli_fetch_array($_res)) {
-                            echo "<div class='column'>";
-                            echo "<div class='content'>";
-                            echo "<div id='profilbild' class='Profilbild'>";
-                            echo "<img class='Profilbild' src='sulf.jpeg' alt='Profilbild'>";
-                            echo "<a href='Freund.php'>".$_freundName."</a>";
-                            echo "<p>".$_fach.",<br/>".$_uni."</p>";
-                            echo "</div>";
-                            echo "</div>";
-                        }
+                        echo "<div class='column'>";
+                        echo "<div class='content'>";
+                        echo "<img class='Profilbild' src='sulf.jpeg' alt='Profilbild'>";
+                        echo "<a href='Freund.php'>".$_freundName."</a>";
+                        echo "<p>".$_fach.",<br/>".$_uni."</p>";
+                        echo "</div>";
+                        echo "</div>";
+                        
                     }
                 }
             ?>
