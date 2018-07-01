@@ -153,21 +153,12 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
-=======
->>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
         .gesuchteNachhilfe {
             background-color: #4CAF50;
             margin-top: 10px;
         }
->>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
-<<<<<<< HEAD
-=======
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
-=======
+
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -192,9 +183,6 @@
 			background-color: #4CAF50;
 			margin-top : 10px;
 		}
->>>>>>> parent of 99773ee... logoutbtn
-=======
->>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
 
     </style>
 </head>
@@ -287,24 +275,15 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r Java-Programmierung anbieten?</h4>
                                                                     <button onclick="document.getElementById('id03').style.display='block'" class="NachhilfeEintragen">Nachhilfe eintragen</button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
->>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
-=======
+
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
-=======
+
 																	<button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
->>>>>>> parent of 99773ee... logoutbtn
-=======
-=======
+
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
->>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
->>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
+
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -434,18 +413,11 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r Java-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
-=======
+
                                                                         <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
-=======
+
 																		<button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
->>>>>>> parent of 99773ee... logoutbtn
+
 
                                                                     </ul>
                                                                 </div>
@@ -570,11 +542,7 @@
                         </div>
                     </form>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 				
 				
 				
@@ -859,9 +827,6 @@
 				
 				
 				
->>>>>>> parent of 99773ee... logoutbtn
-=======
->>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
                 <script>
                     //Schließt die Modals wenn daneben geklickt wird
                     var modal = document.getElementById('id03');
@@ -876,9 +841,6 @@
                         if (event.target == modal2) {
                             modal2.style.display = "none";
                         }
-<<<<<<< HEAD
-=======
-
 
 
 
@@ -987,7 +949,6 @@
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
->>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
                     }
 
                     if (event.target == modal2) {
@@ -999,7 +960,7 @@
 
                     if (event.target == modal4) {
                         modal4.style.display = "none";
-=======
+
 						 if (event.target == modal3) {
                             modal3.style.display = "none";
                         }
@@ -1007,7 +968,6 @@
 						 if (event.target == modal4) {
                             modal4.style.display = "none";
                         }
->>>>>>> parent of 99773ee... logoutbtn
                     }
 
                 </script>
