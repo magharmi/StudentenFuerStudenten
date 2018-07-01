@@ -224,12 +224,19 @@
                         $_freundName = $_zeile["name"];
                         $_uni = $_zeile["uni"];
                         $_fach = $_zeile["fach"];
+                        $_bild = $_zeile["bild"];
                         echo "<script>console.log('".$_freundName."');</script>";
                         echo "<script>console.log('".$_fach."');</script>";
                         echo "<script>console.log('".$_uni."');</script>";
+                        echo "<script>console.log('".$_bild."');</script>";
                         echo "<div class='column'>";
                         echo "<div class='content'>";
-                        echo "<img class='Profilbild' src='sulf.jpeg' alt='Profilbild'>";
+                        if(empty($_bild)){
+                            echo "<img class='Profilbild' src='logo.png' alt='Profilbild'>";
+                        }
+                        else{
+                            echo "<img class='Profilbild' src='profilbilder/".$_bild."' alt='Profilbild'>";
+                        }
                         echo "<a href='Freund.php'>".$_freundName."</a>";
                         echo "<p>".$_fach.",<br/>".$_uni."</p>";
                         echo "</div>";
