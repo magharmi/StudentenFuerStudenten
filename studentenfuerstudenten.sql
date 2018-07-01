@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 01. Jul 2018 um 02:16
--- Server-Version: 10.1.33-MariaDB
--- PHP-Version: 7.2.6
+-- Erstellungszeit: 01. Jul 2018 um 14:01
+-- Server-Version: 10.1.9-MariaDB
+-- PHP-Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -178,7 +176,8 @@ CREATE TABLE `todoliste` (
 INSERT INTO `todoliste` (`todoID`, `userID`, `beschreibung`, `checked`) VALUES
 (2, 1, '', NULL),
 (3, 1, '', NULL),
-(4, 1, '', NULL);
+(4, 1, '', NULL),
+(5, 1, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -202,7 +201,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `passwort`, `email`, `userID`, `uni`, `fach`, `beschreibung`, `bild`) VALUES
-('Albert', 'cb69ade06bce5180f20a96b1fc3960f3', 'a', 1, 'Hochschule Bochum', 'Informatik', 'Ich bin Albert', 'sulf.jpeg');
+('Albert', 'cb69ade06bce5180f20a96b1fc3960f3', 'a', 1, 'Hochschule Bochum', 'Informatik', 'Ich bin Albert', 'sulf.jpeg'),
+('Abradolf Lincoln', '123', 'lincoln@gmail.com', 2, 'Ruhr Uni Bochum', 'Mechatronik', '', 'algodude.jpg'),
+('Max Mustermann', '123', 'Max@Mustermann.de', 3, 'TU Dortmund', 'BWL', '', ''),
+('ein deutiger Nutzername', '123', 'deutiger@Nutzername.de', 4, 'FH Dortmund', 'Medizin', '', '');
 
 -- --------------------------------------------------------
 
@@ -304,38 +306,31 @@ ALTER TABLE `user`
 --
 ALTER TABLE `aufgabe`
   MODIFY `aufgabenID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT für Tabelle `kurs`
 --
 ALTER TABLE `kurs`
   MODIFY `kursID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfeangebot`
 --
 ALTER TABLE `nachhilfeangebot`
   MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfesuche`
 --
 ALTER TABLE `nachhilfesuche`
   MODIFY `sucheID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT für Tabelle `todoliste`
 --
 ALTER TABLE `todoliste`
-  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
