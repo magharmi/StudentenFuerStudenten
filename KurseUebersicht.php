@@ -91,7 +91,6 @@
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
         }
-<<<<<<< HEAD
 
         @media (max-width:960px) {
             #logoutbtn {
@@ -100,8 +99,6 @@
                 text-align: left;
             }
         }
-=======
->>>>>>> parent of 99773ee... logoutbtn
 
     </style>
 </head>
@@ -116,14 +113,11 @@
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
-<<<<<<< HEAD
             <div class="container" id="logoutbtn">
                 <form method="POST">
                     <a href="logoutSeite.php">Logout</a>
                 </form>
             </div>
-=======
->>>>>>> parent of 99773ee... logoutbtn
         </div>
 
 
