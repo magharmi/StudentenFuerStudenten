@@ -237,17 +237,24 @@
                                 <button class="collapsible">Informatik</button>
                                 <div class="content">
                                     <ul class="AlleKurseListe">
-                                        <li><a href="Kurs.php">Java Programmierung</a></li>
-                                        <li><a href="#">Rechnerarchitektur</a></li>
-                                        <li><a href="#">Webtechnologien</a></li>
-                                        <li><a href="#">IT-Sicherheit</a></li>
+                                        <li><a href="Kurs.php?kid=1">Java Programmierung 1</a></li>
+                                        <li><a href="Kurs.php?kid=2">Java Programmierung 2</a></li>
+                                        <li><a href="Kurs.php?kid=6">Datenbanken</a></li>
+                                        <li><a href="Kurs.php?kid=7">C Programmierung</a></li>
+                                        <li><a href="Kurs.php?kid=5">IT-Sicherheit</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
                                 <button class="collapsible">Elektrotechnik</button>
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <ul class="AlleKurseListe">
+                                        <li><a href="Kurs.php?kid=3">Mathe 1</a></li>
+                                        <li><a href="Kurs.php?kid=4">Mathe 2</a></li>
+                                        <li><a href="Kurs.php?kid=6">Datenbanken</a></li>
+                                        <li><a href="Kurs.php?kid=7">C Programmierung</a></li>
+                                        <li><a href="Kurs.php?kid=5">IT-Sicherheit</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
