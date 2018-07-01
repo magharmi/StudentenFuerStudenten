@@ -1,6 +1,6 @@
 <?php
-	SESSION_START();
     include ("Profilbeschreibung.php");
+    include ("loginCheck.php");
 
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
 
@@ -11,17 +11,17 @@
         // image file directory
         $target = $dir.basename($image);
 
-  	     
-		  $_userID = $_SESSION["userID"];
-  	     $sql = "update user set bild = '$image' where userID = '$_userID';";
-  	     // execute query
-  	     mysqli_query($db, $sql);
-
-  	     if (move_uploaded_file($_FILES['bild']['tmp_name'], $target)) {
-  		    $msg = "Image uploaded successfully";
-  	     }else{
-            $msg = "Failed to upload image";
-  	     }
+        if(!empty($image)){
+            $_userID = $_SESSION["userID"];
+            $sql = "UPDATE user SET bild = '$image' WHERE userID = '$_userID';";
+            // execute query
+            $_erg = mysqli_query($db, $sql);
+            if (move_uploaded_file($_FILES['bild']['tmp_name'], $target)) {
+                $msg = "Image uploaded successfully";
+            }else{
+                $msg = "Failed to upload image";
+            }
+        }
     }
     $result = mysqli_query($db, "SELECT bild FROM user");
 ?>
@@ -80,6 +80,7 @@
                 background-color: darkgrey;
                 padding: 25px;
                 margin-right: 20px;
+                min-height: 32.1em;
             }
 
             .block {
@@ -276,17 +277,23 @@
 
             <img src="banner.jpg" class="banner" width="2100px" height="250px" />
             <img id="userlogo" src="user.png" width="75em">
-            <p id="name">Sulfikar Hamka</p>
-            <p id="hochschule">Hochschule Bochum</p>
-            <p id="studiengang">Informatik</p>
             <div id="content">
                 <?php
+                    $_userID = $_SESSION["userID"];
                     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                    $sql = "SELECT bild from user";
+                    $sql = "SELECT * FROM user WHERE userID='$_userID'";
                     $result = mysqli_query($db, $sql);
                     while ($row = mysqli_fetch_array($result)) {
+                        $_name = $row["name"];
+                        $_uni = $row["uni"];
+                        $_fach = $row["fach"];
+                        $_bild = $row["bild"];
+                        $_beschreibung = $row["beschreibung"];
+                        echo "<p id='name'>".$_name."</p>";
+                        echo "<p id='hochschule'>".$_uni."</p>";
+                        echo "<p id='studiengang'>".$_fach."</p>";
                         echo "<div id='profilbild' class='Profilbild'>";
-                        echo "<img src='profilbilder/".$row['bild']."' height=350em width=145% >";
+                        echo "<img src='profilbilder/".$_bild."' height=350em width=145% >";
                         echo "</div>";
                     }
                 ?>
@@ -307,7 +314,7 @@
             <div class="personbeschreibung">
                 <h1>Beschreibung</h1>
                 <h3>
-                    Hallo, ich bin Sulfikar Hamka und studiere Informatik seit vier Semestern an der Hochschule Bochum. Ich bin 22 Jahre alt und gebe schon seit einem Jahr Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
+                    <?php echo "$_beschreibung"; ?>
                 </h3>
             </div>
 
@@ -346,13 +353,48 @@
                     <div class="w3-card w3-container">
                         <div id="KursZusammenfassung">
                             <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift">Sulfikar's Kurse</h2>
+                                <h2 id="MeineKurseUeberschrift"><?php echo "$_name"; ?> Kurse</h2>
                                 <ul id="MeineKurseListe">
-                                    <li><a href="Kurs.php">Java Programmierung</a></li>
-                                    <li><a href="#">C Programmierung</a></li>
-                                    <li><a href="#">Rechnerarchitektur</a></li>
-                                    <li><a href="#">Webtechnologien</a></li>
-                                    <li><a href="#">IT-Sicherheit</a></li>
+                                    <?php
+                                        $link = mysqli_connect("localhost", "root");
+                                        if (!$link) {
+                                            die("Keine Datenbankverbindung möglich: " . mysqli_error());
+                                        } 
+                                        $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+                                        if (!$datenbank) {
+                                            echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+                                            mysqli_close($link);
+                                            exit;
+                                        }
+
+                                        $_userID = $_SESSION["userID"];
+                                        //echo("<script>console.log('User: $_userID');</script>");
+                                        $sql1 = "SELECT kursID FROM userkurse WHERE userID='$_userID'";
+                                        $_res1 = mysqli_query($link, $sql1);
+
+                                        $_anzahl = mysqli_num_rows($_res1);
+                                        //echo("<script>console.log('Anzahl: $_anzahl');</script>");
+                                        if ($_anzahl == 0) {
+                                            echo("<script>console.log('Kein beigetretener Kurs gefunden');</script>");
+                                            echo "<li><a href='#'>Hier k&ouml;nnten deine Kurse stehen</a></li>";
+                                            echo "<li><a href='#'>Trete daf&uuml;r einem Kurs bei</a></li>";
+                                        }
+                                        else {
+                                            while($_row1 = $_res1->fetch_assoc()){
+                                                $_kursID = $_row1["kursID"];
+                                                $_sql2 = "SELECT name FROM kurs WHERE kursID='$_kursID'";
+                                                $_res2 = mysqli_query($link, $_sql2);
+                                                while($_row2 = $_res2->fetch_assoc()){
+                                                    $_kursName = $_row2["name"];
+                                                    echo "<li><a href='Kurs.php?kid=$_kursID'>$_kursName</a></li>";
+                                                    echo("<script>console.log('Kurs angezeigt, ID: $_kursID Name: $_kursName');</script>");
+                                                }
+                                            }
+                                        }
+                                        mysqli_close($link);
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -362,13 +404,46 @@
                     <div class="w3-card w3-container">
                         <div id="KursZusammenfassung">
                             <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift"> Sulfikar bietet Hilfe bei...</h2>
+                                <h2 id="MeineKurseUeberschrift"><?php echo "$_name"; ?> bietet Hilfe bei...</h2>
                                 <ul id="MeineKurseListe">
-                                    <li><a href="Kurs.php">Java Programmierung</a></li>
-                                    <li><a href="#">C Programmierung</a></li>
-                                    <li><a href="#">Rechnerarchitektur</a></li>
-                                    <li><a href="#">Webtechnologien</a></li>
-                                    <li><a href="#">IT-Sicherheit</a></li>
+                                    <?php
+                                        $link = mysqli_connect("localhost", "root");
+                                        if (!$link) {
+                                            die("Keine Datenbankverbindung möglich: " . mysqli_error());
+                                        } 
+                                        $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+                                        if (!$datenbank) {
+                                            echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+                                            mysqli_close($link);
+                                            exit;
+                                        }
+
+                                        $_userID = $_SESSION["userID"];
+                                        //echo("<script>console.log('User: $_userID');</script>");
+                                        $sql1 = "SELECT kursID FROM nachhilfeangebot WHERE userID='$_userID'";
+                                        $_res1 = mysqli_query($link, $sql1);
+
+                                        $_anzahl = mysqli_num_rows($_res1);
+                                        //echo("<script>console.log('Anzahl: $_anzahl');</script>");
+                                        if ($_anzahl == 0) {
+                                            echo("<script>console.log('Kein beigetretener Kurs gefunden');</script>");
+                                            echo "<li><a href='#'>Hier k&ouml;nnten deine Kurse stehen</a></li>";
+                                            echo "<li><a href='#'>Trete daf&uuml;r einem Kurs bei</a></li>";
+                                        }
+                                        else {
+                                            while($_row1 = $_res1->fetch_assoc()){
+                                                $_kursID = $_row1["kursID"];
+                                                $_sql2 = "SELECT name FROM kurs WHERE kursID='$_kursID'";
+                                                $_res2 = mysqli_query($link, $_sql2);
+                                                while($_row2 = $_res2->fetch_assoc()){
+                                                    $_kursName = $_row2["name"];
+                                                    echo "<li><a href='Kurs.php?kid=$_kursID'>$_kursName</a></li>";
+                                                    echo("<script>console.log('Kurs angezeigt, ID: $_kursID Name: $_kursName');</script>");
+                                                }
+                                            }
+                                        }
+                                        mysqli_close($link);
+                                    ?> 
                                 </ul>
                             </div>
                         </div>
@@ -380,10 +455,44 @@
                             <div id="MeineKurseDiv">
                                 <h2 id="MeineKurseUeberschrift"> Ben&oumltigt Hilfe bei...</h2>
                                 <ul id="MeineKurseListe">
-                                    <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
-                                    <li><a href="#">C Programmierung: Pointer</a></li>
+                                    <?php
+                                        $link = mysqli_connect("localhost", "root");
+                                        if (!$link) {
+                                            die("Keine Datenbankverbindung möglich: " . mysqli_error());
+                                        } 
+                                        $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+                                        if (!$datenbank) {
+                                            echo "Kann die Datenbank nicht benutzen: " . mysqli_error();
+                                            mysqli_close($link);
+                                            exit;
+                                        }
 
-                                    <li><a href="#">Mathe: Aufgabe 9</a></li>
+                                        $_userID = $_SESSION["userID"];
+                                        //echo("<script>console.log('User: $_userID');</script>");
+                                        $sql1 = "SELECT kursID FROM nachhilfesuche WHERE userID='$_userID'";
+                                        $_res1 = mysqli_query($link, $sql1);
+
+                                        $_anzahl = mysqli_num_rows($_res1);
+                                        //echo("<script>console.log('Anzahl: $_anzahl');</script>");
+                                        if ($_anzahl == 0) {
+                                            echo("<script>console.log('Kein beigetretener Kurs gefunden');</script>");
+                                            echo "<li><a href='#'>Hier k&ouml;nnten deine Kurse stehen</a></li>";
+                                            echo "<li><a href='#'>Trete daf&uuml;r einem Kurs bei</a></li>";
+                                        }
+                                        else {
+                                            while($_row1 = $_res1->fetch_assoc()){
+                                                $_kursID = $_row1["kursID"];
+                                                $_sql2 = "SELECT name FROM kurs WHERE kursID='$_kursID'";
+                                                $_res2 = mysqli_query($link, $_sql2);
+                                                while($_row2 = $_res2->fetch_assoc()){
+                                                    $_kursName = $_row2["name"];
+                                                    echo "<li><a href='Kurs.php?kid=$_kursID'>$_kursName</a></li>";
+                                                    echo("<script>console.log('Kurs angezeigt, ID: $_kursID Name: $_kursName');</script>");
+                                                }
+                                            }
+                                        }
+                                        mysqli_close($link);
+                                    ?>
                                 </ul>
                             </div>
                         </div>
