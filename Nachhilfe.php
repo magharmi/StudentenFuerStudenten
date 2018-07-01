@@ -536,17 +536,19 @@
                                 echo "<table>";
                                 echo "<tr>";
                                 echo "<th>Name</th>";
-                                echo "<th>Aufgabe</th>";
+                                echo "<th>Kurs</th>";
+                                echo "<th>Ort</th>";
                                 echo "<th>geplante Uhrzeit</th>";
                                 echo "<th>Preis</th>";
                                 echo "</tr>";
                                 $userID = $_SESSION["userID"];
                                 $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                                $sql1 = "SELECT * FROM nachhilfesuche";
+                                $sql1 = "SELECT * FROM nachhilfeangebot WHERE kursID='1'";
                                 $_res = mysqli_query($db, $sql1);
                                 while($_row = mysqli_fetch_assoc($_res)){
                                     $_userID = $_row["userID"];
                                     $_ort = $_row["ort"];
+                                    $_titel = $_row["titel"];
                                     $_zeit = $_row["zeit"];
                                     $_preis = $_row["preis"];
                                     $_sql = "SELECT name FROM user WHERE userID='$_userID'";
@@ -555,7 +557,8 @@
                                         $_freundName = $_zeile["name"];
                                         echo "<tr>";
                                         echo "<script>console.log('".$_freundName."');</script>";
-                                        echo "<td>".$_freundName."</td>";
+                                        echo "<td><a href='Freund.php?fID=".$_userID."'>".$_freundName."</td>";
+                                        echo "<td>".$_titel."</td>";
                                         echo "<td>".$_ort."</td>";
                                         echo "<td>".$_zeit."</td>";
                                         echo "<td>".$_preis."</td>";
@@ -582,17 +585,19 @@
                                 echo "<table>";
                                 echo "<tr>";
                                 echo "<th>Name</th>";
-                                echo "<th>Aufgabe</th>";
+                                echo "<th>Kurs</th>";
+                                echo "<th>Ort</th>";
                                 echo "<th>geplante Uhrzeit</th>";
                                 echo "<th>Preis</th>";
                                 echo "</tr>";
                                 $userID = $_SESSION["userID"];
                                 $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                                $sql1 = "SELECT * FROM nachhilfeangebot";
+                                $sql1 = "SELECT * FROM nachhilfeangebot WHERE kursID='1'";
                                 $_res = mysqli_query($db, $sql1);
                                 while($_row = mysqli_fetch_assoc($_res)){
                                     $_userID = $_row["userID"];
                                     $_ort = $_row["ort"];
+                                    $_titel = $_row["titel"];
                                     $_zeit = $_row["zeit"];
                                     $_preis = $_row["preis"];
                                     $_sql = "SELECT name FROM user WHERE userID='$_userID'";
@@ -601,7 +606,8 @@
                                         $_freundName = $_zeile["name"];
                                         echo "<tr>";
                                         echo "<script>console.log('".$_freundName."');</script>";
-                                        echo "<td>".$_freundName."</td>";
+                                        echo "<td><a href='Freund.php?fID=".$_userID."'>".$_freundName."</td>";
+                                        echo "<td>".$_titel."</td>";
                                         echo "<td>".$_ort."</td>";
                                         echo "<td>".$_zeit."</td>";
                                         echo "<td>".$_preis."</td>";
