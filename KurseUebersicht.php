@@ -8,23 +8,6 @@
     <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
-    <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
-        <div class="topbartexte" id="topbartexte">
-            <a href="index.php">Startseite</a>
-            <a class="active" href="KurseUebersicht.php">Kurse</a>
-            <a href="FreundeUebersicht.php">Freunde</a>
-            <a href="Profil.php">Profil</a>
-            <a href="login.php">Login</a>
-        </div>
-
-
-        <div class="container" onclick="myFunction(this)" id="burgerbutton">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
@@ -108,8 +91,8 @@
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
         }
-        
-         @media (max-width:960px){
+
+        @media (max-width:960px) {
             #logoutbtn {
                 float: none;
                 display: block;
@@ -130,11 +113,11 @@
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
-              <div class="container" id="logoutbtn">
-            <form method="POST">
-            <a href="logoutSeite.php">Logout</a>
-            </form>
-        </div>
+            <div class="container" id="logoutbtn">
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
         </div>
 
 
