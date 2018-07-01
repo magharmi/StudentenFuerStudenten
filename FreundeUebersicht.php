@@ -89,6 +89,16 @@
         #FreundeUeberschrift {
             margin: 0.8em 0 0 0.5em;
         }
+        
+        @media (max-width:960px){
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+    
 
     </style>
 </head>
@@ -103,6 +113,11 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a class="active" href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
+            <div class="container" id="logoutbtn">
+            <form method="POST">
+            <a href="logoutSeite.php">Logout</a>
+            </form>
+        </div>
         </div>
 
 
@@ -111,6 +126,8 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+
+        
     </div>
     <script>
         function myFunction(x) {
@@ -123,6 +140,7 @@
                 y.className = "topbartexte";
             }
         }
+
 
     </script>
     <p class="headerabstand"></p>

@@ -45,6 +45,14 @@
         #Kurs .w3-card {
             height: 19em;
         }
+        
+        @media (max-width:960px){
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
 
     </style>
 </head>
@@ -59,6 +67,11 @@
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
+             <div class="container" id="logoutbtn">
+            <form method="POST">
+            <a href="logoutSeite.php">Logout</a>
+            </form>
+        </div>
         </div>
 
 

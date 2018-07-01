@@ -187,6 +187,14 @@
             .banner {
                 margin-top: -1px;
             }
+            
+            @media (max-width:960px){
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
 
         </style>
     </head>
@@ -201,6 +209,10 @@
                 <a href="KurseUebersicht.php">Kurse</a>
                 <a class="active" href="FreundeUebersicht.php">Freunde</a>
                 <a href="Nachhilfe.php">Nachhilfe</a>
+                <div class="container" id="logoutbtn">
+            <form method="POST">
+            <a href="logoutSeite.php">Logout</a>
+            </form>
             </div>
 
             <input type="text" id="suchfeld" placeholder="Suche...">
@@ -210,7 +222,21 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-        </div>
+            
+        
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+
+            var y = document.getElementById("topbartexte");
+            if (y.className === "topbartexte") {
+                y.className += " responsive";
+            } else {
+                y.className = "topbartexte";
+            }
+        }
+        
         <script>
             function myFunction(x) {
                 x.classList.toggle("change");

@@ -4,7 +4,7 @@ Generell		- Mehr Beispieldatensaetze erstellen
 Generell		- Logout Button Responsive und DANACH verteilen
 Generell		- automatischer Logout verteilen
 Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
-Startseite		- ToDoListe fixen
+Startseite		erledigt	- ToDoListe fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
 Profil			- Modal zum Hochladen des Bildes
 Profil/Freund		- nur eigenes Bild und nicht alle laden

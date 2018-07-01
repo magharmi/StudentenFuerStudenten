@@ -80,7 +80,7 @@
                 background-color: darkgrey;
                 padding: 25px;
                 margin-right: 20px;
-                min-height: 17.7em;
+                min-height: 32.1em;
             }
 
             .block {
@@ -203,6 +203,14 @@
             .banner {
                 margin-top: -1px;
             }
+            
+            @media (max-width:960px){
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
 
         </style>
 
@@ -218,6 +226,11 @@
                 <a href="KurseUebersicht.php">Kurse</a>
                 <a href="FreundeUebersicht.php">Freunde</a>
                 <a href="Nachhilfe.php">Nachhilfe</a>
+                <div class="container" id="logoutbtn">
+            <form method="POST">
+            <a href="logoutSeite.php">Logout</a>
+            </form>
+        </div>
             </div>
 
 
