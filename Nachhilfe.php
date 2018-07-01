@@ -152,23 +152,19 @@
         }
 
 
+
 <<<<<<< HEAD
-
-=======
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-
 <<<<<<< HEAD
 
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
+=======
+>>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
         .gesuchteNachhilfe {
             background-color: #4CAF50;
             margin-top: 10px;
         }
-<<<<<<< HEAD
 >>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
+<<<<<<< HEAD
 =======
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
 =======
@@ -197,6 +193,8 @@
 			margin-top : 10px;
 		}
 >>>>>>> parent of 99773ee... logoutbtn
+=======
+>>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
 
     </style>
 </head>
@@ -292,6 +290,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
 >>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
@@ -301,6 +300,11 @@
 =======
 																	<button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
 >>>>>>> parent of 99773ee... logoutbtn
+=======
+=======
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
+>>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
+>>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -433,9 +437,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
+>>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
+=======
                                                                         <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
 =======
 																		<button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
@@ -564,6 +570,7 @@
                         </div>
                     </form>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -853,6 +860,8 @@
 				
 				
 >>>>>>> parent of 99773ee... logoutbtn
+=======
+>>>>>>> parent of a55a4ad... Merge branch 'master' of https://github.com/magharmi/StudentenFuerStudenten
                 <script>
                     //Schließt die Modals wenn daneben geklickt wird
                     var modal = document.getElementById('id03');
@@ -869,8 +878,6 @@
                         }
 <<<<<<< HEAD
 =======
-=======
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
 
 
 
@@ -922,7 +929,6 @@
 
 
 
-<<<<<<< HEAD
 
 
             <div id="id06" class="modal">
@@ -984,68 +990,6 @@
 >>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
                     }
 
-=======
-
-
-            <div id="id06" class="modal">
-                <form class="modal-content animate" method="POST">
-                    <div class="modalcontainer">
-                        <?php
-                            echo "<h1>Diese User bieten Hilfe an</h1>";
-                            echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
-                            echo "<table>";
-                            echo "<tr>";
-                            echo "<th>Name</th>";
-                            echo "<th>Kurs</th>";
-                            echo "<th>Ort</th>";
-                            echo "<th>geplante Uhrzeit</th>";
-                            echo "<th>Preis</th>";
-                            echo "</tr>";
-                            $userID = $_SESSION["userID"];
-                            $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
-                            $sql1 = "SELECT * FROM nachhilfeangebot WHERE kursID='1'";
-                            $_res = mysqli_query($db, $sql1);
-                            while($_row = mysqli_fetch_assoc($_res)){
-                                $_userID = $_row["userID"];
-                                $_ort = $_row["ort"];
-                                $_titel = $_row["titel"];
-                                $_zeit = $_row["zeit"];
-                                $_preis = $_row["preis"];
-                                $_sql = "SELECT name FROM user WHERE userID='$_userID'";
-                                $_erg = mysqli_query($db, $_sql);
-                                while($_zeile = $_erg->fetch_assoc()){
-                                    $_freundName = $_zeile["name"];
-                                    echo "<tr>";
-                                    echo "<script>console.log('".$_freundName."');</script>";
-                                    echo "<td><a href='Freund.php?fID=".$_userID."'>".$_freundName."</td>";
-                                    echo "<td>".$_titel."</td>";
-                                    echo "<td>".$_ort."</td>";
-                                    echo "<td>".$_zeit."</td>";
-                                    echo "<td>".$_preis."</td>";
-                                    echo "</tr>";
-                                }
-                            }
-                            echo "</table>";
-                        ?>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
-            <script>
-                //Schließt die Modals wenn daneben geklickt wird
-                var modal = document.getElementById('id03');
-                var modal2 = document.getElementById('id04');
-                var modal3 = document.getElementById('id05');
-                var modal4 = document.getElementById('id06');
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-
->>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
                     if (event.target == modal2) {
                         modal2.style.display = "none";
                     }
