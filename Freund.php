@@ -94,6 +94,7 @@
                 background-color: darkgrey;
                 padding: 25px;
                 margin-right: 20px;
+                min-height: 32.1em;
             }
 
             @media screen and (min-width: 600px) {
