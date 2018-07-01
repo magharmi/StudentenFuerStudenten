@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 30. Jun 2018 um 21:20
+-- Erstellungszeit: 01. Jul 2018 um 02:16
 -- Server-Version: 10.1.33-MariaDB
 -- PHP-Version: 7.2.6
 
@@ -121,9 +121,13 @@ CREATE TABLE `nachhilfeangebot` (
 --
 
 INSERT INTO `nachhilfeangebot` (`angebotID`, `kursID`, `titel`, `ort`, `zeit`, `preis`, `userID`) VALUES
-(1, 1, 'Mathe', 'Bochum', '12:00', '12,50â‚¬', 1),
+(1, 1, 'Mathe', 'Bochum', '12:00', '12,50€', 1),
 (2, 2, 'Nachhilfe Java 2', 'Bochum', '19:00 Uhr', '12€', 5),
-(3, 3, 'Mathe Nachhilfe', 'Recklinghausen', '23.7 14:30 Uhr', '10€', 0);
+(3, 3, 'Mathe Nachhilfe', 'Recklinghausen', '23.7 14:30 Uhr', '10€', 7),
+(4, 7, 'Nachhilfe in Javagrundlagen', 'Bochum', '14 Uhr', '12€', 7),
+(5, 6, 'Nachhilfe in IT-Sicherheit', 'Essen', '12:45 Uhr', '17€', 6),
+(6, 7, 'C Programmierung', 'Recklinghausen', '19:30 Uhr', 'VB', 2),
+(7, 6, 'Mathe Grundlagen', 'Bochum', '17 Uhr', '15€ pro Stunde\r\n40€ 3 Stunden Block', 3);
 
 -- --------------------------------------------------------
 
@@ -146,7 +150,13 @@ CREATE TABLE `nachhilfesuche` (
 --
 
 INSERT INTO `nachhilfesuche` (`sucheID`, `kursID`, `userID`, `titel`, `ort`, `zeit`, `preis`) VALUES
-(1, 1, 1, 'C Pointer', 'Bochum', '12:15 - 15:00', '8,50â‚¬ pro Stunde');
+(1, 1, 1, 'C Pointer', 'Bochum', '12:15 - 15:00', '8,50€ pro Stunde'),
+(2, 3, 7, 'Mathe: Vektoren', 'Essen', '16 Uhr', '10€'),
+(3, 8, 10, 'Pq-Formel', 'Bochum', 'Montag oder Samstag', '9€'),
+(4, 6, 3, 'Grundlagen in C', 'Recklinghausen', 'nach 15 Uhr', '12€'),
+(5, 4, 9, 'Javafx', 'Essen', '14 Uhr', '10€'),
+(6, 3, 1, 'Elektrotechnik', 'Bochum', '11 Uhr', '9,50€'),
+(7, 7, 7, 'java 2', 'Bochum', 'Beliebig', '11€');
 
 -- --------------------------------------------------------
 
@@ -167,7 +177,8 @@ CREATE TABLE `todoliste` (
 
 INSERT INTO `todoliste` (`todoID`, `userID`, `beschreibung`, `checked`) VALUES
 (2, 1, '', NULL),
-(3, 1, '', NULL);
+(3, 1, '', NULL),
+(4, 1, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -205,6 +216,19 @@ CREATE TABLE `useraufgabe` (
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `useraufgabe`
+--
+
+INSERT INTO `useraufgabe` (`userID`, `aufgabenID`, `status`) VALUES
+(1, 5, 'Erledigt'),
+(1, 4, 'In Arbeit'),
+(1, 7, 'nicht Angefangen'),
+(1, 0, ''),
+(1, 0, ''),
+(1, 0, ''),
+(1, 0, '');
+
 -- --------------------------------------------------------
 
 --
@@ -215,6 +239,19 @@ CREATE TABLE `userkurse` (
   `userID` int(11) NOT NULL,
   `kursID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `userkurse`
+--
+
+INSERT INTO `userkurse` (`userID`, `kursID`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7);
 
 --
 -- Indizes der exportierten Tabellen
@@ -278,19 +315,19 @@ ALTER TABLE `kurs`
 -- AUTO_INCREMENT für Tabelle `nachhilfeangebot`
 --
 ALTER TABLE `nachhilfeangebot`
-  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `angebotID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `nachhilfesuche`
 --
 ALTER TABLE `nachhilfesuche`
-  MODIFY `sucheID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sucheID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `todoliste`
 --
 ALTER TABLE `todoliste`
-  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `todoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
