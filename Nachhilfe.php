@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<?php SESSION_START(); ?>
 <html>
 
 <head>
+    <?php include ("nachhilfeDatenbank.php"); ?>
     <title>Nachhilfe</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.png">
@@ -150,16 +150,6 @@
         .LoginButtons {
             padding-top: 69px;
         }
-        
-         @media (max-width:960px){
-            #logoutbtn {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
-<<<<<<< HEAD
-=======
 
 
 <<<<<<< HEAD
@@ -170,6 +160,7 @@
         }
 
 
+<<<<<<< HEAD
 
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
         .gesuchteNachhilfe {
@@ -180,6 +171,32 @@
 >>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
 =======
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
+=======
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+		
+
+		
+			.gesuchteNachhilfe
+		{
+			background-color: #4CAF50;
+			margin-top : 10px;
+		}
+>>>>>>> parent of 99773ee... logoutbtn
 
     </style>
 </head>
@@ -194,11 +211,6 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a class="active" href="Nachhilfe.php">Nachhilfe</a>
-             <div class="container" id="logoutbtn">
-            <form method="POST">
-            <a href="logoutSeite.php">Logout</a>
-            </form>
-        </div>
         </div>
 
 
@@ -279,12 +291,16 @@
                                                                     <button onclick="document.getElementById('id03').style.display='block'" class="NachhilfeEintragen">Nachhilfe eintragen</button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
 >>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
 =======
                                                                     <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
+=======
+																	<button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
+>>>>>>> parent of 99773ee... logoutbtn
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -416,12 +432,15 @@
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
                                                                         <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
+=======
+																		<button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
+>>>>>>> parent of 99773ee... logoutbtn
 
->>>>>>> 99a8149e8cc3c9caa88e2a5040b9f6b1702b4e8e
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -547,10 +566,299 @@
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				
+				
+				
+				
+                <div id="id05" class="modal">
+                    <form class="modal-content animate" method="POST">
+                        <div class="modalcontainer">
+                            <h1>Diese User suchen Hilfe</h1>
+                            <h2>Suche einen Studenten aus um ihn zu Kontaktieren</h2>
+
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Aufgabe</th>
+                                    <th>Ort</th>
+									    
+									<th>geplante Uhrzeit</th>
+									<th>Angebot</th>
+
+
+                                </tr>
+                                <tr>
+                                     <td>Centro comercial Moctezuma</td>                                    
+
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
+									<td>19€</td>
+
+									
+           
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>                                    
+
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>Austria</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Island Trading</td>
+                                    <td>Helen Bennett</td>
+                                    <td>UK</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Laughing Bacchus Winecellars</td>
+                                    <td>Yoshi Tannamuri</td>
+                                    <td>Canada</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Magazzini Alimentari Riuniti</td>
+                                    <td>Giovanni Rovelli</td>
+                                    <td>Italy</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                            </table>
+
+                            <div class="LoginButtons">
+                                <button type="submit" onclick="document.getElementById('id05').style.display='none'" name="anfordernAbschicken">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+				
+				
+				
+				
+				 <div id="id06" class="modal">
+                    <form class="modal-content animate" method="POST">
+                        <div class="modalcontainer">
+                            <h1>Diese User bieten Hilfe</h1>
+                            <h2>Suche einen Studenten aus um ihn zu Kontaktieren</h2>
+
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Aufgabe</th>
+                                    <th>Ort</th>
+									    
+									<th>geplante Uhrzeit</th>
+									<th>Angebot</th>
+
+
+                                </tr>
+                                <tr>
+                                     <td>Centro comercial Moctezuma</td>                                    
+
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
+									<td>19€</td>
+
+									
+           
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>                                    
+
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+									<td>Jeden Freitag und Samstag gegen 15 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>Austria</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Island Trading</td>
+                                    <td>Helen Bennett</td>
+                                    <td>UK</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Laughing Bacchus Winecellars</td>
+                                    <td>Yoshi Tannamuri</td>
+                                    <td>Canada</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                                <tr>
+                                    <td>Magazzini Alimentari Riuniti</td>
+                                    <td>Giovanni Rovelli</td>
+                                    <td>Italy</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+								 <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+									<td>12 Uhr</td>
+									<td>19€</td>
+                                </tr>
+                            </table>
+
+                            <div class="LoginButtons">
+                                <button type="submit" onclick="document.getElementById('id06').style.display='none'" name="anfordernAbschicken">Abschicken</button>
+                                <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Abbrechen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+				
+				
+				
+>>>>>>> parent of 99773ee... logoutbtn
                 <script>
                     //Schließt die Modals wenn daneben geklickt wird
                     var modal = document.getElementById('id03');
                     var modal2 = document.getElementById('id04');
+					var modal3 = document.getElementById('id05');
+					var modal4 = document.getElementById('id06');
                     window.onclick = function(event) {
                         if (event.target == modal) {
                             modal.style.display = "none";
@@ -559,6 +867,7 @@
                         if (event.target == modal2) {
                             modal2.style.display = "none";
                         }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> bbaec48a6ca8ab669e1acecefcb3fe0c0b0592d1
@@ -746,12 +1055,20 @@
 
                     if (event.target == modal4) {
                         modal4.style.display = "none";
+=======
+						 if (event.target == modal3) {
+                            modal3.style.display = "none";
+                        }
+						
+						 if (event.target == modal4) {
+                            modal4.style.display = "none";
+                        }
+>>>>>>> parent of 99773ee... logoutbtn
                     }
-                }
 
-            </script>
+                </script>
+            </div>
         </div>
-    </div>
     </div>
 
 </body>

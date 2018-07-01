@@ -91,6 +91,7 @@
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
         }
+<<<<<<< HEAD
 
         @media (max-width:960px) {
             #logoutbtn {
@@ -99,6 +100,8 @@
                 text-align: left;
             }
         }
+=======
+>>>>>>> parent of 99773ee... logoutbtn
 
     </style>
 </head>
@@ -113,11 +116,14 @@
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
+<<<<<<< HEAD
             <div class="container" id="logoutbtn">
                 <form method="POST">
                     <a href="logoutSeite.php">Logout</a>
                 </form>
             </div>
+=======
+>>>>>>> parent of 99773ee... logoutbtn
         </div>
 
 
@@ -203,6 +209,8 @@
                     //echo("<script>console.log('Anzahl: $_anzahl');</script>");
                     if ($_anzahl == 0) {
                         echo("<script>console.log('Kein beigetretener Kurs gefunden');</script>");
+                        echo "<li><a href='#'>Hier k&ouml;nnten deine Kurse stehen</a></li>";
+                        echo "<li><a href='#'>Trete daf&uuml;r einem Kurs bei</a></li>";
                     }
                     else {
                         while($_row1 = $_res1->fetch_assoc()){
