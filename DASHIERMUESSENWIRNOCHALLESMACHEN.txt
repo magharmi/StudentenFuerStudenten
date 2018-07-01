@@ -20,7 +20,7 @@ KurseUebersicht		erledigt	- MeineKurse mit Datenbank verbinden
 KurseUebersicht		erledigt	- alleKurse, jeden einzelnen Kurs mit Kurs.php seite verknüfpen, dabei name des angeklickten Kurses übergeben und so richtigen anzeigen lassen
 Kurs			erledigt	- prüfen ob man diesem beigetreten ist
 Kurs			- Teilnehmer anzeigen(so oder durch Nachhilfe werden neue Freunde gefunden)
-Kurs			- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
+Kurs			erledigt	- Mit Datenbank verbinden(Name,voraussetzung, beschreibung sollen abgefragt werden)
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank

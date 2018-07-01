@@ -116,7 +116,6 @@
 
     <div id="Kurs">
         <?php
-        SESSION_START();
         $link = mysqli_connect("localhost", "root");
         if (!$link) {
             die("Keine Datenbankverbindung möglich: " . mysqli_error());
@@ -140,7 +139,15 @@
             header("Location: Kursbeigetreten.php?kid=$_kursID");
 		}
         else {
-            echo("<script>console.log('Kurs noch nicht beigetreten, du bist hier richtig!');</script>");   
+            echo("<script>console.log('Kurs noch nicht beigetreten, du bist hier richtig!');</script>");
+            
+            //Frage Daten ab
+            $_sql2 = "SELECT * FROM kurs WHERE kursID='$_kursID'";
+            $_res2 = mysqli_query($link, $_sql2);
+            $_row = mysqli_fetch_assoc($_res2);
+            $_titel = $_row["name"];
+            $_beschreibung = $_row["beschreibung"];
+            $_voraussetzung = $_row["voraussetzung"];
 		} 
         mysqli_close($link);
         ?>
@@ -150,10 +157,14 @@
                     <div class="w3-card w3-container">
                         <div id="KursZusammenfassung">
                             <h2>Kurs:</h2>
-                            <h4 id="KursTitel">Java Programmierung</h4>
+                            <h4 id="KursTitel">
+                                <?php echo "$_titel" ?>
+                            </h4>
                             <p> </p>
                             <h3>Voraussetzungen:</h3>
-                            <p id="KursVoraussetzung">Dieser Kurs hat keine Voraussetzungen!</p>
+                            <p id="KursVoraussetzung">
+                                <?php echo "$_voraussetzung" ?>
+                            </p>
                             <h3>Teilnehmeranzahl:</h3>
                             <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
                             <form method="POST">
@@ -165,7 +176,9 @@
                 <div class="w3-half">
                     <div class="w3-card w3-container">
                         <h1>Beschreibung</h1>
-                        <p id="KursBeschreibung">Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und f&uumlr die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren erm&oumlglicht, k&oumlnnen Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.</p>
+                        <p id="KursBeschreibung">
+                            <?php echo "$_beschreibung" ?>
+                        </p>
                     </div>
                 </div>
             </div>

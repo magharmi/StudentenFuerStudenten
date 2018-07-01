@@ -92,7 +92,7 @@ CREATE TABLE `kurs` (
 --
 
 INSERT INTO `kurs` (`kursID`, `name`, `beschreibung`, `voraussetzung`) VALUES
-(1, 'Java 1', 'Grundlagen der Progrmmierung', 'Für diesen Kurs gibt es keine Voraussetzungen'),
+(1, 'Java 1', 'Java ist eine objektorientierte Programmiersprache, die sich durch einige zentrale Eigenschaften auszeichnet. Diese machen sie universell einsetzbar und f&uumlr die Industrie als robuste Programmiersprache interessant. Da Java objektorientiertes Programmieren erm&oumlglicht, k&oumlnnen Entwickler moderne und wiederverwertbare Softwarekomponenten programmieren.', 'Für diesen Kurs gibt es keine Voraussetzungen'),
 (2, 'Java 2', 'Einführung in die OOP', 'Voraussetzung für diesen Kurs ist Java 1'),
 (3, 'Mathe 1', 'In diesem Kurs geht es Hauptsächlich um die Kurvendiskussion', 'Für diesen Kurs gibt es keine Voraussetzungen'),
 (4, 'Mathe 2', 'Der Schwerpunkt in diesem Kurs ist die Vektorrechnung', 'Es ist Vorteilhaft Mathe 1 Vorher abgeschlossen zu haben'),
