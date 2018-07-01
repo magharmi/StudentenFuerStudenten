@@ -1,5 +1,38 @@
 <!DOCTYPE html>
+<?php SESSION_START(); ?>
+<?php include ("loginCheck.php"); ?>
 <html>
+    <?php
+        $_freundID = $_GET["fID"];
+        $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
+        $_sql = "SELECT * FROM user WHERE userID='$_freundID'";
+        $_erg = mysqli_query($db, $_sql);
+        while($_zeile = $_erg->fetch_assoc()){
+            $_freundName = $_zeile["name"];
+            $_uni = $_zeile["uni"];
+            $_fach = $_zeile["fach"];
+            $_bild = $_zeile["bild"];
+            $_beschreibung = $_zeile["beschreibung"];
+            echo "<script>console.log('".$_freundName."');</script>";
+            echo "<script>console.log('".$_fach."');</script>";
+            echo "<script>console.log('".$_uni."');</script>";
+            echo "<script>console.log('".$_bild."');</script>";
+        }
+    
+        if(isset($_POST["deleteFriend"])){
+            $_userID = $_SESSION["userID"]; 
+            $_sql = "DELETE FROM freund WHERE userID1='$_userID' AND userID2='$_freundID'";
+            mysqli_query($db, $_sql);
+            echo "<script>console.log('Freund entfernt');</script>";
+        }
+    
+        if(isset($_POST["addFriend"])){
+            $_userID = $_SESSION["userID"]; 
+            $_sql = "INSERT INTO freund (userID1, userID2) VALUES ('$_userID', '$_freundID')";
+            mysqli_query($db, $_sql);
+            echo "<script>console.log('Freund entfernt');</script>";
+        }
+	?>
 
 <head>
     <title>Freund</title>
@@ -225,21 +258,38 @@
 
     <div style="width: 500px; height: 60px; background: laven">
         <img src="banner.jpg" class="banner" width="2100px" height="250px" />
-        <p id="name">Max Mustermann</p>
-        <p id="hochschule">Hochschule Bochum</p>
-        <p id="studiengang">BWL-Student</p>
+        <p id="name"><?php echo $_freundName ?></p>
+        <p id="hochschule"><?php echo $_uni ?></p>
+        <p id="studiengang"><?php echo $_fach ?></p>
         <div id="profilbild">
             <img id="userlogo" src="freund.png" width="75em">
-            <img src="bwlJustus.jpg" alt="John" style="width:150%">
+            <img src="<?php echo $_bild ?>" alt="John" style="width:150%">
             <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
-            <button type="button" id="" class="block">Freund entfernen</button>
+            <form method="POST">
+                <?php
+                $_freundID = $_GET["fID"];
+                $_userID = $_SESSION["userID"]; 
+                $sql = "SELECT * FROM freund WHERE userID1='$_userID' AND userID2='$_freundID'";
+                $_res = mysqli_query($db, $sql);
+                while($_row = mysqli_fetch_assoc($_res)){
+                    if(is_null($_row)){
+                        echo "<script>console.log('Nicht befreundet.');</script>";
+                        echo "<button type='submit' name='addFriend' id='' class='block'>Freund hinzufügen</button>";
+                    }
+                    else{
+                        echo "<script>console.log('Befreundet');</script>";
+                        echo "<button type='submit' name='deleteFriend' id='' class='block'>Freund entfernen</button>";
+                    }
+                }
+                ?>
+            </form>
         </div>
     </div>
     <div id="txtbox">
         <div class="personbeschreibung">
             <h1>Beschreibung</h1>
             <h3>
-                Hallo, ich bin Max Mustermann und studiere BWL seit 9 Semestern an der Hochschule Bochum. Ich bin 30 Jahre alt und gebe schon seit 9 Jahren Nachhilfe zu g&uumlnstigen Preisen. Das Feedback meiner "Sch&uumller" ist durchaus positiv. Dies hat sich auch dadurch bemerkbar gemacht, indem die selben Leute wieder Nachhilfe bei mir haben wollten, da sie so gute Note erzielt hatten. Nat&uumlrlich m&oumlchte auch ich mein Wissen erweitern und nutze diese Plattform, um Hilfe zu fordern.
+                <?php echo $_beschreibung ?>
             </h3>
         </div>
     </div>
