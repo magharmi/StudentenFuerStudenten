@@ -203,8 +203,6 @@
                 <a href="Nachhilfe.php">Nachhilfe</a>
             </div>
 
-            <input type="text" id="suchfeld" placeholder="Suche...">
-
             <div class="container" onclick="myFunction(this)" id="burgerbutton">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -309,7 +307,7 @@
                             <div id="MeineKurseDiv">
                                 <h2 id="MeineKurseUeberschrift">Max's Kurse</h2>
                                 <ul id="MeineKurseListe">
-                                       <?php
+                                    <?php
                     $link = mysqli_connect("localhost", "root");
                     if (!$link) {
                         die("Keine Datenbankverbindung möglich: " . mysqli_error());
@@ -347,7 +345,7 @@
                     }
                     mysqli_close($link);
                 ?>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -359,7 +357,7 @@
                             <div id="MeineKurseDiv">
                                 <h2 id="MeineKurseUeberschrift">Max bietet Hilfe bei ...</h2>
                                 <ul id="MeineKurseListe">
-                                   <?php
+                                    <?php
                     $link = mysqli_connect("localhost", "root");
                     if (!$link) {
                         die("Keine Datenbankverbindung möglich: " . mysqli_error());
@@ -408,7 +406,7 @@
                             <div id="MeineKurseDiv">
                                 <h2 id="MeineKurseUeberschrift">Ben&ouml;tigt Hilfe bei ...</h2>
                                 <ul id="MeineKurseListe">
-                                        <?php
+                                    <?php
                     $link = mysqli_connect("localhost", "root");
                     if (!$link) {
                         die("Keine Datenbankverbindung möglich: " . mysqli_error());
@@ -457,7 +455,7 @@
                             <div id="MeineKurseDiv">
                                 <h2 id="MeineKurseUeberschrift">Zuletzt bearbeitete Aufgaben ...</h2>
                                 <ul id="MeineKurseListe">
-                                   <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
+                                    <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
                                     <li><a href="#">C Programmierung: Pointer</a></li>
 
                                     <li><a href="#">Mathe: Aufgabe 9</a></li>
