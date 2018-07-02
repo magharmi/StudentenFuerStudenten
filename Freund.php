@@ -285,7 +285,7 @@
             </p>
             <div id="profilbild">
                 <img id="userlogo" src="symbole/freund.png" width="75em">
-                <img src="profilbilder/" "<?php echo $_bild ?>" alt="John" style="width:150%">
+                <?php echo "<img src='profilbilder/".$_bild."' height=350em width=145% >"; ?>
                 <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
                 <form method="POST">
                     <?php
@@ -320,7 +320,7 @@
             <div class="w3-row-padding w3-margin-top">
                 <div class="w3-half">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift">Max's Kurse</h2>
+                        <h2 id="MeineKurseUeberschrift">Kurse von <?php echo "$_freundName"; ?>
                         <ul id="MeineKurseListe">
                             <?php
                             $link = mysqli_connect("localhost", "root");
@@ -365,7 +365,7 @@
                 </div>
                 <div class="w3-half">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift">Max bietet Hilfe bei ...</h2>
+                        <h2 id="MeineKurseUeberschrift"> <?php echo "$_freundName"; ?> bietet Hilfe bei...</h2>
                         <ul id="MeineKurseListe">
                             <?php
                             $link = mysqli_connect("localhost", "root");
@@ -410,7 +410,7 @@
                 </div>
                 <div class="w3-half w3-margin-top">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift">Ben&ouml;tigt Hilfe bei ...</h2>
+                        <h2 id="MeineKurseUeberschrift">Ben&ouml;tigt Hilfe bei...</h2>
                         <ul id="MeineKurseListe">
                             <?php
                             $link = mysqli_connect("localhost", "root");
@@ -455,7 +455,7 @@
                 </div>
                 <div class="w3-half w3-margin-top">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift">Zuletzt bearbeitete Aufgaben ...</h2>
+                        <h2 id="MeineKurseUeberschrift">Zuletzt bearbeitete Aufgaben...</h2>
                         <ul id="MeineKurseListe">
                             <li><a href="Kursbeigetreten.php">Java: Aufgabe 1</a></li>
                             <li><a href="#">C Programmierung: Pointer</a></li>
