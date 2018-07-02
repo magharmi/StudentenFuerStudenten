@@ -241,11 +241,6 @@
                 </form>
             </div>
 
-            <div class="container" id="logoutbtn">
-                <form method="POST">
-                    <a href="logoutSeite.php">Logout</a>
-                </form>
-            </div>
         </div>
         <script>
             function myFunction(x) {
