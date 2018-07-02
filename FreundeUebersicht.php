@@ -188,48 +188,6 @@
 
         <!-- Portfolio Gallery Grid -->
         <div class="row">
-            <div class="column">
-                <div class="content">
-                    <img class="Profilbild" src="bwlJustus.jpg" alt="Profilbild">
-                    <a href="Freund.php">Max Mustermann</a>
-                    <p>BWL-Student,<br/>Hochschule Bochum</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <img class="Profilbild" src="froherStudent.jpg" alt="Profilbild">
-                    <a href="Freund.php">Maks Mustamann</a>
-                    <p>Jura-Student,<br/>TU Dortmund</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <img class="Profilbild" src="sulf.jpeg" alt="Profilbild">
-                    <a href="Freund.php">Sulfikar Hamka</a>
-                    <p>Informatik,<br/>Hochschule Bochum</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <img class="Profilbild" src="logo.png" alt="Profilbild">
-                    <a href="Freund.php">Armin Maghsoudloo</a>
-                    <p>Informatik,<br/>Hochschule Bochum</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                        <img class="Profilbild" src="logo.png" alt="Profilbild">
-                        <a href="Freund.php">Vincent Br&uumlcher</a>
-                        <p>Informatik,<br/>Hochschule Bochum</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <img class="Profilbild" src="logo.png" alt="Profilbild">
-                    <a href="Freund.php">Alexander Schmidt</a>
-                    <p>Informatik,<br/>Hochschule Bochum</p>
-                </div>
-            </div>
             <?php      
                 $userID = $_SESSION["userID"];
                 $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
