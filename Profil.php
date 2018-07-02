@@ -22,6 +22,11 @@
                 $msg = "Failed to upload image";
             }
         }
+        else{
+            $_userID = $_SESSION["userID"];
+            $sql = "UPDATE user SET bild = 'logoPB.png' WHERE userID = '$_userID';";
+            $_erg = mysqli_query($db, $sql);
+        }
     }
     $result = mysqli_query($db, "SELECT bild FROM user");
 ?>
