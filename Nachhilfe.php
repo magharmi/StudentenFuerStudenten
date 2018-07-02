@@ -177,13 +177,21 @@
             margin-top: 10px;
         }
 
+        @media (max-width:960px) {
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" style="height: 56px" id="myTopnav">
-        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
@@ -197,6 +205,12 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
+
+        <div class="container" id="logoutbtn">
+            <form method="POST">
+                <a href="logoutSeite.php">Logout</a>
+            </form>
         </div>
     </div>
     <script>
@@ -278,6 +292,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r C-Programmierung anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -287,6 +302,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r OO-Programmierung anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -296,6 +312,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r Moderne Webtechnologien anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -305,7 +322,7 @@
                                                                 <ul class="AlleKurseListe">
                                                                     <h4>Hilfe f&uuml;r IT-Sicherheit anbieten?</h4>
                                                                     <a onclick="document.getElementById('id03').style.display='block'"><button class="NachhilfeEintragen">Nachhilfe eintragen</button></a>
-
+                                                                    <button onclick="document.getElementById('id05').style.display='block'" class="gesuchteNachhilfe">Gesuchte Nachhilfe anzeigen</button>
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -399,7 +416,6 @@
                                                                         <h4>Hilfe f&uuml;r Java-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
                                                                         <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
-
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -409,6 +425,7 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r C-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
+                                                                        <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -418,6 +435,7 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r OO-Programmierung anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
+                                                                        <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -427,6 +445,7 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r Moderne Webtechnologien anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
+                                                                        <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -436,6 +455,7 @@
                                                                     <ul class="AlleKurseListe">
                                                                         <h4>Hilfe f&uuml;r IT-Sicherheit anfordern?</h4>
                                                                         <a onclick="document.getElementById('id04').style.display='block'"><button class="NachhilfeEintragen">Hilfe anfordern</button></a>
+                                                                        <button onclick="document.getElementById('id06').style.display='block'" class="gesuchteNachhilfe">Nachhilfeangebote anzeigen</button>
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -527,10 +547,10 @@
 
 
 
-            <div id="id05" class="modal">
-                <form class="modal-content animate" method="POST">
-                    <div class="modalcontainer">
-                        <?php
+                <div id="id05" class="modal">
+                    <form class="modal-content animate" method="POST">
+                        <div class="modalcontainer">
+                            <?php
                             echo "<h1>Diese User suchen Hilfe</h1>";
                             echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
                             echo "<table>";
@@ -616,37 +636,38 @@
                             }
                             echo "</table>";
                         ?>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
+        </div>
 
 
 
-            <script>
-                //Schließt die Modals wenn daneben geklickt wird
-                var modal = document.getElementById('id03');
-                var modal2 = document.getElementById('id04');
-                var modal3 = document.getElementById('id05');
-                var modal4 = document.getElementById('id06');
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-
-                    if (event.target == modal2) {
-                        modal2.style.display = "none";
-                    }
-                    if (event.target == modal3) {
-                        modal3.style.display = "none";
-                    }
-
-                    if (event.target == modal4) {
-                        modal4.style.display = "none";
-                    }
+        <script>
+            //Schließt die Modals wenn daneben geklickt wird
+            var modal = document.getElementById('id03');
+            var modal2 = document.getElementById('id04');
+            var modal3 = document.getElementById('id05');
+            var modal4 = document.getElementById('id06');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
                 }
 
-            </script>
-        </div>
-    </body>
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
+                }
+
+                if (event.target == modal4) {
+                    modal4.style.display = "none";
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
 </html>
