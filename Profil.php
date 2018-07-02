@@ -116,7 +116,6 @@
 
             #bild_hochladen {
                 background-color: forestgreen;
-                width: 50%;
             }
 
             #Kurs {
@@ -219,6 +218,21 @@
 
             .w3-card {
                 min-height: 20em;
+            }
+            #durchsuchen{
+                
+            }
+            
+            #id02{
+                position: fixed;
+                overflow: auto;
+                margin:4% auto;
+                padding:  20px;
+                text-align: center;
+            }
+            .durch{
+                margin-left: 5em;
+                width: 30em;
             }
 
         </style>
@@ -323,22 +337,22 @@
                              <!-- Trigger/Open the Modal -->
             <button name="hochladenModal" id="beschreibungbutton" class="block"
                     onclick="document.getElementById('id02').style.display='block'"
-            class="w3-button">Bild Hochladen</button>
+            >Bild Hochladen</button>
 
             <!-- The Modal -->
-            <div id="id02" class="w3-modal">
+            <div id="id02" class="modal">
               <div class="w3-modal-content">
                 <div class="w3-container">
-                  <span onclick="document.getElementById('id02').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
+                  
                      <form method="POST" action="Profil.php" enctype="multipart/form-data">
                                     <input type="hidden" name="size" value="100">
-                                    <div>
-                                        <input type="file" name="bild">
+                                    <div class=durch>
+                                        <input type="file" name="bild" id="durchsuchen">
                                     </div>
                                
-                                <div>
-                                        <button type="submit" name="upload" id="bild_hochladen" class="block">Bild hochladen</button>
+                                <div class="LoginButtons">
+                                        <button type="submit" name="upload" class="signupbtn">Bild hochladen</button>
+                                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                                     </div>
                           </form>
                 </div>
@@ -373,11 +387,15 @@
             </div>
             <script>
                 // Get the modals
+                var modal2 = document.getElementById('id02');
                 var modal = document.getElementById('id01');
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
+                    }
+                     if (event.target == modal2) {
+                        modal2.style.display = "none";
                     }
                 }
 
