@@ -1,6 +1,7 @@
 <?php
     include ("Profilbeschreibung.php");
     include ("loginCheck.php");
+    $_userID = $_SESSION["userID"];
 
     $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
 
@@ -9,21 +10,23 @@
         $dir="profilbilder/";
         $image = $_FILES['bild']['name'];
         // image file directory
-        $target = $dir.basename($image);
+        $name = $_userID."profilbilder".basename($image);
+        //$target = $dir.basename($name);
+        
 
         if(!empty($image)){
             $_userID = $_SESSION["userID"];
-            $sql = "UPDATE user SET bild = '$image' WHERE userID = '$_userID';";
+            $sql = "UPDATE user SET bild = '$name' WHERE userID = '$_userID';";
             // execute query
             $_erg = mysqli_query($db, $sql);
-            if (move_uploaded_file($_FILES['bild']['tmp_name'], $target)) {
+            if (move_uploaded_file($_FILES['bild']['tmp_name'],"profilbilder/".$name )) {
                 $msg = "Image uploaded successfully";
             }else{
                 $msg = "Failed to upload image";
             }
         }
         else{
-            $_userID = $_SESSION["userID"];
+           
             $sql = "UPDATE user SET bild = 'logoPB.png' WHERE userID = '$_userID';";
             $_erg = mysqli_query($db, $sql);
         }
