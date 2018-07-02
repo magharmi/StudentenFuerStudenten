@@ -1,32 +1,17 @@
 Seite			- Was getan werden muss
 
-Generell		erledigt	- Mehr Beispieldatensaetze erstellen
-Generell		erledigt	- Logout Button verteilen()
-Generell		erledigt	- automatischer Logout verteilen, aufpassen mit SESSION_START
-Generell		erledigt	- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
-Generell		erledigt	- ü aus Datenbank entfernen oder zu &uuml; ändern
 Startseite		~ ToDoListe Checked fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
-Profil			erledigt	- Modal zum Hochladen des Bildes
-Profil/Freund		erledigt	- Standartbild, wenn noch kein eigenes hochgeladen wurde, einfuegen
-Freund			erledigt	- Nachricht schreiben button soll email anzeigen
 FreundeUebersicht	~ Text in Karte untenbündig wenn kein Bild, oder kleines Bild
-FreundeUebersicht	erledigt	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
-Kurs			erledigt	- Teilnehmerzahl anzeigen
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen bzw diese aus der Datenbank holen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
-kursbeigetreten		erledigt	- kurs verlassen? wie freund entfernen?
 Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
-Nachhilfe		erledigt	- in nachhilfe anzeigen, unten rand hinzufügen
-Nachhilfe		erledigt	- Namen anklickbar besser visualisieren oder Kontakt Button der zu Profil leitet
 Nachhilfe		~ Burger Menue fixen
-Nachhilfe		erledigt	- Seite FIXEN
 Datenschutz/Impressum	~ Box mittig?
-Müllbilder		erledigt	- ersetzten und entfernen
-profilbilder		erlegigt	- in richtigen ordner(inklusive möglicher noch vorhandener verlinkungen)
 
+SULF Datenbank updaten
 
 PowerPoint
 was bisher geschah
