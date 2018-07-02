@@ -11,6 +11,7 @@
             $_freundName = $_zeile["name"];
             $_uni = $_zeile["uni"];
             $_fach = $_zeile["fach"];
+            $_mail = $_zeile["email"];
             $_bild = $_zeile["bild"];
             $_beschreibung = $_zeile["beschreibung"];
             echo "<script>console.log('".$_freundName."');</script>";
@@ -123,7 +124,7 @@
 
             }
 
-            #nachricht {
+            .nachricht {
                 background-color: #4CAF50;
 
             }
@@ -286,7 +287,8 @@
             <div id="profilbild">
                 <img id="userlogo" src="symbole/freund.png" width="75em">
                 <?php echo "<img src='profilbilder/".$_bild."' height=350em width=145% >"; ?>
-                <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
+                <button type="button" id="schreiben" onclick="document.getElementById('schreiben').innerHTML='<?php echo $_mail ?>'" class="nachricht block">Nachricht schreiben</button>
+
                 <form method="POST">
                     <?php
                     $_freundID = $_GET["fID"];
@@ -296,7 +298,7 @@
                     $_row = mysqli_fetch_assoc($_res);
                     if(is_null($_row)){
                         echo "<script>console.log('Nicht befreundet.');</script>";
-                        echo "<button type='submit' name='addFriend' id='nachricht' class='block'>Freund hinzufügen</button>";
+                        echo "<button type='submit' name='addFriend' class='nachricht block'>Freund hinzufügen</button>";
                     }
                     else{
                         echo "<script>console.log('Befreundet');</script>";
@@ -320,9 +322,10 @@
             <div class="w3-row-padding w3-margin-top">
                 <div class="w3-half">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift">Kurse von <?php echo "$_freundName"; ?>
-                        <ul id="MeineKurseListe">
-                            <?php
+                        <h2 id="MeineKurseUeberschrift">Kurse von
+                            <?php echo "$_freundName"; ?>
+                            <ul id="MeineKurseListe">
+                                <?php
                             $link = mysqli_connect("localhost", "root");
                             if (!$link) {
                                 die("Keine Datenbankverbindung möglich: " . mysqli_error());
@@ -360,12 +363,13 @@
                             }
                             mysqli_close($link);
                             ?>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
                 <div class="w3-half">
                     <div class="w3-card w3-container">
-                        <h2 id="MeineKurseUeberschrift"> <?php echo "$_freundName"; ?> bietet Hilfe bei...</h2>
+                        <h2 id="MeineKurseUeberschrift">
+                            <?php echo "$_freundName"; ?> bietet Hilfe bei...</h2>
                         <ul id="MeineKurseListe">
                             <?php
                             $link = mysqli_connect("localhost", "root");
