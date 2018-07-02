@@ -121,9 +121,9 @@
 
     <!-- Header und Footer -->
     <div class="topnav" id="myTopnav">
-        <a href="" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
-            <a href="index.php">Studenten f&uumlr Studenten</a>
+            <a href="index.php">Studenten f&uuml;r Studenten</a>
         </div>
     </div>
     <p class="headerabstand"></p>
@@ -161,9 +161,9 @@
 
     <div id="Registrieren">
         <div id="Loginbereich" class="card">
-            <img id="LoginLogo" src="logo.png" alt="Logo" style="width:50%">
-            <p class="title">Lernen auf Augenh&oumlhe</p>
-            <h2>Studenten f&uumlr Studenten</h2>
+            <img id="LoginLogo" src="symbole/logo.png" alt="Logo" style="width:50%">
+            <p class="title">Lernen auf Augenh&ouml;he</p>
+            <h2>Studenten f&uuml;r Studenten</h2>
             <div class="LoginButtons">
                 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 <button onclick="document.getElementById('id02').style.display='block'">Registrieren</button>
@@ -171,7 +171,7 @@
             <div id="id01" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
-                        <img src="logo.png" alt="Avatar" class="avatar">
+                        <img src="symbole/logo.png" alt="Avatar" class="avatar">
                     </div>
                     <div class="modalcontainer">
                         <input type="text" placeholder="Benutzername" name="uname" required>
@@ -194,7 +194,7 @@
             <div id="id02" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
-                        <img src="logo.png" alt="Avatar" class="avatar">
+                        <img src="symbole/logo.png" alt="Avatar" class="avatar">
                     </div>
                     <div class="modalcontainer">
                         <h1>Registrieren</h1>
