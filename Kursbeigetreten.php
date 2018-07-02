@@ -116,13 +116,21 @@
             margin-bottom: 1em;
         }
 
+        @media (max-width:960px) {
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
-        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
@@ -136,6 +144,12 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
+
+        <div class="container" id="logoutbtn">
+            <form method="POST">
+                <a href="logoutSeite.php">Logout</a>
+            </form>
         </div>
     </div>
     <script>

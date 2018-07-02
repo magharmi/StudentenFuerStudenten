@@ -89,16 +89,14 @@
         #FreundeUeberschrift {
             margin: 0.8em 0 0 0.5em;
         }
-        
-        @media (max-width:960px){
+
+        @media (max-width:960px) {
             #logoutbtn {
                 float: none;
                 display: block;
                 text-align: left;
             }
         }
-        
-    
 
     </style>
 </head>
@@ -106,7 +104,7 @@
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
-        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
@@ -114,10 +112,10 @@
             <a class="active" href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
             <div class="container" id="logoutbtn">
-            <form method="POST">
-            <a href="logoutSeite.php">Logout</a>
-            </form>
-        </div>
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
         </div>
 
 
@@ -127,7 +125,13 @@
             <div class="bar3"></div>
         </div>
 
-        
+        <div class="container" id="logoutbtn">
+            <form method="POST">
+                <a href="logoutSeite.php">Logout</a>
+            </form>
+        </div>
+
+
     </div>
     <script>
         function myFunction(x) {
@@ -140,7 +144,6 @@
                 y.className = "topbartexte";
             }
         }
-
 
     </script>
     <p class="headerabstand"></p>
@@ -179,7 +182,7 @@
     <div id="FreundeUebersicht">
         <div id="FreundeUeberschriftDiv">
             <div class="nebeneinander">
-                <img id="FreundeLogo" src="freunde.png" width="100em">
+                <img id="FreundeLogo" src="symbole/freunde.png" width="100em">
             </div>
             <div class="nebeneinander">
                 <h1 id="FreundeUeberschrift">Freunde</h1>
@@ -209,7 +212,7 @@
                         echo "<div class='column'>";
                         echo "<div class='content'>";
                         if(empty($_bild)){
-                            echo "<img class='Profilbild' src='logo.png' alt='Profilbild'>";
+                            echo "<img class='Profilbild' src='symbole/logo.png' alt='Profilbild'>";
                         }
                         else{
                             echo "<img class='Profilbild' src='profilbilder/".$_bild."' alt='Profilbild'>";

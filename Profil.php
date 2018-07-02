@@ -204,6 +204,14 @@
                 margin-top: -1px;
             }
 
+            @media (max-width:960px) {
+                #logoutbtn {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+            }
+
         </style>
 
     </head>
@@ -211,7 +219,7 @@
     <body>
         <!-- Kopierenstart -->
         <div class="topnav" id="myTopnav">
-            <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+            <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
             <div class="topbartexte" id="topbartexte">
                 <a href="Startseite.php">Startseite</a>
                 <a class="active" href="Profil.php">Profil</a>
@@ -226,6 +234,13 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
+
+            <div class="container" id="logoutbtn">
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
+
         </div>
         <script>
             function myFunction(x) {
@@ -275,8 +290,8 @@
 
         <div style="width: 500px; height: 60px; background: laven">
 
-            <img src="banner.jpg" class="banner" width="2100px" height="250px" />
-            <img id="userlogo" src="user.png" width="75em">
+            <img src="symbole/banner.jpg" class="banner" width="2100px" height="250px" />
+            <img id="userlogo" src="symbole/user.png" width="75em">
             <div id="content">
                 <?php
                     $_userID = $_SESSION["userID"];
@@ -322,7 +337,7 @@
             <div id="id01" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="imgcontainer">
-                        <img src="user.png" id="registerbild" style="width:18%" />
+                        <img src="symbole/user.png" id="registerbild" style="width:18%" />
                     </div>
                     <div class="modalcontainer">
                         <h2>Geben sie ihre Beschreibung ein </h2>
@@ -353,7 +368,8 @@
                     <div class="w3-card w3-container">
                         <div id="KursZusammenfassung">
                             <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift"><?php echo "$_name"; ?> Kurse</h2>
+                                <h2 id="MeineKurseUeberschrift">
+                                    <?php echo "$_name"; ?> Kurse</h2>
                                 <ul id="MeineKurseListe">
                                     <?php
                                         $link = mysqli_connect("localhost", "root");
@@ -393,8 +409,8 @@
                                         }
                                         mysqli_close($link);
                                     ?>
-                                    
-                                    
+
+
                                 </ul>
                             </div>
                         </div>
@@ -404,7 +420,8 @@
                     <div class="w3-card w3-container">
                         <div id="KursZusammenfassung">
                             <div id="MeineKurseDiv">
-                                <h2 id="MeineKurseUeberschrift"><?php echo "$_name"; ?> bietet Hilfe bei...</h2>
+                                <h2 id="MeineKurseUeberschrift">
+                                    <?php echo "$_name"; ?> bietet Hilfe bei...</h2>
                                 <ul id="MeineKurseListe">
                                     <?php
                                         $link = mysqli_connect("localhost", "root");
@@ -443,7 +460,7 @@
                                             }
                                         }
                                         mysqli_close($link);
-                                    ?> 
+                                    ?>
                                 </ul>
                             </div>
                         </div>

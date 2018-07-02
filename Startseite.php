@@ -42,6 +42,14 @@
             /* Add a hover effect to all links, except for headers */
         }
 
+        @media (max-width:960px) {
+            #logoutbtn {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
     </style>
 </head>
 
@@ -49,7 +57,7 @@
     <!-- Kopierenstart -->
     <!-- Header und Footer, active Tab zuweisen-->
     <div class="topnav" id="myTopnav">
-        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a class="active" href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
@@ -259,7 +267,7 @@
                 <div class="w3-card w3-container" style="min-height:460px">
                     <div id="MeineKurseDiv">
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
-                        <p><a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
+                        <p><a href="KurseUebersicht.php"><img src="symbole/kurs2.png"  style="width:18%"/></a>
                             <p>
                                 <ul id="MeineKurseListe">
                                     <?php
@@ -311,7 +319,7 @@
             <div class="w3-half">
                 <div class="w3-card w3-container w3-margin-top" style="min-height:460px">
                     <h2>Aufgaben &Uuml;bersicht</h2>
-                    <p><a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
+                    <p><a href="Kursbeigetreten.php"><img src="symbole/aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
                                 <ul id="MeineKurseListe">
@@ -327,7 +335,7 @@
             <div class="w3-half">
                 <div class="w3-card w3-container w3-margin-top" href="Kursbeigetreten.php" style="min-height:460px">
                     <h2>Zuletzt bearbeitete Aufgabe</h2>
-                    <p><a href="Kursbeigetreten.php"><img src="aufgaben.jpg" alt="John"   style="width:20%"/></a>
+                    <p><a href="Kursbeigetreten.php"><img src="symbole/aufgaben.jpg" alt="John"   style="width:20%"/></a>
                         <p>
                             <div id="MeineKurseDiv">
                                 <ul id="MeineKurseListe">
