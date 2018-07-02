@@ -106,8 +106,9 @@
             }
 
             #profilbild {
-                margin: -25% 40% 15% 25%;
-
+                background-size: 10em;
+                margin: -8.5% 40% 15% 25%;
+                max-height: 13.5em;
                 text-align: center;
             }
 
@@ -335,7 +336,7 @@
                         echo "<p id='hochschule'>".$_uni."</p>";
                         echo "<p id='studiengang'>".$_fach."</p>";
                         echo "<div id='profilbild' class='Profilbild'>";
-                        echo "<img src='profilbilder/".$_bild."' height=350em width=145% >";
+                        echo "<img src='profilbilder/".$_bild."' height=270em width=145% >";
                         echo "</div>";
                     }
                 ?>
@@ -356,7 +357,7 @@
                                         <br />
                                     </div>
                                     <div id="zweiButtons" class="LoginButtons">
-                                        <button type="submit" name="upload" class="signupbtn">Bild hochladen</button>
+                                        <button type="submit" name="upload" class="signupbtn">Bild laden</button>
                                         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                                     </div>
                                 </form>
