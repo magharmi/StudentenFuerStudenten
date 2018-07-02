@@ -10,6 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <style>
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: forestgreen;
+            padding: 10px 3px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
         #KursBeigetreten {
             width: 960px;
             margin: 0 auto 5em auto;
@@ -314,7 +325,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <button class="collapsible">Geod&aumlsie</button>
+                                    <button class="collapsible">Geod&auml;sie</button>
                                     <div class="content">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipilaboris nisi ut aliquip ex ea commodo consequat.</p>
                                     </div>
@@ -361,7 +372,7 @@
                                     <br />
                                     <br />
                                     <br />
-                                    <p>Gib den Titel f&uumlr deine Aufgabe ein.</p>
+                                    <p>Gib den Titel f&uuml;r deine Aufgabe ein.</p>
                                     <input type="text" id="ort" placeholder="Beispiel: Hochschule Bochum" required>
                                     <div class="LoginButtons">
                                         <button id="AufgabenHochladen">Hochladen</button>

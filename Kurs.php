@@ -12,7 +12,7 @@
     <style>
         .block {
             display: block;
-            width: 50%;
+            width: 100%;
             border: none;
             background-color: forestgreen;
             padding: 10px 3px;
