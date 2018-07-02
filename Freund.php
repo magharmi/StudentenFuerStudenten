@@ -188,6 +188,14 @@
                 margin-top: -1px;
             }
 
+            @media (max-width:960px) {
+                #logoutbtn {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+            }
+
         </style>
     </head>
 
@@ -201,6 +209,11 @@
                 <a href="KurseUebersicht.php">Kurse</a>
                 <a class="active" href="FreundeUebersicht.php">Freunde</a>
                 <a href="Nachhilfe.php">Nachhilfe</a>
+                <div class="container" id="logoutbtn">
+                    <form method="POST">
+                        <a href="logoutSeite.php">Logout</a>
+                    </form>
+                </div>
             </div>
 
             <div class="container" onclick="myFunction(this)" id="burgerbutton">
@@ -268,7 +281,7 @@
             </p>
             <div id="profilbild">
                 <img id="userlogo" src="symbole/freund.png" width="75em">
-                <img src="profilbilder/""<?php echo $_bild ?>" alt="John" style="width:150%">
+                <img src="profilbilder/" "<?php echo $_bild ?>" alt="John" style="width:150%">
                 <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
                 <form method="POST">
                     <?php
