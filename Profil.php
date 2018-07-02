@@ -319,16 +319,31 @@
                         echo "</div>";
                     }
                 ?>
-                    <form method="POST" action="Profil.php" enctype="multipart/form-data">
-                        <input type="hidden" name="size" value="100">
-                        <div>
-                            <input type="file" name="bild">
-                        </div>
+                   
+                             <!-- Trigger/Open the Modal -->
+            <button name="hochladenModal" id="beschreibungbutton" class="block"
+                    onclick="document.getElementById('id02').style.display='block'"
+            class="w3-button">Bild Hochladen</button>
 
-                        <div>
-                            <button type="submit" name="upload" id="bild_hochladen" class="block">Bild hochladen</button>
-                        </div>
-                    </form>
+            <!-- The Modal -->
+            <div id="id02" class="w3-modal">
+              <div class="w3-modal-content">
+                <div class="w3-container">
+                  <span onclick="document.getElementById('id02').style.display='none'"
+                  class="w3-button w3-display-topright">&times;</span>
+                     <form method="POST" action="Profil.php" enctype="multipart/form-data">
+                                    <input type="hidden" name="size" value="100">
+                                    <div>
+                                        <input type="file" name="bild">
+                                    </div>
+                               
+                                <div>
+                                        <button type="submit" name="upload" id="bild_hochladen" class="block">Bild hochladen</button>
+                                    </div>
+                          </form>
+                </div>
+              </div>
+            </div> 
             </div>
         </div>
 
