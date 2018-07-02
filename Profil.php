@@ -219,20 +219,23 @@
             .w3-card {
                 min-height: 20em;
             }
-            #durchsuchen{
-                
-            }
-            
-            #id02{
+
+            #id02 {
                 position: fixed;
                 overflow: auto;
-                margin:4% auto;
-                padding:  20px;
+                margin: 4% auto;
+                padding: 20px;
                 text-align: center;
             }
-            .durch{
-                margin-left: 5em;
-                width: 30em;
+
+            #durch {
+                display: block;
+                width: 50%;
+                margin: 0 auto 0 auto;
+            }
+
+            #durchsuchen {
+                margin: 0 0 0 3.5em;
             }
 
         </style>
@@ -333,31 +336,30 @@
                         echo "</div>";
                     }
                 ?>
-                   
-                             <!-- Trigger/Open the Modal -->
-            <button name="hochladenModal" id="beschreibungbutton" class="block"
-                    onclick="document.getElementById('id02').style.display='block'"
-            >Bild Hochladen</button>
 
-            <!-- The Modal -->
-            <div id="id02" class="modal">
-              <div class="w3-modal-content">
-                <div class="w3-container">
-                  
-                     <form method="POST" action="Profil.php" enctype="multipart/form-data">
-                                    <input type="hidden" name="size" value="100">
-                                    <div class=durch>
+                    <!-- Trigger/Open the Modal -->
+                    <button name="hochladenModal" id="beschreibungbutton" class="block" onclick="document.getElementById('id02').style.display='block'">Bild Hochladen</button>
+
+                    <!-- The Modal -->
+                    <div id="id02" class="modal">
+                        <div class="w3-modal-content">
+                            <div class="w3-container">
+
+                                <form method="POST" action="Profil.php" enctype="multipart/form-data">
+                                    <div id="durch">
                                         <input type="file" name="bild" id="durchsuchen">
+                                        <br />
+                                        <br />
+                                        <br />
                                     </div>
-                               
-                                <div class="LoginButtons">
+                                    <div id="zweiButtons" class="LoginButtons">
                                         <button type="submit" name="upload" class="signupbtn">Bild hochladen</button>
                                         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Abbrechen</button>
                                     </div>
-                          </form>
-                </div>
-              </div>
-            </div> 
+                                </form>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -394,7 +396,7 @@
                     if (event.target == modal) {
                         modal.style.display = "none";
                     }
-                     if (event.target == modal2) {
+                    if (event.target == modal2) {
                         modal2.style.display = "none";
                     }
                 }
