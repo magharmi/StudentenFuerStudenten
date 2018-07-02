@@ -10,6 +10,7 @@ kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschrei
 Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		~ Burger Menue fixen
 Datenschutz/Impressum	~ Box mittig?
+FreundeUebersicht	- Bilder einfügen
 
 SULF Datenbank updaten
 
