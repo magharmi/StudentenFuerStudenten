@@ -186,6 +186,10 @@
             }
         }
 
+        .nachhifleTabelle {
+            margin: 1em auto 2em auto;
+        }
+
     </style>
 </head>
 
@@ -544,16 +548,13 @@
                     </form>
                 </div>
 
-
-
-
                 <div id="id05" class="modal">
                     <form class="modal-content animate" method="POST">
                         <div class="modalcontainer">
                             <?php
                             echo "<h1>Diese User suchen Hilfe</h1>";
                             echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
-                            echo "<table>";
+                            echo "<table class='nachhifleTabelle'>";
                             echo "<tr>";
                             echo "<th>Name</th>";
                             echo "<th>Kurs</th>";
@@ -592,17 +593,13 @@
                 </div>
             </div>
 
-
-
-
-
             <div id="id06" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="modalcontainer">
                         <?php
                             echo "<h1>Diese User bieten Hilfe an</h1>";
                             echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
-                            echo "<table>";
+                            echo "<table class='nachhifleTabelle'>";
                             echo "<tr>";
                             echo "<th>Name</th>";
                             echo "<th>Kurs</th>";
@@ -641,8 +638,6 @@
             </div>
         </div>
 
-
-
         <script>
             //Schließt die Modals wenn daneben geklickt wird
             var modal = document.getElementById('id03');
@@ -653,14 +648,12 @@
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
-
                 if (event.target == modal2) {
                     modal2.style.display = "none";
                 }
                 if (event.target == modal3) {
                     modal3.style.display = "none";
                 }
-
                 if (event.target == modal4) {
                     modal4.style.display = "none";
                 }
