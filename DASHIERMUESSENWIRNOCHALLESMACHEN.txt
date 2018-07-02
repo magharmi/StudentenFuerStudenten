@@ -3,7 +3,7 @@ Seite			- Was getan werden muss
 Generell		erledigt	- Mehr Beispieldatensaetze erstellen
 Generell		erledigt	- Logout Button verteilen()
 Generell		erledigt	- automatischer Logout verteilen, aufpassen mit SESSION_START
-Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
+Generell		erledigt	- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
 Generell		erledigt	- ü aus Datenbank entfernen oder zu &uuml; ändern
 Startseite		~ ToDoListe Checked fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
@@ -17,7 +17,7 @@ Kursbeigetreten		- nur vorhandene Aufgaben anzeigen bzw diese aus der Datenbank 
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
-kursbeigetreten		- kurs verlassen? wie freund entfernen?
+kursbeigetreten		erledigt	- kurs verlassen? wie freund entfernen?
 Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		erledigt	- in nachhilfe anzeigen, unten rand hinzufügen
 Nachhilfe		erledigt	- Namen anklickbar besser visualisieren oder Kontakt Button der zu Profil leitet

@@ -168,6 +168,19 @@
             $_titel = $_row["name"];
             $_beschreibung = $_row["beschreibung"];
             $_voraussetzung = $_row["voraussetzung"];
+            
+            //Frage Teilnehmerzahl ab
+            $_sql3 = "SELECT COUNT(userID) AS teilnehmerzahl FROM userkurse WHERE kursID='$_kursID'";
+            $_res3 = mysqli_query($link, $_sql3);
+            $_row2 = mysqli_fetch_assoc($_res3);
+            $_teilnehmerzahl = $_row2["teilnehmerzahl"];
+            //Ueberpruefe ob leer
+            if($_teilnehmerzahl == 0){
+                $_teilnehmerzahl = "Dieser Kurs hat noch keine Teilnehmer!";
+            }
+            else{
+                $_teilnehmerzahl = "Dieser Kurs hat $_teilnehmerzahl Teilnehmer!";
+            }
 		} 
         mysqli_close($link);
         ?>
@@ -186,9 +199,11 @@
                                 <?php echo "$_voraussetzung" ?>
                             </p>
                             <h3>Teilnehmeranzahl:</h3>
-                            <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
+                            <p id="KursTeilnehmeranzahl">
+                                <?php echo "$_teilnehmerzahl" ?>
+                            </p>
                             <form method="POST">
-                                <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
+                                <button type="submit" name="joinKurs" class="block">Kurs beitreten</button>
                             </form>
                         </div>
                     </div>

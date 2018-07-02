@@ -124,6 +124,10 @@
             }
         }
 
+        #leaveKurs {
+            background-color: #f44336;
+        }
+
     </style>
 </head>
 
@@ -215,6 +219,14 @@
         $_kursID = $_GET["kid"];
         echo("<script>console.log('Kurs: $_kursID');</script>");
         
+        //Kurs verlassen Button
+        if(isset($_POST["leaveKurs"])){
+            $_sql = "DELETE FROM userkurse WHERE userID='$_userID' AND kursID='$_kursID'";
+            $_res = mysqli_query($link, $_sql);
+            echo "<script>console.log('Kurs verlassen!');</script>";
+            echo "<script>window.location.replace('Kurs.php?kid=$_kursID');</script>";
+        }
+        
         $_sql = "SELECT * FROM userkurse WHERE userID='$_userID' AND kursID='$_kursID'";
         $_res = mysqli_query($link, $_sql);
         $_anzahl = @mysqli_num_rows($_res);        
@@ -265,6 +277,9 @@
                             <p id="KursTeilnehmeranzahl">
                                 <?php echo "$_teilnehmerzahl" ?>
                             </p>
+                            <form method="POST">
+                                <button type='submit' name='leaveKurs' id='leaveKurs' class='block'>Kurs verlassen</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -279,12 +294,12 @@
                 <div class="w3-col">
                     <div class="w3-card w3-container w3-margin-top">
                         <div id="AlleKurseDiv">
-                            <h1 id="AlleKurseUeberschrift">Aufgaben &Uumlbersicht</h1>
+                            <h1 id="AlleKurseUeberschrift">Aufgaben &Uuml;bersicht</h1>
                             <ul class="AlleKurseListe">
                                 <li>
-                                    <button class="collapsible">&Uumlbung: Getter und Setter</button>
+                                    <button class="collapsible">&Uuml;bung: Getter und Setter</button>
                                     <div class="content">
-                                        <p> Eine &Uumlbung zum richtigen Umgang von getter und setter. </p>
+                                        <p> Eine &Uuml;bung zum richtigen Umgang von getter und setter. </p>
 
 
                                         <div id="downloadpos">
@@ -341,7 +356,7 @@
                                 <div class="modalcontainer">
                                     <h1>Teile Aufgaben mit Anderen</h1>
                                     <h2>Lade deine Aufgaben hoch</h2>
-                                    <p> W&aumlhle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.</p>
+                                    <p> W&auml;hle deine Aufgabe (*.txt, *.html usw.) von deinem Rechner aus.</p>
                                     <input type="file" id="datei">
                                     <br />
                                     <br />
