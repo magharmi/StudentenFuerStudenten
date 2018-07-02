@@ -3,8 +3,8 @@
 
 <head>
     <title>Impressum</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="symbole/favicon.ico">
+    <link rel="icon" href="symbole/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
 
@@ -33,7 +33,7 @@
     <!-- Kopierenstart -->
     <!-- Header und Footer, active Tab zuweisen-->
     <div class="topnav" id="myTopnav">
-        <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a class="active" href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>

@@ -1,11 +1,11 @@
 Seite			- Was getan werden muss
 
 Generell		- Mehr Beispieldatensaetze erstellen
-Generell		- Logout Button verteilen()
-Generell		- automatischer Logout verteilen, aufpassen mit SESSION_START
+Generell		erledigt	- Logout Button verteilen()
+Generell		erledigt	- automatischer Logout verteilen, aufpassen mit SESSION_START
 Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
 Generell		- ü aus Datenbank entfernen oder zu &uuml; ändern
-Startseite		- ToDoListe Checked fixen
+Startseite		~ ToDoListe Checked fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
 Profil			- Modal zum Hochladen des Bildes
 Profil/Freund		- Standartbild, wenn noch kein eigenes hochgeladen wurde, einfuegen
