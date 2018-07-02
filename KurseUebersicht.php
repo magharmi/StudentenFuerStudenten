@@ -177,10 +177,6 @@
         <div id="MeineKurseDiv">
             <h1 id="MeineKurseUeberschrift">Meine Kurse</h1>
             <ul id="MeineKurseListe">
-                <li><a href="Kurs.php?kid=7">C Programmierung</a></li>
-                <li><a href="Kurs.php?kid=2">Java 2</a></li>
-                <li><a href="Kurs.php?kid=3">Mathe 1</a></li>
-                <li><a href="Kurs.php?kid=5">IT-Sicherheit</a></li>
 
                 <?php
                     $link = mysqli_connect("localhost", "root");
