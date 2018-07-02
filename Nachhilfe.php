@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php SESSION_START(); ?>
+<?php include ("loginCheck.php"); ?>
 <html>
 
 <head>
@@ -198,6 +199,11 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a class="active" href="Nachhilfe.php">Nachhilfe</a>
+            <div class="container" id="logoutbtn">
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
         </div>
 
 
@@ -205,12 +211,6 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-        </div>
-
-        <div class="container" id="logoutbtn">
-            <form method="POST">
-                <a href="logoutSeite.php">Logout</a>
-            </form>
         </div>
     </div>
     <script>

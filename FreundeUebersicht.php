@@ -111,6 +111,11 @@
             <a href="KurseUebersicht.php">Kurse</a>
             <a class="active" href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
+            <div class="container" id="logoutbtn">
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
         </div>
 
 
@@ -119,14 +124,6 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-
-        <div class="container" id="logoutbtn">
-            <form method="POST">
-                <a href="logoutSeite.php">Logout</a>
-            </form>
-        </div>
-
-
     </div>
     <script>
         function myFunction(x) {
