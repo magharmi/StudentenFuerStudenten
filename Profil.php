@@ -107,8 +107,8 @@
 
             #profilbild {
                 background-size: 10em;
-                margin: -15% 40% 15% 24.8%;
-                max-height: 15.5em;
+                margin: -25% 40% 15% 24.8%;
+                max-height: 18.7em;
                 text-align: center;
             }
 
@@ -342,7 +342,7 @@
                         echo "<p id='hochschule'>".$_uni."</p>";
                         echo "<p id='studiengang'>".$_fach."</p>";
                         echo "<div id='profilbild' class='Profilbild'>";
-                        echo "<img src='profilbilder/".$_bild."' height=300em width=145% >";
+                        echo "<img src='profilbilder/".$_bild."' height=350em width=145% >";
                         echo "</div>";
                     }
                 ?>
