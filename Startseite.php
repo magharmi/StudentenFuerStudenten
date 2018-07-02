@@ -141,10 +141,70 @@
                             </div>
                         </div>
                         <ul id="ToDoListe">
-                            <li>Hit the gym</li>
-                            <li class="checked">Pay bills</li>
-                            <li>Meet George</li>
-                            <li>Read a book</li>
+                            <?php
+                            $_userID = $_SESSION["userID"];
+                            echo("<script>console.log('User: $_userID');</script>");
+
+                            // connect to database
+                            $link = mysqli_connect("localhost", "root"); 
+                            $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
+                            if (!$link) { 
+                                die("Keine Datenbankverbindung möglich: " . mysqli_error()); 
+                            } 
+
+                            $datenbank = mysqli_select_db($link, "StudentenFuerStudenten");
+                            if (!$datenbank) { 
+                                echo "Kann die Datenbank nicht benutzen: " . mysqli_error(); 
+                                mysqli_close($link);
+                                exit;
+                            }
+                            
+                            //Pruefe ob ein neuer Eintrag da ist
+                            if(isset($_GET["neuerEintrag"])){
+                                $_neuerEintrag = $_GET["neuerEintrag"];
+                                $_sql2 = "INSERT INTO todoliste (userID, beschreibung) VALUES('$_userID', '$_neuerEintrag')";
+                                $_res = mysqli_query($link, $_sql2);
+                                echo("<script>console.log('Neuer Eintrag: $_neuerEintrag');</script>");
+                            }
+                            else{
+                                echo("<script>console.log('Nichts Neues');</script>");
+                            }
+                            
+                            //Pruefe ob ein Eintrag weg soll
+                            if(isset($_GET["weg"])){
+                                $_weg = $_GET["weg"];
+                                $_sql3 = "DELETE FROM todoliste WHERE todoID='$_weg'";
+                                $_res = mysqli_query($link, $_sql3);
+                                echo("<script>console.log('Eintrag entfernt: $_weg');</script>");
+                            }
+                            else{
+                                echo("<script>console.log('Nichts entfernt');</script>");
+                            }
+                            
+                            $_sql = "SELECT * FROM todoliste WHERE userID='$_userID'";
+                            $_res = mysqli_query($link, $_sql);
+
+                            $_anzahl = mysqli_num_rows($_res);
+                            if ($_anzahl == 0) {
+                                echo("<script>console.log('Keine ToDoPunkte gefunden!');</script>");
+                                echo "<li>Fuege hier Notizen ein</li>";
+                                echo "<li>Oder notiere dir wichtige Deadlines</li>";
+                            }
+                            else {
+                                while($_row = mysqli_fetch_assoc($_res)){
+                                    $_beschreibung = $_row["beschreibung"];
+                                    $_todoID = $_row["todoID"];
+                                    $_checked = $_row["checked"];
+                                    if($_checked == 0){
+                                        echo "<li id='$_todoID'>$_beschreibung</li>";
+                                    }
+                                    else{
+                                        echo "<li id='$_todoID' class='checked'>$_beschreibung</li>";
+                                    }
+                                }
+                            }
+                            mysqli_close($link);
+                            ?>
                         </ul>
 
                         <script>
@@ -166,6 +226,8 @@
                                 close[i].onclick = function() {
                                     var div = this.parentElement;
                                     div.style.display = "none";
+                                    //laed Seite neu und fuegt Element Name in url ein
+                                    window.location.href = "Startseite.php?weg=" + this.parentElement["id"];
                                 }
                             }
 
@@ -180,34 +242,12 @@
                             // Create a new list item when clicking on the "Add" button
                             function newElement() {
                                 var inputValue = document.getElementById("myInput").value;
-                                newElementDB(inputValue);
-                            }
-
-                            //newElement mit Datenuebergabe
-                            function newElementDB(inputValue) {
-                                var li = document.createElement("li");
-                                var t = document.createTextNode(inputValue);
-                                li.appendChild(t);
                                 if (inputValue === '') {
                                     alert("Du musst etwas eingeben!");
                                 } else {
-                                    document.getElementById("ToDoListe").appendChild(li);
+                                    //laed Seite neu fuegt dabei Wert in url ein
+                                    window.location.href = "Startseite.php?neuerEintrag=" + inputValue;
                                 }
-                                document.getElementById("myInput").value = "";
-
-                                var span = document.createElement("SPAN");
-                                var txt = document.createTextNode("\u00D7");
-                                span.className = "close";
-                                span.appendChild(txt);
-                                li.appendChild(span);
-
-                                for (i = 0; i < close.length; i++) {
-                                    close[i].onclick = function() {
-                                        var div = this.parentElement;
-                                        div.style.display = "none";
-                                    }
-                                }
-
                             }
 
                         </script>
@@ -221,7 +261,7 @@
                         <h2 id="MeineKurseUeberschrift">Meine Kurse</h2>
                         <p><a href="KurseUebersicht.php"><img src="kurs2.png"  style="width:18%"/></a>
                             <p>
-                                <ul id="MeineKurseListe">             
+                                <ul id="MeineKurseListe">
                                     <?php
                                         $link = mysqli_connect("localhost", "root");
                                         if (!$link) {
@@ -260,8 +300,8 @@
                                         }
                                         mysqli_close($link);
                                     ?>
-                                    
-                                
+
+
                                 </ul>
                     </div>
                 </div>
