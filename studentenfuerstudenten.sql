@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Jul 2018 um 19:06
+-- Erstellungszeit: 02. Jul 2018 um 19:18
 -- Server-Version: 10.1.9-MariaDB
 -- PHP-Version: 5.6.15
 
@@ -132,10 +132,10 @@ CREATE TABLE `nachhilfeangebot` (
 
 INSERT INTO `nachhilfeangebot` (`angebotID`, `kursID`, `titel`, `ort`, `zeit`, `preis`, `userID`) VALUES
 (1, 3, 'Mathe', 'Bochum', '12:00', '12,50€', 1),
-(2, 2, 'Nachhilfe Java 2', 'Bochum', '19:00 Uhr', '12€', 5),
+(2, 1, 'Nachhilfe Java 2', 'Bochum', '19:00 Uhr', '12€', 5),
 (3, 4, 'Mathe Nachhilfe', 'Recklinghausen', '23.7 14:30 Uhr', '10€', 7),
 (4, 1, 'Nachhilfe in Javagrundlagen', 'Bochum', '14 Uhr', '12€', 7),
-(5, 5, 'Nachhilfe in IT-Sicherheit', 'Essen', '12:45 Uhr', '17€', 6),
+(5, 5, 'Nachhilfe in IT-Sicherheit', 'Essen', '12:45 Uhr', '17€', 1),
 (6, 7, 'C Programmierung', 'Recklinghausen', '19:30 Uhr', 'VB', 2),
 (7, 3, 'Mathe Grundlagen', 'Bochum', '17 Uhr', '15€ pro Stunde\r\n40€ 3 Stunden Block', 3);
 
@@ -272,13 +272,13 @@ CREATE TABLE `userkurse` (
 
 INSERT INTO `userkurse` (`userID`, `kursID`) VALUES
 (1, 1),
-(2, 2),
 (3, 3),
 (4, 4),
 (5, 5),
 (6, 6),
 (7, 7),
-(1, 2);
+(1, 6),
+(1, 5);
 
 --
 -- Indizes der exportierten Tabellen
