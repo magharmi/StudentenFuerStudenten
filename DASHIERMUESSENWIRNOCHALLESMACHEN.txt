@@ -20,7 +20,7 @@ kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschrei
 kursbeigetreten		- kurs verlassen? wie freund entfernen?
 Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
 Nachhilfe		erledigt	- in nachhilfe anzeigen, unten rand hinzufügen
-Nachhilfe		- Namen anklickbar besser visualisieren oder Kontakt Button der zu Profil leitet
+Nachhilfe		erledigt	- Namen anklickbar besser visualisieren oder Kontakt Button der zu Profil leitet
 Nachhilfe		- Burger Menue fixen
 Nachhilfe		erledigt	- Seite FIXEN
 Datenschutz/Impressum	~ Box mittig?
