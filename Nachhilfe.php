@@ -186,6 +186,20 @@
             }
         }
 
+        .nachhifleTabelle {
+            width: 90%;
+            margin: 1em auto 2em auto;
+        }
+
+        .modalcontainer {
+            text-align: center;
+            margin: 1em 3em 1em 3em;
+        }
+
+        .kontaktButton {
+            color: white;
+        }
+
     </style>
 </head>
 
@@ -544,44 +558,41 @@
                     </form>
                 </div>
 
-
-
-
                 <div id="id05" class="modal">
                     <form class="modal-content animate" method="POST">
                         <div class="modalcontainer">
                             <?php
                             echo "<h1>Diese User suchen Hilfe</h1>";
-                            echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
-                            echo "<table>";
+                            echo "<h2>Kontaktiere sie um ihnen zu helfen</h2>";
+                            echo "<table class='nachhifleTabelle'>";
                             echo "<tr>";
                             echo "<th>Name</th>";
                             echo "<th>Kurs</th>";
                             echo "<th>Ort</th>";
                             echo "<th>geplante Uhrzeit</th>";
                             echo "<th>Preis</th>";
+                            echo "<th>Kontakt</th>";
                             echo "</tr>";
-                            $userID = $_SESSION["userID"];
                             $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
                             $sql1 = "SELECT * FROM nachhilfeangebot WHERE kursID='1'";
                             $_res = mysqli_query($db, $sql1);
                             while($_row = mysqli_fetch_assoc($_res)){
-                                $_userID = $_row["userID"];
+                                $_freundID = $_row["userID"];
                                 $_ort = $_row["ort"];
                                 $_titel = $_row["titel"];
                                 $_zeit = $_row["zeit"];
                                 $_preis = $_row["preis"];
-                                $_sql = "SELECT name FROM user WHERE userID='$_userID'";
+                                $_sql = "SELECT name FROM user WHERE userID='$_freundID'";
                                 $_erg = mysqli_query($db, $_sql);
                                 while($_zeile = $_erg->fetch_assoc()){
                                     $_freundName = $_zeile["name"];
                                     echo "<tr>";
-                                    echo "<script>console.log('".$_freundName."');</script>";
-                                    echo "<td><a href='Freund.php?fID=".$_userID."'>".$_freundName."</td>";
+                                    echo "<td>".$_freundName."</td>";
                                     echo "<td>".$_titel."</td>";
                                     echo "<td>".$_ort."</td>";
                                     echo "<td>".$_zeit."</td>";
                                     echo "<td>".$_preis."</td>";
+                                    echo "<td bgcolor=#4CAF50><a href='Freund.php?fID=$_freundID' class='kontaktButton'>Kontakt</a></td>";
                                     echo "</tr>";
                                 }
                             }
@@ -592,45 +603,41 @@
                 </div>
             </div>
 
-
-
-
-
             <div id="id06" class="modal">
                 <form class="modal-content animate" method="POST">
                     <div class="modalcontainer">
                         <?php
                             echo "<h1>Diese User bieten Hilfe an</h1>";
-                            echo "<h2>Suche einen Studenten aus um ihn zu kontaktieren</h2>";
-                            echo "<table>";
+                            echo "<h2>Kontaktiere sie wenn du Hilfe brauchst</h2>";
+                            echo "<table class='nachhifleTabelle'>";
                             echo "<tr>";
                             echo "<th>Name</th>";
                             echo "<th>Kurs</th>";
                             echo "<th>Ort</th>";
                             echo "<th>geplante Uhrzeit</th>";
                             echo "<th>Preis</th>";
+                            echo "<th>Kontakt</th>";
                             echo "</tr>";
-                            $userID = $_SESSION["userID"];
                             $db = mysqli_connect("localhost", "root", "", "studentenfuerstudenten");
                             $sql1 = "SELECT * FROM nachhilfeangebot WHERE kursID='1'";
                             $_res = mysqli_query($db, $sql1);
                             while($_row = mysqli_fetch_assoc($_res)){
-                                $_userID = $_row["userID"];
+                                $_freundID = $_row["userID"];
                                 $_ort = $_row["ort"];
                                 $_titel = $_row["titel"];
                                 $_zeit = $_row["zeit"];
                                 $_preis = $_row["preis"];
-                                $_sql = "SELECT name FROM user WHERE userID='$_userID'";
+                                $_sql = "SELECT name FROM user WHERE userID='$_freundID'";
                                 $_erg = mysqli_query($db, $_sql);
                                 while($_zeile = $_erg->fetch_assoc()){
                                     $_freundName = $_zeile["name"];
                                     echo "<tr>";
-                                    echo "<script>console.log('".$_freundName."');</script>";
-                                    echo "<td><a href='Freund.php?fID=".$_userID."'>".$_freundName."</td>";
+                                    echo "<td>".$_freundName."</td>";
                                     echo "<td>".$_titel."</td>";
                                     echo "<td>".$_ort."</td>";
                                     echo "<td>".$_zeit."</td>";
                                     echo "<td>".$_preis."</td>";
+                                    echo "<td bgcolor=#4CAF50><a href='Freund.php?fID=$_freundID' class='kontaktButton'>Kontakt</a></td>";
                                     echo "</tr>";
                                 }
                             }
@@ -640,8 +647,6 @@
                 </form>
             </div>
         </div>
-
-
 
         <script>
             //Schließt die Modals wenn daneben geklickt wird
@@ -653,14 +658,12 @@
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
-
                 if (event.target == modal2) {
                     modal2.style.display = "none";
                 }
                 if (event.target == modal3) {
                     modal3.style.display = "none";
                 }
-
                 if (event.target == modal4) {
                     modal4.style.display = "none";
                 }
