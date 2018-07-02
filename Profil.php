@@ -107,14 +107,20 @@
 
             #profilbild {
                 background-size: 10em;
-                margin: -8.5% 40% 15% 25%;
-                max-height: 13.5em;
+                margin: -15% 40% 15% 24.8%;
+                max-height: 15.5em;
                 text-align: center;
             }
 
             #beschreibungbutton {
                 background-color: forestgreen;
                 width: 50%;
+
+            }
+            
+            #hochladenModal {
+                background-color: forestgreen;
+                width: 51.5%;
 
             }
 
@@ -336,13 +342,13 @@
                         echo "<p id='hochschule'>".$_uni."</p>";
                         echo "<p id='studiengang'>".$_fach."</p>";
                         echo "<div id='profilbild' class='Profilbild'>";
-                        echo "<img src='profilbilder/".$_bild."' height=270em width=145% >";
+                        echo "<img src='profilbilder/".$_bild."' height=300em width=145% >";
                         echo "</div>";
                     }
                 ?>
 
                     <!-- Trigger/Open the Modal -->
-                    <button name="hochladenModal" id="beschreibungbutton" class="block" onclick="document.getElementById('id02').style.display='block'">Bild Hochladen</button>
+                    <button name="hochladenModal" id="hochladenModal" class="block" onclick="document.getElementById('id02').style.display='block'">Bild Hochladen</button>
 
                     <!-- The Modal -->
                     <div id="id02" class="modal">
