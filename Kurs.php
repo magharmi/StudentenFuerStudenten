@@ -5,8 +5,8 @@
 
 <head>
     <title>Kurs</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="symbole/favicon.ico">
+    <link rel="icon" href="symbole/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <style>
@@ -45,8 +45,8 @@
         #Kurs .w3-card {
             height: 19em;
         }
-        
-        @media (max-width:960px){
+
+        @media (max-width:960px) {
             #logoutbtn {
                 float: none;
                 display: block;
@@ -60,18 +60,18 @@
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+        <a href="javascript:void(0);" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
-             <div class="container" id="logoutbtn">
-            <form method="POST">
-            <a href="logoutSeite.php">Logout</a>
-            </form>
-        </div>
+            <div class="container" id="logoutbtn">
+                <form method="POST">
+                    <a href="logoutSeite.php">Logout</a>
+                </form>
+            </div>
         </div>
 
 

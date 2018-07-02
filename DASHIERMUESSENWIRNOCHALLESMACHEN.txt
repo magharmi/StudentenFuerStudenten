@@ -4,26 +4,28 @@ Generell		- Mehr Beispieldatensaetze erstellen
 Generell		- Logout Button verteilen()
 Generell		- automatischer Logout verteilen, aufpassen mit SESSION_START
 Generell		- Datein die hochgeladen werden umbenennen, zB kann sonst nur einer ein profil.png hochladen
+Generell		- ü aus Datenbank entfernen oder zu &uuml; ändern
 Startseite		- ToDoListe Checked fixen
 Startseite		- Aufgaben/kurse mit datenbank verknüpfen
 Profil			- Modal zum Hochladen des Bildes
 Profil/Freund		- Standartbild, wenn noch kein eigenes hochgeladen wurde, einfuegen
 Freund			- Nachricht schreiben button soll email anzeigen
 FreundeUebersicht	~ Text in Karte untenbündig wenn kein Bild, oder kleines Bild
-FreundeUebersicht	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
+FreundeUebersicht	erledigt	- "Feste" Freunde entfernen wenn genug echte Freunde in Datenbank
 Kurs			erledigt	- Teilnehmerzahl anzeigen
 Kursbeigetreten		- nur vorhandene Aufgaben anzeigen bzw diese aus der Datenbank holen
 Kursbeigetreten		- download button funktionsfähig
 kursbeigetreten		- uploadbutton mit Datenbank
 kursbeigetreten		- beschreibung in aufgabenupload modal hinzufügen oder beschreibung in datenbank von aufgaben entfernen
+kursbeigetreten		- kurs verlassen? wie freund entfernen?
 Nachhilfe		~ KursID in nachhilfedatenbank echt einfügen nicht immer 1
-Nachhilfe		- in nachhilfe anzeigen unten rand
-Nachhilfe		- Namen anklickbar besser visualisieren
+Nachhilfe		- in nachhilfe anzeigen, unten rand hinzufügen
+Nachhilfe		- Namen anklickbar besser visualisieren oder Kontakt Button der zu Profil leitet
 Nachhilfe		- Burger Menue fixen
-Nachhilfe		- Seite FIXEN
+Nachhilfe		erledigt	- Seite FIXEN
 Datenschutz/Impressum	~ Box mittig?
-Müllbilder		- ersetzten und entfernen
-profilbilder		- in richtigen ordner(inklusive möglicher noch vorhandener verlinkungen)
+Müllbilder		erledigt	- ersetzten und entfernen
+profilbilder		erlegigt	- in richtigen ordner(inklusive möglicher noch vorhandener verlinkungen)
 
 
 PowerPoint
