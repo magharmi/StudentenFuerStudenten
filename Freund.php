@@ -36,8 +36,8 @@
 
     <head>
         <title>Freund</title>
-        <link rel="icon" href="favicon.ico">
-        <link rel="icon" href="favicon.png">
+        <link rel="icon" href="symbole/favicon.ico">
+        <link rel="icon" href="symbole/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styler.css">
         <style>
@@ -194,7 +194,7 @@
     <body>
         <!-- Kopierenstart -->
         <div class="topnav" id="myTopnav">
-            <a href="Startseite.php" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
+            <a href="Startseite.php" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
             <div class="topbartexte" id="topbartexte">
                 <a href="Startseite.php">Startseite</a>
                 <a href="Profil.php">Profil</a>
@@ -256,7 +256,7 @@
         <!-- Kopierenende -->
 
         <div style="width: 500px; height: 60px; background: laven">
-            <img src="banner.jpg" class="banner" width="2100px" height="250px" />
+            <img src="symbole/banner.jpg" class="banner" width="2100px" height="250px" />
             <p id="name">
                 <?php echo $_freundName ?>
             </p>
@@ -267,8 +267,8 @@
                 <?php echo $_fach ?>
             </p>
             <div id="profilbild">
-                <img id="userlogo" src="freund.png" width="75em">
-                <img src="<?php echo $_bild ?>" alt="John" style="width:150%">
+                <img id="userlogo" src="symbole/freund.png" width="75em">
+                <img src="profilbilder/""<?php echo $_bild ?>" alt="John" style="width:150%">
                 <button type="button" id="nachricht" class="block">Nachricht schreiben</button>
                 <form method="POST">
                     <?php

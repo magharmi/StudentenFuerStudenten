@@ -5,8 +5,8 @@
 
 <head>
     <title>Kurs</title>
-    <link rel="icon" href="symbole/favicon.ico">
-    <link rel="icon" href="symbole/favicon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styler.css">
     <style>
@@ -45,8 +45,8 @@
         #Kurs .w3-card {
             height: 19em;
         }
-
-        @media (max-width:960px) {
+        
+        @media (max-width:960px){
             #logoutbtn {
                 float: none;
                 display: block;
@@ -60,18 +60,18 @@
 <body>
     <!-- Kopierenstart -->
     <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" id="logo"><img src="symbole/logo.png" alt="John" style="width:48px"></a>
+        <a href="javascript:void(0);" id="logo"><img src="logo.png" alt="John" style="width:48px"></a>
         <div class="topbartexte" id="topbartexte">
             <a href="Startseite.php">Startseite</a>
             <a href="Profil.php">Profil</a>
             <a class="active" href="KurseUebersicht.php">Kurse</a>
             <a href="FreundeUebersicht.php">Freunde</a>
             <a href="Nachhilfe.php">Nachhilfe</a>
-            <div class="container" id="logoutbtn">
-                <form method="POST">
-                    <a href="logoutSeite.php">Logout</a>
-                </form>
-            </div>
+             <div class="container" id="logoutbtn">
+            <form method="POST">
+            <a href="logoutSeite.php">Logout</a>
+            </form>
+        </div>
         </div>
 
 
@@ -168,19 +168,6 @@
             $_titel = $_row["name"];
             $_beschreibung = $_row["beschreibung"];
             $_voraussetzung = $_row["voraussetzung"];
-            
-            //Frage Teilnehmerzahl ab
-            $_sql3 = "SELECT COUNT(userID) AS teilnehmerzahl FROM userkurse WHERE kursID='$_kursID'";
-            $_res3 = mysqli_query($link, $_sql3);
-            $_row2 = mysqli_fetch_assoc($_res3);
-            $_teilnehmerzahl = $_row2["teilnehmerzahl"];
-            //ueberpruefe ob leer
-            if($_teilnehmerzahl == 0){
-                $_teilnehmerzahl = "Dieser Kurs hat noch keine Teilnehmer!";
-            }
-            else{
-                $_teilnehmerzahl = "Dieser Kurs hat $_teilnehmerzahl Teilnehmer!";
-            }
 		} 
         mysqli_close($link);
         ?>
@@ -199,9 +186,7 @@
                                 <?php echo "$_voraussetzung" ?>
                             </p>
                             <h3>Teilnehmeranzahl:</h3>
-                            <p id="KursTeilnehmeranzahl">
-                                <?php echo "$_teilnehmerzahl" ?>
-                            </p>
+                            <p id="KursTeilnehmeranzahl">Dieser Kurs hat noch keine Teilnehmer!</p>
                             <form method="POST">
                                 <button type="submit" name="joinKurs" class="block" onclick="window.location.replace('Kursbeigetreten.html')">Kurs beitreten</button>
                             </form>
